@@ -1,0 +1,43 @@
+[colors]
+
+# special
+foreground      = #ffeefc
+foreground_bold = #ffeefc
+cursor          = #ffeefc
+background      = #141021
+
+# black
+color0  = #4f4858
+color8  = #545d67
+
+# red
+color1  = #c05c47
+color9  = #c16772
+
+# green
+color2  = #428e8e
+color10 = #afda6e
+
+# yellow
+color3  = #e4b226
+color11 = #ebcf1a
+
+# blue
+color4  = #4457a3
+color12 = #4880a5
+
+# magenta
+color5  = #903a62
+color13 = #9568a1
+
+# cyan
+color6  = #7aa1dc
+color14 = #abbcda
+
+# white
+color7  = #c4b7c5
+color15 = #ffeefc
+
+[options]
+font = DejaVu Sans Mono 12 
+cursor_shape = underline
