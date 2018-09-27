@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-scrot /home/prashant/screen.png
-icon="/$HOME/lock.png"
-tmpbg="$HOME/screen.png"
+scrot /home/prashant/.screen.png
+icon="/$HOME/.lock.png"
+tmpbg="$HOME/.screen.png"
 
 (( $# )) && { icon=$1; }
 

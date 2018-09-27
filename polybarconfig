@@ -109,7 +109,7 @@ label-urgent-padding = 2
 [module/date]
 type = internal/date
 interval = 5
-time = "%{A3:bash /home/prashant/lock.sh:}%a %b %d, %I:%M %p%{A}"
+time = "%{A3:bash /home/prashant/.lock.sh:}%a %b %d, %I:%M %p%{A}"
 format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
 label = %date%%time%

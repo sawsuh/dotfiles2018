@@ -218,14 +218,14 @@ client.placeholder      #312842 #312842 #ffeefc #312842
 #}
 
 bindsym $mod+Shift+s sticky toggle
-bindsym $mod+Shift+f exec tdrop -a -h 462 -w 1024 -x 860 -y 582 --name sticko -n 1 -f "--role stick -e ranger" termite
-bindsym $mod+Shift+m exec tdrop -a -h 462 -w 1024 -x 860 -y 582 --name sticko -n 2 -f "--role stick -e ncmpcpp" termite
-bindsym --release $mod+Shift+v exec --no-startup-id "bash /home/prashant/t.sh"
+bindsym $mod+Shift+f exec tdrop -a -h 300 -w 700 -x 1184 -y 744 --name sticko -n 1 -f "--role stick -e ranger" termite
+bindsym $mod+Shift+m exec tdrop -a -h 300 -w 700 -x 1184 -y 744 --name sticko -n 2 -f "--role stick -e ncmpcpp" termite
+bindsym --release $mod+Shift+v exec --no-startup-id "bash /home/prashant/.t.sh"
 focus_follows_mouse no
 #bindsym $mod+Control+s exec --no-startup-id "bash /home/prashant/.sc.sh"
 exec xrandr --output DVI-D-1 --mode 1920x1080 --rate 144
 exec polybar main_bar
-exec feh --bg-center wp.png
+exec feh --bg-center .wp.png
 exec compton --config /home/prashant/.compton.conf
 exec mopidy
 exec redshift -l -35.3:149
