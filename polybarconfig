@@ -52,7 +52,7 @@ format-underline = ${colors.my_color0}
 
 [module/title]
 type = internal/xwindow
-label = %title%
+label = " %title% "
 label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
@@ -114,3 +114,9 @@ format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
 label = %date%%time%
 format-margin = 0
+
+[module/ewmh]
+type = internal/xworkspaces
+enable-click = false
+enable-scroll = false
+
