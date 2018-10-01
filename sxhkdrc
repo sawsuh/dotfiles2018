@@ -45,9 +45,9 @@ super + g
 #
 
 super + shift + f
-	tdrop -a -h 300 -w 700 -x 1181 -y 741 --name stick -n 1 -f "--name=stick -e ranger" termite
+	tdrop -a -h 300 -w 700 -x 1181 -y 741 -n 1 -f "--name=stick1 -e ranger" termite
 super + shift + m
-	tdrop -a -h 300 -w 700 -x 1181 -y 741 --name stick -n 1 -f "--name=stick -e ncmpcpp" termite
+	tdrop -a -h 300 -w 700 -x 1181 -y 741 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
 
