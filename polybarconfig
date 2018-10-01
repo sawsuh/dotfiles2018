@@ -41,7 +41,7 @@ module-margin = 2
 line-size = 2
 line-color = ${colors.my_color0}
 
-modules-left = i3
+modules-left = bspwm
 modules-center = title
 modules-right = date
 
@@ -57,12 +57,25 @@ label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
-
+label-separator = ""
+label-separator-padding = 2
 [module/mpd]
 type = internal/mpd
 format-online = %{A1:mpc -h 127.0.0.1 toggle:}%{A3:mpc -h 127.0.0.1 next:}%{A2:mpc -h 127.0.0.1 prev:}%{A4:mpc -h 127.0.0.1 volume +2:}%{A5: mpc -h 127.0.0.1 volume -2:}<label-song>%{A}%{A}%{A}%{A}%{A}
 label-song-maxlen = 35
 
+[module/bspwm]
+type = internal/bspwm
+label-focused = %name%
+label-focused-foreground = #ffeefc
+label-focused-background = #141021
+label-focused-underline = #c16772
+label-focused-padding = 2
+label-occupied = %name%
+label-occupied-underline = #141021
+label-occupied-padding = 2
+pin-workspaces = true
+label-empty = 
 [module/i3]
 type = internal/i3
 ws-icon-0 = "1;one"
