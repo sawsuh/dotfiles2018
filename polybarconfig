@@ -33,7 +33,7 @@ height = 30
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 
-font-0 = DejaVu Sans Mono:pixelsize=12
+font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
 
 module-margin = 2

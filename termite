@@ -39,5 +39,6 @@ color7  = #c4b7c5
 color15 = #ffeefc
 
 [options]
-font = DejaVu Sans Mono 12 
+#font = DejaVu Sans Mono 12 
+font = Gohu GohuFont
 cursor_shape = underline
