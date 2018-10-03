@@ -33,9 +33,9 @@ bspc rule -a Screenkey manage=off
 bspc rule -a mpv state=floating
 bspc rule -a feh state=floating
 bspc rule -a MuPDF state=floating
-bspc rule -a Termite:stick state=floating sticky=on
+bspc rule -a Termite:stick state=floating sticky=on center
 bspc rule -a Termite:stick1 state=floating sticky=on
 bspc rule -a Termite:stick2 state=floating sticky=on
 bspc rule -a Termite:float state=floating
-bspc rule -a Termite:term state=tiled
+#bspc rule -a Termite:term state=tiled
 xsetroot -cursor_name left_ptr&
