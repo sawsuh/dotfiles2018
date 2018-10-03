@@ -17,7 +17,7 @@
 /*********************************/
 /**** URL BAR VARIABLES ****/
 /*********************************/
-    --url-background: var(--bg-light); 
+    --url-background: var(--bg-dark); 
     --url-foreground: var(--fg-light);
     --url-fonts: "Gohu Gohufont"; 
     --url-font-size: 12pt;
