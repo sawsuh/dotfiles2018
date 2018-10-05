@@ -39,3 +39,4 @@ bspc rule -a Termite:stick2 state=floating sticky=on
 bspc rule -a Termite:float state=floating
 #bspc rule -a Termite:term state=tiled
 xsetroot -cursor_name left_ptr&
+bash /home/prashant/.lock.sh
