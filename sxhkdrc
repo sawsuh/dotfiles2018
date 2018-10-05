@@ -128,3 +128,5 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+super + alt + s
+	scrot '%Y-%m-%d_%k-%M-%s.png' -e 'mv $f /home/prashant/screenshots/'
