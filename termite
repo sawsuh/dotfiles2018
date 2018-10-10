@@ -1,42 +1,43 @@
 [colors]
 
 # special
-foreground      = #ffeefc
-foreground_bold = #ffeefc
-cursor          = #ffeefc
-background      = #141021
+foreground      = #eee4e5
+foreground_bold = #eee4e5
+cursor          = #eee4e5
+background      = #202020
 
 # black
-color0  = #4f4858
-color8  = #545d67
+color0  = #202020
+color8  = #42423d
 
 # red
-color1  = #c05c47
-color9  = #c16772
+color1  = #e47ca3
+color9  = #ff8eb4
 
 # green
-color2  = #428e8e
-color10 = #afda6e
+color2  = #75a393
+color10 = #8cc2aa
 
 # yellow
-color3  = #e4b226
-color11 = #ebcf1a
+color3  = #e1a7b5
+color11 = #ffbec9
 
 # blue
-color4  = #4457a3
-color12 = #4880a5
+color4  = #acc6bc
+color12 = #c8e5d5
 
 # magenta
-color5  = #903a62
-color13 = #9568a1
+color5  = #ae8497
+color13 = #cc9cad
 
 # cyan
-color6  = #7aa1dc
-color14 = #abbcda
+color6  = #9dafac
+color14 = #bacec6
 
 # white
-color7  = #c4b7c5
-color15 = #ffeefc
+color7  = #787376
+color15 = #eee4e5
+
 
 [options]
 #font = DejaVu Sans Mono 12 

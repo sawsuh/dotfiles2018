@@ -5,10 +5,10 @@
 /*********************************/
 /**** TAB BAR VARIABLES ****/
 /*********************************/
-    --bg-dark: var(--bg);
-    --bg-light: #4f4858 ; 
-    --fg-dark: var(--fg);
-    --fg-light: var(--fg); 
+    --bg-dark: #202020;
+    --bg-light: #787376 ; 
+    --fg-dark: #eee4e5;
+    --fg-light: #eee4e5; 
     --tab-fonts: "Gohu Gohufont"; 
     --tab-font-size: 12pt;
     --tab-text-align: center;

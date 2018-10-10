@@ -104,33 +104,33 @@ color 					= #000000
 ; 'color' 		- normal color
 
 ; Set the interior circle colors
-insidevercolor 			= #141021ff
-insidewrongcolor		= #141021ff
-insidecolor 			= #141021ff
+insidevercolor 			= #202020ff
+insidewrongcolor		= #e1a7b5ff
+insidecolor 			= #202020ff
 
 ; Set the ring colors
-ringvercolor 			= #c16772ff
-ringwrongcolor 			= #c16772ff
-ringcolor 				= #c16772ff
+ringvercolor 			= #42423dff
+ringwrongcolor 			= #cc9cadff
+ringcolor 				= #42423dff
 
 ; Set the color for line separating for inside circle and the outer ring
-linecolor 				= #c16772ff
+linecolor 				= #acc6bcff
 
 ; Set the color of status text (verification and wrong)
-textcolor 				= #ffeefcff
+textcolor 				= #eee4e5ff
 ; Set the color of time in clock
-timecolor 				= #ffeefcff
+timecolor 				= #eee4e5ff
 ; Set the color of date in clock
-datecolor 				= #ffeefcff
+datecolor 				= #eee4e5ff
 
 ; Set the color of the ring 'highlight' strokes that appear upon keypress
-keyhlcolor 				= #ffeefcff
+keyhlcolor 				= #e47ca3ff
 ; Set the color of the ring 'hilight' strokes that appear upon backspace
-bshlcolor 				= #ffeefcff
+bshlcolor 				= #e47ca3ff
 ; Set the color of the 'separator' which is at both ends oof the ring highlights
-separatorcolor 			= #ffeefcff
+separatorcolor 			= #75a393ff
 ; Set the color of the keyboard layout and caps lock indicators
-indicatorscolor			= #ffeefcff
+indicatorscolor			= #eee4e5ff
 
 
 ; [clock] configuration configures, well, time in clock.

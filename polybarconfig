@@ -7,8 +7,8 @@
 
 
 [colors]
-my_background 	= #141021
-my_foreground 	= #ffeefc
+my_background 	= #202020
+my_foreground 	= #eee4e5
 my_color0	= #c16772
 my_color1	= #545d67
 my_color2	= #c05c47
@@ -29,23 +29,61 @@ my_color15	= #ffeefc
 [bar/main_bar]
 bottom = false
 height = 30
-
-background = ${colors.my_background}
+width = 1885
+offset-y = 25
+background = #00000000
 foreground =  ${colors.my_foreground}
 
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
 
-module-margin = 2
+module-margin = 0
 
-line-size = 2
+line-size = 0
+line-color = ${colors.my_color0}
+
+;modules-left = bspwm
+modules-center = title
+;modules-right = date
+[bar/left_bar]
+height = 30
+width = 1885
+offset-y = 25
+offset-x = 35
+background = #00000000
+foreground =  ${colors.my_foreground}
+
+font-0 = Gohu GohuFont:pixelsize=14
+font-1 = Icons:pixelsize=12
+
+module-margin = 0
+
+line-size = 0
 line-color = ${colors.my_color0}
 
 modules-left = bspwm
-modules-center = title
+;modules-center = title
+;modules-right = date
+[bar/right_bar]
+height = 30
+offset-y = 25
+width = 1885
+background = #00000000
+foreground =  ${colors.my_foreground}
+
+font-0 = Gohu GohuFont:pixelsize=14
+font-1 = Icons:pixelsize=12
+
+module-margin = 0
+
+line-size = 0
+line-color = ${colors.my_color0}
+
+;modules-left = bspwm
+;modules-center = title
 modules-right = date
 
-wm-restack = i3
+
 
 [settings]
 format-underline = ${colors.my_color0}
@@ -67,13 +105,14 @@ label-song-maxlen = 35
 [module/bspwm]
 type = internal/bspwm
 label-focused = %name%
-label-focused-foreground = #ffeefc
-label-focused-background = #141021
+label-focused-foreground = ${colors.my_foreground}
+label-focused-background = #42423d
 label-focused-underline = #c16772
 label-focused-padding = 2
 label-occupied = %name%
 label-occupied-underline = #141021
 label-occupied-padding = 2
+label-occupied-background = #202020
 pin-workspaces = true
 label-empty = 
 [module/i3]
@@ -127,6 +166,7 @@ format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
 label = %date%%time%
 format-margin = 0
+format-background = #202020
 
 [module/ewmh]
 type = internal/xworkspaces
