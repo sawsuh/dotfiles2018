@@ -6,9 +6,9 @@
 /**** TAB BAR VARIABLES ****/
 /*********************************/
     --bg-dark: #202020;
-    --bg-light: #787376 ; 
+    --bg-light: #9dafac ; 
     --fg-dark: #eee4e5;
-    --fg-light: #eee4e5; 
+    --fg-light: #202020; 
     --tab-fonts: "Gohu Gohufont"; 
     --tab-font-size: 12pt;
     --tab-text-align: center;
@@ -18,7 +18,7 @@
 /**** URL BAR VARIABLES ****/
 /*********************************/
     --url-background: var(--bg-dark); 
-    --url-foreground: var(--fg-light);
+    --url-foreground: var(--fg-dark);
     --url-fonts: "Gohu Gohufont"; 
     --url-font-size: 12pt;
     --url-text-align: center;
@@ -42,7 +42,7 @@
 /*********************************/
 tab, .tabbrowser-tabs *|tab {
     background: var(--bg-dark) !important; 
-    color: var(--fg-light) !important;
+    color: var(--fg-dark) !important;
     font-family: var(--tab-fonts) !important;
     font-size: var(--tab-font-size); 
     text-shadow: none !important; 
@@ -120,6 +120,7 @@ tab, .tabbrowser-tabs *|tab {
     background: var(--url-background) !important;
     background-color: var(--url-background) !important;
     margin-top: 0px !important;
+    margin-bottom: 0px !important;
     border-top: 0px !important;
     border-bottom: 0px !important;}
 

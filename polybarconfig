@@ -29,15 +29,17 @@ my_color15	= #ffeefc
 [bar/main_bar]
 bottom = false
 height = 30
-width = 1885
+width = 900
 offset-y = 25
+offset-x = 510
 background = #00000000
 foreground =  ${colors.my_foreground}
 
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
 
-module-margin = 0
+module-margin = 2
+
 
 line-size = 0
 line-color = ${colors.my_color0}
@@ -47,7 +49,7 @@ modules-center = title
 ;modules-right = date
 [bar/left_bar]
 height = 30
-width = 1885
+width = 400
 offset-y = 25
 offset-x = 35
 background = #00000000
@@ -67,7 +69,8 @@ modules-left = bspwm
 [bar/right_bar]
 height = 30
 offset-y = 25
-width = 1885
+offset-x = 1435
+width = 450
 background = #00000000
 foreground =  ${colors.my_foreground}
 
@@ -95,8 +98,9 @@ label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
-label-separator = ""
-label-separator-padding = 2
+label-separator = " "
+label-separator-padding = 1
+label-padding = 1
 [module/mpd]
 type = internal/mpd
 format-online = %{A1:mpc -h 127.0.0.1 toggle:}%{A3:mpc -h 127.0.0.1 next:}%{A2:mpc -h 127.0.0.1 prev:}%{A4:mpc -h 127.0.0.1 volume +2:}%{A5: mpc -h 127.0.0.1 volume -2:}<label-song>%{A}%{A}%{A}%{A}%{A}
@@ -167,7 +171,7 @@ format-underline = ${colors.my_color0}
 label = %date%%time%
 format-margin = 0
 format-background = #202020
-
+label-padding = 1
 [module/ewmh]
 type = internal/xworkspaces
 enable-click = false
