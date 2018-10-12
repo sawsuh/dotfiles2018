@@ -1,4 +1,4 @@
-;-------------------------------------------------
+V;-------------------------------------------------
 ;                                                ;
 ;           Polybar config for my themes         ;
 ; 				                 ;
@@ -29,10 +29,10 @@ my_color15	= #ffeefc
 [bar/main_bar]
 bottom = false
 height = 30
-width = 900
+width = 700
 offset-y = 25
-offset-x = 510
-background = #00000000
+offset-x = 610
+background = #202020
 foreground =  ${colors.my_foreground}
 
 font-0 = Gohu GohuFont:pixelsize=14
@@ -40,7 +40,7 @@ font-1 = Icons:pixelsize=12
 
 module-margin = 2
 
-
+radius = 10
 line-size = 0
 line-color = ${colors.my_color0}
 
@@ -49,10 +49,11 @@ modules-center = title
 ;modules-right = date
 [bar/left_bar]
 height = 30
-width = 400
+width = 250
 offset-y = 25
 offset-x = 35
-background = #00000000
+radius = 10
+background = #202020
 foreground =  ${colors.my_foreground}
 
 font-0 = Gohu GohuFont:pixelsize=14
@@ -63,17 +64,17 @@ module-margin = 0
 line-size = 0
 line-color = ${colors.my_color0}
 
-modules-left = bspwm
+modules-center = bspwm
 ;modules-center = title
 ;modules-right = date
 [bar/right_bar]
 height = 30
 offset-y = 25
-offset-x = 1435
-width = 450
-background = #00000000
+offset-x = 1655
+width = 230
+background = #202020
 foreground =  ${colors.my_foreground}
-
+radius = 10
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
 
@@ -84,7 +85,7 @@ line-color = ${colors.my_color0}
 
 ;modules-left = bspwm
 ;modules-center = title
-modules-right = date
+modules-center = date
 
 
 
@@ -94,13 +95,14 @@ format-underline = ${colors.my_color0}
 [module/title]
 type = internal/xwindow
 label = " %title% "
+label-empty = "  "
 label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
-label-separator = " "
-label-separator-padding = 1
-label-padding = 1
+#label-separator = " "
+#label-separator-padding = 1
+#label-padding = 1
 [module/mpd]
 type = internal/mpd
 format-online = %{A1:mpc -h 127.0.0.1 toggle:}%{A3:mpc -h 127.0.0.1 next:}%{A2:mpc -h 127.0.0.1 prev:}%{A4:mpc -h 127.0.0.1 volume +2:}%{A5: mpc -h 127.0.0.1 volume -2:}<label-song>%{A}%{A}%{A}%{A}%{A}
