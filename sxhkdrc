@@ -45,10 +45,10 @@ super + g
 #
 # start file browser
 super + shift + f
-	tdrop -a -h 393 -w 704 -x 1190 -y 665 -n 1 -f "--name=stick1 -e ranger" termite
+	tdrop -a -h 397 -w 711 -x 1191 -y 665 -n 1 -f "--name=stick1 -e ranger" termite
 # start music player
 super + shift + m
-	tdrop -a -h 393 -w 704 -x 1190 -y 665 -n 2 -f "--name=stick2 -e ncmpcpp" termite
+	tdrop -a -h 397 -w 711 -x 1191 -y 665 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
 

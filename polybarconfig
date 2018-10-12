@@ -26,68 +26,43 @@ my_color13	= #abbcda
 my_color14	= #c4b7c5
 my_color15	= #ffeefc
 
-[bar/main_bar]
+[bar/main]
 bottom = false
 height = 30
-width = 700
-offset-y = 25
-offset-x = 610
 background = #202020
 foreground =  ${colors.my_foreground}
-
-font-0 = Gohu GohuFont:pixelsize=14
-font-1 = Icons:pixelsize=12
-
 module-margin = 2
-
 radius = 10
 line-size = 0
 line-color = ${colors.my_color0}
+offset-y = 25
+font-0 = Gohu GohuFont:pixelsize=14
+font-1 = Icons:pixelsize=12
 
+[bar/main_bar]
+bottom = false
+width = 700
+offset-x = 610
 ;modules-left = bspwm
 modules-center = title
 ;modules-right = date
+inherit = bar/main
+
 [bar/left_bar]
-height = 30
 width = 250
-offset-y = 25
 offset-x = 35
-radius = 10
-background = #202020
-foreground =  ${colors.my_foreground}
-
-font-0 = Gohu GohuFont:pixelsize=14
-font-1 = Icons:pixelsize=12
-
-module-margin = 0
-
-line-size = 0
-line-color = ${colors.my_color0}
-
 modules-center = bspwm
 ;modules-center = title
 ;modules-right = date
+inherit = bar/main
+
 [bar/right_bar]
-height = 30
-offset-y = 25
 offset-x = 1655
 width = 230
-background = #202020
-foreground =  ${colors.my_foreground}
-radius = 10
-font-0 = Gohu GohuFont:pixelsize=14
-font-1 = Icons:pixelsize=12
-
-module-margin = 0
-
-line-size = 0
-line-color = ${colors.my_color0}
-
 ;modules-left = bspwm
 ;modules-center = title
 modules-center = date
-
-
+inherit = bar/main
 
 [settings]
 format-underline = ${colors.my_color0}
@@ -95,12 +70,12 @@ format-underline = ${colors.my_color0}
 [module/title]
 type = internal/xwindow
 label = " %title% "
-label-empty = "  "
+label-empty = " "
 label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
-#label-separator = " "
+#label-separator = 
 #label-separator-padding = 1
 #label-padding = 1
 [module/mpd]
@@ -112,7 +87,7 @@ label-song-maxlen = 35
 type = internal/bspwm
 label-focused = %name%
 label-focused-foreground = ${colors.my_foreground}
-label-focused-background = #42423d
+label-focused-background = #787376
 label-focused-underline = #c16772
 label-focused-padding = 2
 label-occupied = %name%
