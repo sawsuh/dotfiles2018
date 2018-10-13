@@ -1,0 +1,5 @@
+configuration {
+	lines: 3;
+	font: "Gohu GohuFont 12";
+	terminal: "Termite --name=float";
+}

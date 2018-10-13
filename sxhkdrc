@@ -10,6 +10,8 @@ super + shift + Return
 
 # program launcher
 super + @space
+	rofi -show run
+super + shift + @space
 	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t' "
 
 # make sxhkd reload its configuration files:
@@ -45,10 +47,10 @@ super + g
 #
 # start file browser
 super + shift + f
-	tdrop -a -h 397 -w 711 -x 1191 -y 665 -n 1 -f "--name=stick1 -e ranger" termite
+	tdrop -a -h 208 -w 615 -x 1267 -y 833 -n 1 -f "--name=stick1 -e ranger" termite
 # start music player
 super + shift + m
-	tdrop -a -h 397 -w 711 -x 1191 -y 665 -n 2 -f "--name=stick2 -e ncmpcpp" termite
+	tdrop -a -h 208 -w 615 -x 1267 -y 833 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
 

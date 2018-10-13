@@ -29,15 +29,17 @@ my_color15	= #ffeefc
 [bar/main]
 bottom = false
 height = 30
-background = #202020
+background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 module-margin = 2
-radius = 10
+;radius = 10
 line-size = 0
 line-color = ${colors.my_color0}
 offset-y = 25
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
+border-size = 2
+border-color = #42423d
 
 [bar/main_bar]
 bottom = false
@@ -78,6 +80,7 @@ format-underline = ${colors.my_color0}
 #label-separator = 
 #label-separator-padding = 1
 #label-padding = 1
+
 [module/mpd]
 type = internal/mpd
 format-online = %{A1:mpc -h 127.0.0.1 toggle:}%{A3:mpc -h 127.0.0.1 next:}%{A2:mpc -h 127.0.0.1 prev:}%{A4:mpc -h 127.0.0.1 volume +2:}%{A5: mpc -h 127.0.0.1 volume -2:}<label-song>%{A}%{A}%{A}%{A}%{A}
@@ -96,6 +99,7 @@ label-occupied-padding = 2
 label-occupied-background = #202020
 pin-workspaces = true
 label-empty = 
+
 [module/i3]
 type = internal/i3
 ws-icon-0 = "1;one"
@@ -149,6 +153,7 @@ label = %date%%time%
 format-margin = 0
 format-background = #202020
 label-padding = 1
+
 [module/ewmh]
 type = internal/xworkspaces
 enable-click = false
