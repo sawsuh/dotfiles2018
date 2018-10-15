@@ -6,6 +6,7 @@ polybar right_bar&
 feh --bg-tile .wp.png&
 compton --config /home/prashant/.compton.conf&
  mopidy&
+ mpc repeat on&
 redshift -l -35.3:149&
 
 
