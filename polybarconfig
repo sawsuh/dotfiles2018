@@ -88,9 +88,9 @@ label-song-maxlen = 35
 
 [module/bspwm]
 type = internal/bspwm
-label-focused = %name%
+label-focused = >%name%
 label-focused-foreground = ${colors.my_foreground}
-label-focused-background = #787376
+;label-focused-background = #787376
 label-focused-underline = #c16772
 label-focused-padding = 2
 label-occupied = %name%
