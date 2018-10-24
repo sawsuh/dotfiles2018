@@ -28,7 +28,8 @@ my_color15	= #ffeefc
 
 [bar/main]
 bottom = false
-height = 30
+height = 70
+bspc rule -a Chromium desktop='^2'
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 module-margin = 2
