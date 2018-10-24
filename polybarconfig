@@ -7,7 +7,7 @@ V;-------------------------------------------------
 
 
 [colors]
-my_background 	= #202020
+my_background 	= #a5202020
 my_foreground 	= #eee4e5
 my_color0	= #c16772
 my_color1	= #545d67
@@ -28,19 +28,18 @@ my_color15	= #ffeefc
 
 [bar/main]
 bottom = false
-height = 70
-bspc rule -a Chromium desktop='^2'
-background = ${colors.my_background}
+height = 20
+background = #00000000
 foreground =  ${colors.my_foreground}
 module-margin = 2
 ;radius = 10
 line-size = 0
 line-color = ${colors.my_color0}
-offset-y = 25
+;offset-y = 50
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
-border-size = 5
-border-color = #42423d
+;border-size = 5
+;border-color = #42423d
 
 [bar/main_bar]
 bottom = false
@@ -54,7 +53,7 @@ inherit = bar/main
 [bar/left_bar]
 width = 250
 offset-x = 60
-modules-center = bspwm
+modules-left = bspwm
 ;modules-center = title
 ;modules-right = date
 inherit = bar/main
@@ -64,7 +63,7 @@ offset-x = 1580
 width = 280
 ;modules-left = bspwm
 ;modules-center = title
-modules-center = date
+modules-right = date
 inherit = bar/main
 
 [settings]
@@ -73,7 +72,7 @@ format-underline = ${colors.my_color0}
 [module/title]
 type = internal/xwindow
 label = " %title% "
-label-empty = " "
+label-empty = 
 label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
@@ -91,14 +90,15 @@ label-song-maxlen = 35
 type = internal/bspwm
 label-focused = >%name%
 label-focused-foreground = ${colors.my_foreground}
-;label-focused-background = #787376
+label-focused-background = ${colors.my_background}
 label-focused-underline = #c16772
 label-focused-padding = 2
-label-occupied = %name%
+;label-occupied = %name%
+label-occupied = 
 label-occupied-underline = #141021
 ;label-occupied-foreground = #787376
 label-occupied-padding = 2
-label-occupied-background = #202020
+;label-occupied-background = #202020
 pin-workspaces = true
 label-empty = 
 
@@ -153,7 +153,7 @@ format-prefix-foreground = ${colors.my_foreground}
 format-underline = ${colors.my_color0}
 label = %date%%time%
 format-margin = 0
-format-background = #202020
+format-background = ${colors.my_background}
 label-padding = 1
 
 [module/ewmh]
