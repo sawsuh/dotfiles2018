@@ -1,8 +1,6 @@
 #! /bin/sh
 xrandr --output DVI-D-1 --mode 1920x1080 --rate 144&
-polybar main_bar&
-polybar left_bar&
-polybar right_bar&
+polybar main&
 feh --bg-tile .wp.png&
 compton --config /home/prashant/.compton.conf&
  mopidy&

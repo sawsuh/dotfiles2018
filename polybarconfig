@@ -7,7 +7,7 @@ V;-------------------------------------------------
 
 
 [colors]
-my_background 	= #a5202020
+my_background 	= #202020
 my_foreground 	= #eee4e5
 my_color0	= #c16772
 my_color1	= #545d67
@@ -28,8 +28,8 @@ my_color15	= #ffeefc
 
 [bar/main]
 bottom = false
-height = 20
-background = #00000000
+height = 30
+background = #202020
 foreground =  ${colors.my_foreground}
 module-margin = 2
 ;radius = 10
@@ -40,6 +40,9 @@ font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
 ;border-size = 5
 ;border-color = #42423d
+modules-center = title
+modules-right = date
+modules-left = bspwm
 
 [bar/main_bar]
 bottom = false
@@ -88,13 +91,14 @@ label-song-maxlen = 35
 
 [module/bspwm]
 type = internal/bspwm
-label-focused = >%name%
+label-focused = %name%
 label-focused-foreground = ${colors.my_foreground}
-label-focused-background = ${colors.my_background}
+;label-focused-background = ${colors.my_background}
+label-focused-background = #42423d
 label-focused-underline = #c16772
 label-focused-padding = 2
-;label-occupied = %name%
-label-occupied = 
+label-occupied = %name%
+;label-occupied = 
 label-occupied-underline = #141021
 ;label-occupied-foreground = #787376
 label-occupied-padding = 2
