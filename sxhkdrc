@@ -137,3 +137,5 @@ super + alt + s
 # shift window into preselected region
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node --to-node {west,south,north,east}
+super + ctrl + u 
+	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
