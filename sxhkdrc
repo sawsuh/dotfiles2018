@@ -12,7 +12,7 @@ super + shift + Return
 super + @space
 	rofi -show run
 super + shift + @space
-	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t' "
+	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -133,7 +133,7 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 # take a screenshot
 super + alt + s
-	scrot '%Y-%m-%d_%k-%M-%s.png' -e 'mv $f /home/prashant/screenshots/'
+	scrot '%Y-%m-%d_%M-%s.png' -e 'mv $f /home/prashant/screenshots/'
 # shift window into preselected region
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node --to-node {west,south,north,east}
