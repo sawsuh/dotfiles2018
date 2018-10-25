@@ -50,7 +50,7 @@ super + shift + f
 	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
 # start music player
 super + shift + m
-	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
+	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
 
