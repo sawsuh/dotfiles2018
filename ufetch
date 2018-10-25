@@ -54,7 +54,7 @@ c1="${reset}${cyan}"			# second color
 
 cat <<EOF
 
-${c0}        /\        ${nc}${USER}${ic}@${nc}${host}${reset}
+${c0}        /\        ${nc}whats${ic} ${nc}good${reset}
 ${c0}       /^^\       ${lc}os  ${ic}arch linux${reset}
 ${c0}      /\   \      ${lc}wm  ${ic}bspwm${reset}
 ${c0}     /  ${c1}__  \     ${lc}terminal  ${ic}termite${reset}
