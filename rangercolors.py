@@ -56,7 +56,6 @@ class Default(ColorScheme):
 				if context.selected:
 					attr |= normal
 				if context.marked:
-					attr |= underline
 					fg = white
 			if context.badinfo:
 				if attr & reverse:
