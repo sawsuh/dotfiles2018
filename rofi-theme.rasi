@@ -32,10 +32,10 @@
     active-background:           @orange;
 }
 #window {
-    border:     2px;
+    border:     5px;
     text-color: @foreground;
     background-color: @background;
-    padding:    20px;
+    padding:    50px;
     border-color:                #42423d;
 }
 #mainbox {
@@ -57,6 +57,7 @@
 }
 #element {
     border: 0;
+    padding:	10px 5px 10px;
 }
 #element.normal.normal {
     text-color: @normal-foreground;
@@ -71,8 +72,8 @@
     background-color: @active-background;
 }
 #element.selected.normal {
-    text-color: @selected-normal-foreground;
-    background-color: @selected-normal-background;
+    text-color: @normal-foreground;
+    background-color: @border-color;
 }
 #element.selected.urgent {
     text-color: @selected-urgent-foreground;
@@ -98,12 +99,13 @@
     border: 1px dash 0px 0px ;
 }
 #button selected {
-    text-color: @selected-normal-foreground;
-    background-color: @selected-normal-background;
+    text-color: @normal-background;
+    background-color: @normal-foreground;
 }
 #inputbar {
     spacing: 0;
     border: 0px ;
+    padding: 10px 10px 10px;
 }
 #button normal {
     text-color: @foreground;
