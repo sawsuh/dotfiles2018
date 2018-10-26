@@ -12,9 +12,9 @@
 #   Note:           if using compton w/ shadows, exclude "class_g = 'slop'"
 #
 
-M=2                 # slop border width
+M=5                 # slop border width
 
-REC=$(slop -t 0 -b $M -c 1,1,1,1 -f "%w %h %x %y" --nokeyboard) || exit 1
+REC=$(slop -t 0 -b $M -c 0.9296875,0.890625,0.89453125,1 -f "%w %h %x %y" --nokeyboard) || exit 1
 #REC=$(xrectsel) || exit 1
 
 IFS=' ' read -r W H X Y <<< "$REC"
@@ -37,4 +37,4 @@ if [ "$W" -gt "1" ]; then
             break
         fi
     done
-fi
+fi 
