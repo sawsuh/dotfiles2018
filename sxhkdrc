@@ -10,7 +10,7 @@ super + shift + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	rofi -show run -display-run ">  ~ "
 super + shift + @space
 	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 
