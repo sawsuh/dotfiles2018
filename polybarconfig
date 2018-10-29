@@ -28,13 +28,13 @@ my_color15	= #ffeefc
 
 [bar/main]
 bottom = false
-height = 30
+height = 35
 background = #202020
 foreground =  ${colors.my_foreground}
 module-margin = 2
 ;radius = 10
-line-size = 0
-line-color = ${colors.my_color0}
+line-size = 5
+line-color = ${colors.my_background}
 ;offset-y = 50
 font-0 = Gohu GohuFont:pixelsize=14
 font-1 = Icons:pixelsize=12
@@ -43,6 +43,7 @@ font-1 = Icons:pixelsize=12
 modules-center = title
 modules-right = date
 modules-left = bspwm
+padding = 1
 
 [bar/main_bar]
 bottom = false
@@ -79,7 +80,7 @@ label-empty =
 label-maxlen = 60
 format-background = ${colors.my_background}
 format-foreground = ${colors.my_foreground}
-format-underline = ${colors.my_color0}
+format-underline = ${colors.my_background}
 #label-separator = 
 #label-separator-padding = 1
 #label-padding = 1
@@ -95,14 +96,17 @@ label-focused = %name%
 label-focused-foreground = ${colors.my_foreground}
 ;label-focused-background = ${colors.my_background}
 label-focused-background = #42423d
-label-focused-underline = #c16772
+label-focused-underline = ${colors.my_background}
 label-focused-padding = 2
+label-focused-overline = ${colors.my_background}
+
 label-occupied = %name%
 ;label-occupied = 
-label-occupied-underline = #141021
+label-occupied-underline = ${colors.my_background}
 ;label-occupied-foreground = #787376
 label-occupied-padding = 2
 ;label-occupied-background = #202020
+
 pin-workspaces = true
 label-empty = 
 
@@ -154,7 +158,7 @@ type = internal/date
 interval = 5
 time = " %{A3:systemctl suspend:}%a %b %d, %I:%M %p%{A} "
 format-prefix-foreground = ${colors.my_foreground}
-format-underline = ${colors.my_color0}
+format-underline = ${colors.my_background}
 label = %date%%time%
 format-margin = 0
 format-background = ${colors.my_background}
