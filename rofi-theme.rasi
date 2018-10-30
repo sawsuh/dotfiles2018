@@ -45,19 +45,19 @@
 /*#message {
     border:     1px dash 0px 0px ;
     text-color: @separatorcolor;
-    padding:    2px 0px 0px ;
+    padding:    0px 0px 0px ;
 }*/
 #textbox {
     text-color: @foreground;
 }
 #listview {
     border:       0px 0px 0px ;
-    padding:      5px 5px 5px ;
+    padding:      0px 0px 0px ;
     text-color: @foreground;
 }
 #element {
     border: 0;
-    padding:	10px 5px 10px;
+    padding:	0px 0px 0px;
 }
 #element.normal.normal {
     text-color: @normal-foreground;
@@ -105,7 +105,7 @@
 #inputbar {
     spacing: 0;
     border: 0px ;
-    padding: 10px 10px 10px;
+    padding: 0px 0px 0px;
 }
 #button normal {
     text-color: @foreground;
