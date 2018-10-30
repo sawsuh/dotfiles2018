@@ -1,8 +1,8 @@
 #! /bin/sh
 xrandr --output DVI-D-1 --mode 1920x1080 --rate 144&
 polybar main&
-feh --bg-tile .w.gif&
-#xwinwrap -g 1920x1080 -ov -ni -s -nf -- gifview -w WID /home/prashant/w.gif -a&
+#feh --bg-tile .w.gif&
+xwinwrap -g 1920x1080 -ov -ni -s -nf -- mpv -wid WID --hwdec --no-keepaspect --loop /home/prashant/gifs/video.mp4&
 compton --config /home/prashant/.compton.conf&
  mopidy&
 redshift -l -35.3:149&
