@@ -9,9 +9,9 @@ super + shift + Return
 	bash /home/prashant/.t.sh
 
 # program launcher
-super + @space
-	rofi -show run -display-run ">  ~ "
 super + shift + @space
+	rofi -show run -display-run ">  ~ "
+super + @space
 	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 
 # make sxhkd reload its configuration files:
@@ -133,9 +133,10 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 # take a screenshot
 super + alt + s
-	scrot '%Y-%m-%d_%M-%s.png' -e 'mv $f /home/prashant/screenshots/'
+	scrot -z ~/screenshots/$(date +%F-%T).png
 # shift window into preselected region
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node --to-node {west,south,north,east}
+# open ufetch window
 super + ctrl + u 
 	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
