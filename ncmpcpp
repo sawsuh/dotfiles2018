@@ -27,7 +27,7 @@ selected_item_suffix = "$/b"
 song_window_title_format = "{%a - }{%t}|{%f}"
 
 #song_columns_list_format = "(8)[white]{l} (28)[magenta]{a} (28)[white]{b} (50)[magenta]{t}"
-song_columns_list_format = "(35)[white]{a} (57)[magenta]{t} (8)[white]{lr}"
+song_columns_list_format = "(40)[cyan]{a} (50)[magenta]{t} (8)[white]{lr}"
 discard_colors_if_item_is_selected = "yes"
 progressbar_look = "── "
 user_interface = "classic" (classic/alternative)
