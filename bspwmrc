@@ -6,7 +6,7 @@ xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/.gifs/video.mp4 --no-osc --no-os
 compton --config /home/prashant/.compton.conf&
  mopidy&
 redshift -l -35.3:149&
-
+xrdb ~/.Xresources
 
 sxhkd &
 
