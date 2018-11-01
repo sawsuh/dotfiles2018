@@ -27,8 +27,11 @@ if [ "$W" -gt "1" ]; then
     let W=$(( $W / 1))
     let H=$(( $H / 1))
 
-    termite --geometry=$W"x"$H"+"$X"+"$Y --name="float"&
-
+    urxvt -name "float"&
+active="$(xdotool getwindowfocus)"
+xdotool "windowmove" "$active" "$X" "$Y"
+xdotool "windowsize" "$active" "$W" "$H"
+wmctrl -ia "$active"
     for i in {0..49}; do # timeout
         if ps -p $! >/dev/null; then
             sleep .1

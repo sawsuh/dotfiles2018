@@ -4,7 +4,8 @@
 
 # terminal emulator
 super + Return
-	termite --name=term
+	urxvt -name term
+#	termite --name=term
 super + shift + Return
 	bash /home/prashant/.t.sh
 
@@ -12,8 +13,8 @@ super + shift + Return
 super + shift + @space
 	rofi -show run -display-run ">  ~ "
 super + @space
-	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
-
+        urxvt -name stick -g 90x1 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
+#	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -47,10 +48,12 @@ super + g
 #
 # start file browser
 super + shift + f
-	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
+	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "-name stick1 -e ranger" urxvt
+#	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
 # start music player
 super + shift + m
-	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
+	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+#	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
 

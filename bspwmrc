@@ -38,7 +38,7 @@ bspc rule -a Termite:stick2 state=floating sticky=on
 bspc rule -a Termite:float state=floating
 bspc rule -a URxvt:stick state=floating sticky=on center
 bspc rule -a URxvt:stick1 state=floating sticky=on
-bspc rule -a URxvt stick2 state=floating sticky=on
+bspc rule -a URxvt:stick2 state=floating sticky=on
 bspc rule -a URxvt:float state=floating
 bspc rule -a Steam:"Friends List" state=floating
 #bspc rule -a Termite:term state=tiled
