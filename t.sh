@@ -24,14 +24,14 @@ aW=$(( $W + ( $M * 2 ) )) && aH=$(( $H + ( $M * 2 ) ))
 
 if [ "$W" -gt "1" ]; then
     # Calculate width and height to block/font size
-    let W=$(( $W / 1))
-    let H=$(( $H / 1))
+    let W=$(( $W / 7))
+    let H=$(( $H / 11))
 
-    urxvt -name "float"&
-active="$(xdotool getwindowfocus)"
-xdotool "windowmove" "$active" "$X" "$Y"
-xdotool "windowsize" "$active" "$W" "$H"
-wmctrl -ia "$active"
+    urxvt -name "float" -g $W"x"$H"+"$X"+"$Y&
+#active="$(xdotool getwindowfocus)"
+#xdotool "windowmove" "$active" "$X" "$Y"
+#xdotool "windowsize" "$active" "$W" "$H"
+#wmctrl -ia "$active"
     for i in {0..49}; do # timeout
         if ps -p $! >/dev/null; then
             sleep .1
