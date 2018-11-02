@@ -6,15 +6,18 @@
 super + Return
 	urxvt -name term
 #	termite --name=term
+
 super + shift + Return
 	bash /home/prashant/.t.sh
 
 # program launcher
 super + shift + @space
 	rofi -show run -display-run ">  ~ "
+
 super + @space
         urxvt -name stick -g 90x1 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
 #	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -46,10 +49,12 @@ super + g
 #
 # state/flags
 #
+
 # start file browser
 super + shift + f
 	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "-name stick1 -e ranger" urxvt
 #	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
+
 # start music player
 super + shift + m
 	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
@@ -134,12 +139,16 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
 # take a screenshot
 super + alt + s
 	scrot -z ~/screenshots/$(date +%F-%T).png
+
 # shift window into preselected region
 super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node --to-node {west,south,north,east}
+
 # open ufetch window
 super + ctrl + u 
-	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
+	urxvt -name float -g 30x9 -hold -e zsh -c ufetch   
+#	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
