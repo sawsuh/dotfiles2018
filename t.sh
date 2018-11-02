@@ -28,7 +28,7 @@ if [ "$W" -gt "1" ]; then
     let H=$(( $H / 11))
 
     urxvt -name "float" -g $W"x"$H"+"$X"+"$Y&
-#active="$(xdotool getwindowfocus)"
+#active="$(xdotool getactivewindow)"
 #xdotool "windowmove" "$active" "$X" "$Y"
 #xdotool "windowsize" "$active" "$W" "$H"
 #wmctrl -ia "$active"

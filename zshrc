@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [[ -n ${LAUNCHER} ]]; then
     bindkey -s "^M" " & \n"
-    bindkey -s "^[" "\r; exit \n"
+    bindkey -s "^[" "^U exit \n"
     return
 fi
 ZSH_DISABLE_COMPFIX=true
