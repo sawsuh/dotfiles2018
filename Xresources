@@ -34,11 +34,11 @@
 ! white
 *.color7:       #787376
 *.color15:      #eee4e5
-*font: xft:Gohu Gohufont:size=11
+*font: xft:t cherry:size=13
 *scrollBar: false
 *internalBorder: 50
 *lineSpace:    5
-*letterSpace: 0
+*letterSpace: -2
 Xft.autohint:           0
 Xft.lcdfilter:          lcddefault
 Xft.hinting:            1
