@@ -9,7 +9,7 @@
     --bg-light: #9dafac ; 
     --fg-dark: #eee4e5;
     --fg-light: #202020; 
-    --tab-fonts: "Gohu Gohufont"; 
+    --tab-fonts: "t cherry"; 
     --tab-font-size: 12pt;
     --tab-text-align: center;
     --tab-min-height: 25px !important;
@@ -19,7 +19,7 @@
 /*********************************/
     --url-background: var(--bg-dark); 
     --url-foreground: var(--fg-dark);
-    --url-fonts: "Gohu Gohufont"; 
+    --url-fonts: "t cherry"; 
     --url-font-size: 12pt;
     --url-text-align: center;
 }
@@ -130,6 +130,12 @@ tab, .tabbrowser-tabs *|tab {
 }
 
 
+:-moz-any(#content,#appcontent) browser{
+ margin-right:-14px!important;
+ overflow-y:scroll;
+ margin-bottom:-14px!important;
+ overflow-x:scroll;
+}
 /*********************************/
 /**** OTHER CONFIGS ****/
 /*********************************/
