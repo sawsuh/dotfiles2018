@@ -102,3 +102,4 @@ ZSH_DISABLE_COMPFIX=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 task
+export PATH=~/.local/bin/:$PATH
