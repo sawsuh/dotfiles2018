@@ -26,9 +26,13 @@ super + Escape
 # bspwm hotkeys
 #
 
-# quit bspwm normally
+# suspend
 super + alt + Escape
-	bspc quit
+	systemctl suspend
+
+# quit bspwm 
+super + alt + shift + Escape
+	pkill bspwm
 
 # close and kill
 super + {_,shift + }w
