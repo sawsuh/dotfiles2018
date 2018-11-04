@@ -150,5 +150,5 @@ super + ctrl + shift + {Left,Down,Up,Right}
 
 # open ufetch window
 super + ctrl + u 
-	urxvt -name float -g 30x9 -hold -e zsh -c ufetch   
+	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
 #	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
