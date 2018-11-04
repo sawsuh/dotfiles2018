@@ -45,6 +45,7 @@ modules-center = title
 modules-right = date
 modules-left = bspwm
 padding = 1
+override-redirect = false
 
 [bar/main_bar]
 bottom = false
@@ -169,4 +170,5 @@ label-padding = 1
 type = internal/xworkspaces
 enable-click = false
 enable-scroll = false
+
 
