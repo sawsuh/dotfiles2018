@@ -52,12 +52,12 @@ super + g
 
 # start file browser
 super + shift + f
-	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "-name stick1 -e ranger" urxvt
+	tdrop -a -h 309 -w 721 -x 1179 -y 751 -n 1 -f "-name stick1 -e ranger" urxvt
 #	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
 
 # start music player
 super + shift + m
-	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+	tdrop -a -h 309 -w 721 -x 10 -y 751 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
 #	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
 
 # set the window state
@@ -100,9 +100,17 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# send to the given desktop
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}'
+
+# focus the given desktop
+#super + {1-9}
+#	bspc desktop -f '^{1-9}'
+#super + {1-9}
+#	echo '{1-9}' >> /home/prashant/a.txt
+super + {1-9,0}
+	bash ~/.deskswitch.sh {1-9,10}
 
 #
 # preselect
@@ -152,3 +160,7 @@ super + ctrl + shift + {Left,Down,Up,Right}
 super + ctrl + u 
 	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
 #	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
+
+#send time notification
+super + alt + t
+	dunstify -r 1 "$(date +'%a %d %b, %I %M %P')"
