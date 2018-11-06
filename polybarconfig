@@ -150,9 +150,8 @@ label-urgent-padding = 2
 
 [module/date]
 type = custom/script
-exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
-interval = 5
-click-right = systemctl suspend
+exec = bash ~/.date.sh
+tail = true
 
 [module/ewmh]
 type = internal/xworkspaces
