@@ -167,4 +167,4 @@ super + ctrl + u
 
 #send time notification
 super + alt + t 
-	dunstify -u critical -r 1 "$(date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]')"
+	dunstify -r 1 "$(date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]')"
