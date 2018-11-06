@@ -165,6 +165,6 @@ super + ctrl + u
 	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
 #	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
 
-#send time notification
+#toggle time
 super + alt + t 
-	dunstify -r 1 "$(date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]')"
+	polybar-msg cmd toggle
