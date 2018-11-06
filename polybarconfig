@@ -150,8 +150,8 @@ label-urgent-padding = 2
 
 [module/date]
 type = custom/script
-exec = bash ~/.date.sh
-tail = true
+exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
+interval = 5
 
 [module/ewmh]
 type = internal/xworkspaces
