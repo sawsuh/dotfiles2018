@@ -46,12 +46,12 @@
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
     # to the font height and padding.
-    notification_height = 112
+    notification_height = 0 
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 2
+    separator_height = 0
 
     # Padding between text and separator.
     padding = 50
@@ -61,7 +61,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 5
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     frame_color = "#42423d"
@@ -89,7 +89,7 @@
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
-    line_height = 60
+    line_height = 17
 
     # Possible values are:
     # full: Allow a small subset of html markup in notifications:
@@ -125,7 +125,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "%s %b"
+    format = "%s \n %b"
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
