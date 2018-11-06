@@ -28,24 +28,28 @@ my_color15	= #ffeefc
 
 [bar/main]
 bottom = false
-height = 35
-background = #202020
+height = 40
+width = 190
+offset-y = 10
+offset-x = 1720
+background = #BB202020
 foreground =  ${colors.my_foreground}
 module-margin = 2
 ;radius = 10
-line-size = 5
-line-color = ${colors.my_background}
+;line-size = 5
+;line-color = ${colors.my_background}
 ;offset-y = 50
 ;font-0 = Gohu GohuFont:pixelsize=14
 font-0 = t cherry:pixelsize=13
 font-1 = Icons:pixelsize=12
 ;border-size = 5
 ;border-color = #42423d
-modules-center = title
-modules-right = date
-modules-left = bspwm
+modules-center = date
+;modules-right = date
+;modules-left = bspwm
 padding = 1
-override-redirect = false
+override-redirect = true
+wm-restack = true
 
 [bar/main_bar]
 bottom = false
@@ -160,10 +164,10 @@ type = internal/date
 interval = 5
 time = " %{A3:systemctl suspend:}%a %b %d, %I:%M %p%{A} "
 format-prefix-foreground = ${colors.my_foreground}
-format-underline = ${colors.my_background}
+;format-underline = ${colors.my_background}
 label = %date%%time%
 format-margin = 0
-format-background = ${colors.my_background}
+;format-background = ${colors.my_background}
 label-padding = 1
 
 [module/ewmh]
