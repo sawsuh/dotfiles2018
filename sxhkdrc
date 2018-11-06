@@ -168,6 +168,7 @@ super + ctrl + u
 #hide time
 super + alt + t 
 	xdo hide -N "Polybar"
+
 #show time
 super + ctrl + t
 	xdo show -N "Polybar"
