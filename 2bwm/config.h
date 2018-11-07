@@ -96,20 +96,20 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
     {  MOD |SHIFT,        XK_Left,          resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
     // Resize a window slower
-    {  MOD |SHIFT|CONTROL,XK_k,          resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
-    {  MOD |SHIFT|CONTROL,XK_j,          resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
-    {  MOD |SHIFT|CONTROL,XK_l,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT_SLOW}},
-    {  MOD |SHIFT|CONTROL,XK_h,          resizestep,        {.i=TWOBWM_RESIZE_LEFT_SLOW}},
+    {  MOD |SHIFT|CONTROL,XK_Up,          resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
+    {  MOD |SHIFT|CONTROL,XK_Down,          resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
+    {  MOD |SHIFT|CONTROL,XK_Right,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT_SLOW}},
+    {  MOD |SHIFT|CONTROL,XK_Left,          resizestep,        {.i=TWOBWM_RESIZE_LEFT_SLOW}},
     // Move a window
     {  MOD ,              XK_Up,          movestep,          {.i=TWOBWM_MOVE_UP}},
     {  MOD ,              XK_Down,          movestep,          {.i=TWOBWM_MOVE_DOWN}},
     {  MOD ,              XK_Right,          movestep,          {.i=TWOBWM_MOVE_RIGHT}},
     {  MOD ,              XK_Left,          movestep,          {.i=TWOBWM_MOVE_LEFT}},
     // Move a window slower
-    {  MOD |CONTROL,      XK_k,          movestep,          {.i=TWOBWM_MOVE_UP_SLOW}},
-    {  MOD |CONTROL,      XK_j,          movestep,          {.i=TWOBWM_MOVE_DOWN_SLOW}},
-    {  MOD |CONTROL,      XK_l,          movestep,          {.i=TWOBWM_MOVE_RIGHT_SLOW}},
-    {  MOD |CONTROL,      XK_h,          movestep,          {.i=TWOBWM_MOVE_LEFT_SLOW}},
+    {  MOD |CONTROL,      XK_Up,          movestep,          {.i=TWOBWM_MOVE_UP_SLOW}},
+    {  MOD |CONTROL,      XK_Down,          movestep,          {.i=TWOBWM_MOVE_DOWN_SLOW}},
+    {  MOD |CONTROL,      XK_Right,          movestep,          {.i=TWOBWM_MOVE_RIGHT_SLOW}},
+    {  MOD |CONTROL,      XK_Left,          movestep,          {.i=TWOBWM_MOVE_LEFT_SLOW}},
     // Teleport the window to an area of the screen.
     // Center:
     {  MOD ,              XK_g,          teleport,          {.i=TWOBWM_TELEPORT_CENTER}},
