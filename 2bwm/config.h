@@ -90,20 +90,20 @@ static key keys[] = {
     // Kill a window
     {  MOD ,              XK_q,          deletewin,         {}},
     // Resize a window
-    {  MOD |SHIFT,        XK_k,          resizestep,        {.i=TWOBWM_RESIZE_UP}},
-    {  MOD |SHIFT,        XK_j,          resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
-    {  MOD |SHIFT,        XK_l,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
-    {  MOD |SHIFT,        XK_h,          resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
+    {  MOD |SHIFT,        XK_Up,          resizestep,        {.i=TWOBWM_RESIZE_UP}},
+    {  MOD |SHIFT,        XK_Down,          resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
+    {  MOD |SHIFT,        XK_Right,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
+    {  MOD |SHIFT,        XK_Left,          resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
     // Resize a window slower
     {  MOD |SHIFT|CONTROL,XK_k,          resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_j,          resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_l,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_h,          resizestep,        {.i=TWOBWM_RESIZE_LEFT_SLOW}},
     // Move a window
-    {  MOD ,              XK_k,          movestep,          {.i=TWOBWM_MOVE_UP}},
-    {  MOD ,              XK_j,          movestep,          {.i=TWOBWM_MOVE_DOWN}},
-    {  MOD ,              XK_l,          movestep,          {.i=TWOBWM_MOVE_RIGHT}},
-    {  MOD ,              XK_h,          movestep,          {.i=TWOBWM_MOVE_LEFT}},
+    {  MOD ,              XK_Up,          movestep,          {.i=TWOBWM_MOVE_UP}},
+    {  MOD ,              XK_Down,          movestep,          {.i=TWOBWM_MOVE_DOWN}},
+    {  MOD ,              XK_Right,          movestep,          {.i=TWOBWM_MOVE_RIGHT}},
+    {  MOD ,              XK_Left,          movestep,          {.i=TWOBWM_MOVE_LEFT}},
     // Move a window slower
     {  MOD |CONTROL,      XK_k,          movestep,          {.i=TWOBWM_MOVE_UP_SLOW}},
     {  MOD |CONTROL,      XK_j,          movestep,          {.i=TWOBWM_MOVE_DOWN_SLOW}},
@@ -182,7 +182,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
     {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
     // Start programs
-    {  MOD ,              XK_w,          start,             {.com = menucmd}},
+    {  MOD ,              XK_space,          start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
     {  MOD ,              XK_Return,          start,             {.com = term}},
@@ -190,7 +190,7 @@ static key keys[] = {
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
-    {  MOD ,              XK_space,      halfandcentered,   {.i=0}},
+    {  MOD ,              XK_w,          halfandcentered,   {.i=0}},
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             1)
        DESKTOPCHANGE(     XK_2,                             2)
