@@ -45,6 +45,7 @@ static const char *files[]   = { "bash", "/home/prashant/.scripts/files.sh", NUL
 static const char *music[]   = { "bash", "/home/prashant/.scripts/music.sh", NULL };
 static const char *term[]   = { "bash", "/home/prashant/.scripts/term.sh", NULL };
 static const char *datetoggle[]   = { "bash", "/home/prashant/.scripts/datetoggle.sh", NULL };
+static const char *suspendcmd[]   = { "systemctl", "suspend", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -187,6 +188,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
     {  MOD ,              XK_Return,          start,             {.com = term}},
     {  MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
+    {  MOD , 		  XK_Escape, 	start,		    {.com = suspendcmd}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
