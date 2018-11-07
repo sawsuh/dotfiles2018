@@ -1,44 +1,44 @@
 ! special
-*.foreground:   #eee4e5
-*.background:   #202020
-*.cursorColor:  #eee4e5
+URxvt.foreground:   #eee4e5
+URxvt.background:   #202020
+URxvt.cursorColor:  #eee4e5
 
 ! black
-*.color0:       #202020
-*.color8:       #42423d
+URxvt.color0:       #202020
+URxvt.color8:       #42423d
 
 ! red
-*.color1:       #e47ca3
-*.color9:       #ff8eb4
+URxvt.color1:       #e47ca3
+URxvt.color9:       #ff8eb4
 
 ! green
-*.color2:       #75a393
-*.color10:      #8cc2aa
+URxvt.color2:       #75a393
+URxvt.color10:      #8cc2aa
 
 ! yellow
-*.color3:       #e1a7b5
-*.color11:      #ffbec9
+URxvt.color3:       #e1a7b5
+URxvt.color11:      #ffbec9
 
 ! blue
-*.color4:       #acc6bc
-*.color12:      #c8e5d5
+URxvt.color4:       #acc6bc
+URxvt.color12:      #c8e5d5
 
 ! magenta
-*.color5:       #ae8497
-*.color13:      #cc9cad
+URxvt.color5:       #ae8497
+URxvt.color13:      #cc9cad
 
 ! cyan
-*.color6:       #9dafac
-*.color14:      #bacec6
+URxvt.color6:       #9dafac
+URxvt.color14:      #bacec6
 
 ! white
-*.color7:       #787376
-*.color15:      #eee4e5
-*font: xft:t cherry:size=13
-*scrollBar: false
-*internalBorder: 50
-*lineSpace:    5
-*letterSpace: -2
+URxvt.color7:       #787376
+URxvt.color15:      #eee4e5
+URxvt.font: xft:t cherry:size=13
+URxvt.scrollBar: false
+URxvt.internalBorder: 50
+URxvt.lineSpace:    5
+URxvt.letterSpace: -2
 Xft.autohint:           0
 Xft.lcdfilter:          lcddefault
 Xft.hinting:            1
@@ -47,3 +47,4 @@ Xft.antialias:          1
 Xft.rgba: rgb
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
+twobwm.enable_compton: true
