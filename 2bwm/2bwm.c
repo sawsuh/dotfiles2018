@@ -872,7 +872,7 @@ newwin(xcb_generic_event_t *ev)
 
 	centerpointer(e->window,client);
 	updateclientlist();
-
+	setfocus(client);
 	if (!client->maxed)
 		setborders(client,true);
 }
@@ -2890,8 +2890,8 @@ enternotify(xcb_generic_event_t *ev)
 		if (NULL == client)
 			return;
 
-		setfocus(client);
-		setborders(client,true);
+/*		setfocus(client);
+*		setborders(client,true); */
 	}
 }
 
