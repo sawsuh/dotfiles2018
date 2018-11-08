@@ -870,7 +870,7 @@ newwin(xcb_generic_event_t *ev)
 	xcb_change_property(conn, XCB_PROP_MODE_REPLACE, client->id,
 			ewmh->_NET_WM_STATE, ewmh->_NET_WM_STATE, 32, 2, data);
 
-	centerpointer(e->window,client);
+/*	centerpointer(e->window,client);*/
 	updateclientlist();
 	setfocus(client);
 	if (!client->maxed)
@@ -1558,7 +1558,7 @@ focusnext_helper(bool arg)
 	/* if NULL focuswin */
 	if (NULL != cl && focuswin != cl && cl->iconic==false) {
 		raisewindow(cl->id);
-		centerpointer(cl->id,cl);
+	/*	centerpointer(cl->id,cl);*/
 		setfocus(cl);
 	}
 }
