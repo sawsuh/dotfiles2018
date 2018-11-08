@@ -187,7 +187,7 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
     {  MOD ,              XK_Return,          start,             {.com = term}},
-    {  MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
+    { MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
     {  MOD , 		  XK_Escape, 	start,		    {.com = suspendcmd}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
