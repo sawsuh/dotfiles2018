@@ -2381,7 +2381,8 @@ deletewin()
 
 		xcb_icccm_get_wm_protocols_reply_wipe(&protocols);
     }
-    if (!use_delete) xcb_kill_client(conn, focuswin->id);
+	if (!use_delete) xcb_kill_client(conn, focuswin->id);
+	focusnext_helper(1);
 }
 
 void
@@ -2855,6 +2856,7 @@ destroynotify(xcb_generic_event_t *ev)
 		forgetwin(cl->id);
 
 	updateclientlist();
+	focusnext_helper(1);
 }
 
 void
