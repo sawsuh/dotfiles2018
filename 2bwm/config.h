@@ -173,22 +173,22 @@ static key keys[] = {
     // Make the window stay on all workspaces
     {  MOD ,              XK_f,          fix,               {}},
     // Move the cursor
-    {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
-    {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
-    {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
-    {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
-    // Move the cursor faster
-    {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP}},
-    {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN}},
-    {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
-    {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}},
+  /*  {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
+  *  {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
+  *  {  MOD ,              XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT_SLOW}},
+  *  {  MOD ,              XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT_SLOW}},
+  *  // Move the cursor faster
+  *  {  MOD |SHIFT,        XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP}},
+  *  {  MOD |SHIFT,        XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN}},
+  *  {  MOD |SHIFT,        XK_Right,      cursor_move,       {.i=TWOBWM_CURSOR_RIGHT}},
+  *  {  MOD |SHIFT,        XK_Left,       cursor_move,       {.i=TWOBWM_CURSOR_LEFT}}, */
     // Start programs
-    {  MOD ,              XK_space,          start,             {.com = menucmd}},
+    {  MOD ,              XK_space,      start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
-    {  MOD ,              XK_Return,          start,             {.com = term}},
-    { MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
-    {  MOD , 		  XK_Escape, 	start,		    {.com = suspendcmd}},
+    {  MOD ,              XK_Return,     start,             {.com = term}},
+    {  MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
+    {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
