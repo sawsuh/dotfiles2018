@@ -30,5 +30,5 @@ mopidy&
 redshift -l -35.3:149&
 xrdb ~/.Xresources
 dunst&
-sxhkd -c ~/.config/sxhkd/sxhkdrcw &
+sxhkd&
 xsetroot -cursor_name left_ptr&
