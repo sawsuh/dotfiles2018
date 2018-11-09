@@ -38,31 +38,17 @@ super + alt + shift + Escape
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
-
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest node
-super + g
-	bspc node -s biggest
-
 #
 # state/flags
 #
 
 # start file browser
 super + shift + f
-	tdrop -a -h 309 -w 721 -x 1179 -y 751 -n 1 -f "-name stick1 -e ranger" urxvt
-#	tdrop -a -h 309 -w 721 -x 1129 -y 701 -n 1 -f "--name=stick1 -e ranger" termite
+	tdrop -a -h 309 -w 721 -x 1183 -y 755 -n 1 -f "-name stick1 -e ranger" urxvt
 
 # start music player
 super + shift + m
-	tdrop -a -h 309 -w 721 -x 10 -y 751 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
-#	tdrop -a -h 309 -w 721 -x 60 -y 701 -n 2 -f "--name=stick2 -e ncmpcpp" termite
+	tdrop -a -h 309 -w 721 -x 10 -y 755 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
 
 # set the window state
 
@@ -81,10 +67,6 @@ super + ctrl + {m,x,y,z}
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
-
 
 # focus the next in the current desktop
 super + {_,shift + }Tab
@@ -94,28 +76,15 @@ super + {_,shift + }Tab
 super + {c,v}
 	bspc desktop -f {prev,next}.local; \
 	dunstify -r 1 "$(bspc query -D -d focused --names)"
-# focus the last node/desktop
-#super + {grave,Tab}
-#	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
 
 # send to the given desktop
 super + shift + {1-9,0}
 	bspc node -d '^{1-9,10}'
 
 # focus the given desktop
-#super + {1-9}
-#	bspc desktop -f '^{1-9}'
-#super + {1-9}
-#	echo '{1-9}' >> /home/prashant/a.txt
 super + {1-9,0}
-	bash ~/.deskswitch.sh {1-9,10}
-
+	bspc desktop -f '^{1-9,0}'; \
+	dunstify -r 1 "$(bspc query -D -d focused --names)"
 #
 # preselect
 #
@@ -124,17 +93,9 @@ super + {1-9,0}
 super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9}
-
 # cancel the preselection for the focused node
 super + ctrl + space
 	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -147,10 +108,6 @@ super + alt + {Left,Down,Up,Right}
 # contract a window by moving one of its side inward
 super + alt + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # take a screenshot
 super + alt + s

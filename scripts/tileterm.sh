@@ -1,0 +1,1 @@
+urxvt -name "tiled"

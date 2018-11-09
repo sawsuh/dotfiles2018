@@ -4,7 +4,3 @@ if xwininfo -all -id $(xdotool search --class 'polybar') | grep -q IsUnMapped; t
 else
 	xdo hide -N "Polybar"
 fi
-if ! pgrep "polybar" > /dev/null
-then
-	polybar main > /dev/null
-fi
