@@ -1,0 +1,34 @@
+#!/bin/sh
+
+waitron wm_config border_width 5
+waitron wm_config internal_border_width 3
+waitron wm_config color_focused 0x202020
+waitron wm_config color_unfocused 0x202020
+waitron wm_config internal_color_focused 0xffeefc
+waitron wm_config internal_color_unfocused 0x42423d
+
+waitron wm_config gap_width all 5
+waitron wm_config grid_gap_width 0
+
+waitron wm_config cursor_position center
+
+waitron wm_config groups_nr 10
+waitron wm_config enable_sloppy_focus false
+waitron wm_config enable_resize_hints false
+waitron wm_config sticky_windows false
+waitron wm_config enable_borders true
+waitron wm_config enable_last_window_focusing true
+waitron wm_config apply_settings true
+waitron wm_config replay_click_on_focus true
+waitron wm_config pointer_actions move resize_side resize_corner
+waitron wm_config pointer_modifier super
+waitron wm_config click_to_focus any
+xrandr --output DVI-D-1 --mode 1920x1080 --rate 144&
+xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/.gifs/H1.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-input-default-bindings --hwdec --log-file=/home/prashant/.mpvlog.log&
+compton --config /home/prashant/.compton.conf&
+mopidy&
+redshift -l -35.3:149&
+xrdb ~/.Xresources
+dunst&
+sxhkd -c ~/.config/sxhkd/sxhkdrcw &
+xsetroot -cursor_name left_ptr&
