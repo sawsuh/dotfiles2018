@@ -86,17 +86,17 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 
-# focus the next/previous node in the current desktop
-super + {_,shift + }c
+# focus the next in the current desktop
+super + {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
+super + {c,v}
+	bspc desktop -f {prev,next}.local; \
+	dunstify -r 1 "$(bspc query -D -d focused --names)"
 # focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+#super + {grave,Tab}
+#	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
@@ -154,7 +154,8 @@ super + {Left,Down,Up,Right}
 
 # take a screenshot
 super + alt + s
-	scrot -z ~/screenshots/$(date +%F-%T).png
+	scrot -z ~/screenshots/$(date +%F-%T).png; \
+	dunstify -r 1 "screenshot taken"
 
 # shift window into preselected region
 super + ctrl + shift + {Left,Down,Up,Right}

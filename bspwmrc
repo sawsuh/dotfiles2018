@@ -30,7 +30,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a mpv state=floating
-bspc rule -a feh state=floating
+bspc rule -a "*:sxiv" state=floating
 #bspc rule -a MuPDF state=floating
 bspc rule -a Termite:stick state=floating sticky=on center
 bspc rule -a Termite:stick1 state=floating sticky=on
@@ -42,6 +42,7 @@ bspc rule -a URxvt:stick2 state=floating sticky=on
 bspc rule -a URxvt:float state=floating
 bspc rule -a Steam:"Friends List" state=floating
 bspc rule -a "polybar" layer=above
+bspc rule -a sxiv state=floating
 
 xsetroot -cursor_name left_ptr&
 #bash /home/prashant/.lock.sh
