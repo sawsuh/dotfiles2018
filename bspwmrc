@@ -6,7 +6,7 @@ mopidy&
 redshift -l -35.3:149&
 xrdb ~/.Xresources
 dunst&
-sxhkd &
+sxhkd -c ~/.config/sxhkd/sxhkdrc1 &
 
 bspc monitor -d one two three four five six seven eight nine ten
 bspc config top_padding        10

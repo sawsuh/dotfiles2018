@@ -13,23 +13,27 @@ super + alt + Escape
 super + Escape
 	systemctl suspend
 
+super + g
+	waitron window_snap middle
+
 super + f
 	waitron window_maximize
 
 super + w
-	waitron window_close
+	waitron window_close; \
+	waitron window_focus $(lsw | tail -1)
 
 super + x
-	waitron window_cycle
-
-super + c
-	waitron window_rev_cycle
-
-super + Tab
 	waitron window_cycle_in_group
 
-super + shift + Tab
+super + c
 	waitron window_rev_cycle_in_group
+
+super + Tab
+	waitron window_cycle
+
+super + shift + Tab
+	waitron window_rev_cycle
 
 super + {1-9}
 	bash ~/.grouptoggle.sh {1-9} show
