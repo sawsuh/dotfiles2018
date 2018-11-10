@@ -30,7 +30,7 @@ myManageHook = composeAll
 myWorkspaces = ["one","two","three","four","five","six","seven","eight","nine"]
 
 myLayoutHook = do
-    smartBorders $ gaps [(U,50), (R,25), (L,25), (D,25)] $ spacingRaw False (Border 0 0 0 0) True (Border 25 25 25 25) True $ layoutHook def
+    smartBorders $ gaps [(U,25), (R,25), (L,25), (D,25)] $ spacingRaw False (Border 0 0 0 0) True (Border 25 25 25 25) True $ layoutHook def
     ||| noBorders Full 
 
 keys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
@@ -57,8 +57,8 @@ main = do
         , ((0, xK_Print), spawn "bash ~/.screenshot.sh")
         , ((mod4Mask, xK_space), spawn "urxvt -title float -g 90x1+595+479 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'")
         , ((mod4Mask .|. shiftMask, xK_c ), kill)
-        , ((mod4Mask .|. shiftMask, xK_m ), spawn "bash ~/.t.sh music")
-        , ((mod4Mask .|. shiftMask, xK_f ), spawn "bash ~/.t.sh files")
+        , ((mod4Mask .|. shiftMask, xK_m ), spawn "tdrop -a -h 309 -w 721 -x 10 -y 755 -n 2 -f '-e ncmpcpp' urxvt")
+        , ((mod4Mask .|. shiftMask, xK_f ), spawn "tdrop -a -h 309 -w 721 -x 1183 -y 755 -n 1 -f '-e ranger' urxvt")
         , ((mod4Mask, xK_z), windows W.swapDown  ) 
         , ((mod4Mask, xK_x), windows W.swapUp )
         , ((mod4Mask .|. shiftMask, xK_Escape ), spawn "systemctl suspend") 
