@@ -42,12 +42,30 @@ enable-ipc = true
 
 [bar/main_bar]
 bottom = false
-width = 700
-offset-x = 610
+height = 45
+width = 200
+;offset-x = 860 
 ;modules-left = bspwm
-modules-center = title
-;modules-right = date
-inherit = bar/main
+;modules-center = title
+modules-center = date 
+background = #CC202020
+foreground =  ${colors.my_foreground}
+font-0 = t cherry:size=13 
+override-redirect = true
+
+[bar/barry]
+bottom = false
+height = 45
+width = 100
+offset-x = 1820
+;modules-left = bspwm
+;modules-center = title
+modules-center = ewmh 
+background = #CC202020
+foreground =  ${colors.my_foreground}
+font-0 = t cherry:size=13 
+override-redirect = true
+
 
 [bar/left_bar]
 width = 250
@@ -157,5 +175,8 @@ interval = 5
 type = internal/xworkspaces
 enable-click = false
 enable-scroll = false
-
+label-monitor = 
+label-active = %name%
+label-occupied =
+label-empty =  
 

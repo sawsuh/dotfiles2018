@@ -24,10 +24,16 @@ aW=$(( $W + ( $M * 2 ) )) && aH=$(( $H + ( $M * 2 ) ))
 
 if [ "$W" -gt "1" ]; then
     # Calculate width and height to block/font size
-    let W=$(( $W / 7))
-    let H=$(( $H / 11))
-
-    urxvt -name "float" -g $W"x"$H"+"$X"+"$Y&
+    let W=$(( $W / 8))
+    let H=$(( $H / 25))
+    if [ "$1" == "music" ]; then
+    	urxvt -name "float" -g $W"x"$H"+"$X"+"$Y -e ncmpcpp&
+    elif [ "$1" == "files" ]
+    then
+	urxvt -name "float" -g $W"x"$H"+"$X"+"$Y -e ranger&
+    else
+	urxvt -name "float" -g $W"x"$H"+"$X"+"$Y&
+    fi
 #active="$(xdotool getactivewindow)"
 #xdotool "windowmove" "$active" "$X" "$Y"
 #xdotool "windowsize" "$active" "$W" "$H"
