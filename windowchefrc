@@ -23,6 +23,7 @@ waitron wm_config replay_click_on_focus false
 waitron wm_config pointer_actions move resize_side resize_corner
 waitron wm_config pointer_modifier super
 waitron wm_config click_to_focus any
+
 xrandr --output DVI-D-1 --mode 1920x1080 --rate 144&
 xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/.gifs/usable/wall.mp4 --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-input-default-bindings --hwdec --log-file=/home/prashant/.mpvlog.log&
 compton --config /home/prashant/.compton.conf&
@@ -32,3 +33,4 @@ xrdb ~/.Xresources
 dunst&
 sxhkd&
 xsetroot -cursor_name left_ptr&
+polybar main&
