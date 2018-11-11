@@ -43,7 +43,8 @@ static const char *ignore_names[] = {"Polybar", "xclock"};
 static const char *menucmd[]   = { "bash", "/home/prashant/.scripts/launcher.sh", NULL };
 static const char *files[]   = { "bash", "/home/prashant/.scripts/files.sh", NULL };
 static const char *music[]   = { "bash", "/home/prashant/.scripts/music.sh", NULL };
-static const char *term[]   = { "bash", "/home/prashant/.scripts/term.sh", NULL };
+static const char *termdrawn[]   = { "bash", "/home/prashant/.scripts/term.sh", NULL };
+static const char *term[]   = { "urxvt", NULL };
 static const char *datetoggle[]   = { "bash", "/home/prashant/.scripts/datetoggle.sh", NULL };
 static const char *suspendcmd[]   = { "systemctl", "suspend", NULL };
 ///--Custom foo---///
@@ -91,10 +92,10 @@ static key keys[] = {
     // Kill a window
     {  MOD ,              XK_q,          deletewin,         {}},
     // Resize a window
-    {  MOD |SHIFT,        XK_Up,          resizestep,        {.i=TWOBWM_RESIZE_UP}},
-    {  MOD |SHIFT,        XK_Down,          resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
-    {  MOD |SHIFT,        XK_Right,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
-    {  MOD |SHIFT,        XK_Left,          resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
+    {  MOD |SHIFT,        XK_w,          resizestep,        {.i=TWOBWM_RESIZE_UP}},
+    {  MOD |SHIFT,        XK_s,          resizestep,        {.i=TWOBWM_RESIZE_DOWN}},
+    {  MOD |SHIFT,        XK_d,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT}},
+    {  MOD |SHIFT,        XK_a,          resizestep,        {.i=TWOBWM_RESIZE_LEFT}},
     // Resize a window slower
     {  MOD |SHIFT|CONTROL,XK_Up,          resizestep,        {.i=TWOBWM_RESIZE_UP_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_Down,          resizestep,        {.i=TWOBWM_RESIZE_DOWN_SLOW}},
@@ -186,7 +187,8 @@ static key keys[] = {
     {  MOD ,              XK_space,      start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
-    {  MOD ,              XK_Return,     start,             {.com = term}},
+    {  MOD ,              XK_Return,     start,             {.com = termdrawn}},
+    {  MOD |SHIFT,        XK_Return,     start,             {.com = term}},
     {  MOD |CONTROL,      XK_t,          start,             {.com = datetoggle}},
     {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
     // Exit or restart 2bwm

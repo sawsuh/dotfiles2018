@@ -40,50 +40,33 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true
 
-[bar/main_bar]
+[bar/main1]
 bottom = false
-height = 45
-width = 200
+height = 60
+width = 150
+offset-y = 80
 offset-x = 10
-offset-y = 10
-;modules-left = bspwm
-;modules-center = title
-modules-center = date 
-background = #CC202020
+background = #202020
 foreground =  ${colors.my_foreground}
-font-0 = t cherry:size=13 
+font-0 = t cherry:size=13
+modules-center = 2bwm
 override-redirect = true
+wm-restack = true
+enable-ipc = true
 
-[bar/barry]
+[bar/main2]
 bottom = false
-height = 45
-width = 100
-offset-x = 1810
-offset-y = 10
-;modules-left = bspwm
-;modules-center = title
-modules-center = ewmh 
-background = #CC202020
-foreground =  ${colors.my_foreground}
-font-0 = t cherry:size=13 
-override-redirect = true
-
-
-[bar/left_bar]
+height = 60
 width = 250
-offset-x = 60
-modules-left = bspwm
-;modules-center = title
-;modules-right = date
-inherit = bar/main
-
-[bar/right_bar]
-offset-x = 1580
-width = 280
-;modules-left = bspwm
-;modules-center = title
-modules-right = date
-inherit = bar/main
+offset-y = 10
+offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = t cherry:size=13
+modules-center = date
+override-redirect = true
+wm-restack = true
+enable-ipc = true   
 
 [settings]
 format-underline = ${colors.my_color0}
@@ -172,6 +155,12 @@ label-urgent-padding = 2
 type = custom/script
 exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
+
+
+[module/2bwm]
+type = custom/script
+exec = bash ~/.scripts/2bwm.sh
+interval = 1
 
 [module/ewmh]
 type = internal/xworkspaces

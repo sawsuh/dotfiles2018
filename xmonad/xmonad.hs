@@ -21,7 +21,7 @@ myManageHook = composeAll
     [
       title =? "tiled"          --> unfloat
     , className =? "Firefox"        --> unfloat
-    , className =? "muPDF"          --> unfloat
+    , className =? "MuPDF"          --> unfloat
     , className =? "Gedit"          --> unfloat
     , isFullscreen --> doFullFloat
     ] <+> doFloat 
@@ -30,7 +30,7 @@ myManageHook = composeAll
 myWorkspaces = ["one","two","three","four","five","six","seven","eight","nine"]
 
 myLayoutHook = do
-    smartBorders $ gaps [(U,25), (R,25), (L,25), (D,25)] $ spacingRaw False (Border 0 0 0 0) True (Border 25 25 25 25) True $ layoutHook def
+    gaps [(U,25), (R,25), (L,25), (D,25)] $ spacingRaw False (Border 0 0 0 0) True (Border 25 25 25 25) True $ layoutHook def
     ||| noBorders Full 
 
 keys :: XConfig Layout -> M.Map (KeyMask, KeySym) (X ())
