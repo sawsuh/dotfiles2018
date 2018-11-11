@@ -160,7 +160,7 @@ interval = 5
 [module/2bwm]
 type = custom/script
 exec = bash ~/.scripts/2bwm.sh
-interval = 1
+interval = 0.5
 
 [module/ewmh]
 type = internal/xworkspaces
