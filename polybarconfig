@@ -43,7 +43,7 @@ enable-ipc = true
 [bar/main1]
 bottom = false
 height = 60
-width = 150
+width = 100
 offset-y = 80
 offset-x = 10
 background = #202020
@@ -57,7 +57,7 @@ enable-ipc = true
 [bar/main2]
 bottom = false
 height = 60
-width = 250
+width = 200
 offset-y = 10
 offset-x = 10
 background = #202020
