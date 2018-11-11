@@ -46,6 +46,7 @@ static const char *music[]   = { "bash", "/home/prashant/.scripts/music.sh", NUL
 static const char *termdrawn[]   = { "bash", "/home/prashant/.scripts/term.sh", NULL };
 static const char *term[]   = { "urxvt", NULL };
 static const char *suspendcmd[]   = { "systemctl", "suspend", NULL };
+static const char *screenshot[]   = { "bash", "/home/prashant/.scripts/screenshot.sh", NULL };
 ///--Custom foo---///
 static void halfandcentered(const Arg *arg)
 {
@@ -101,10 +102,10 @@ static key keys[] = {
     {  MOD |SHIFT|CONTROL,XK_Right,          resizestep,        {.i=TWOBWM_RESIZE_RIGHT_SLOW}},
     {  MOD |SHIFT|CONTROL,XK_Left,          resizestep,        {.i=TWOBWM_RESIZE_LEFT_SLOW}},
     // Move a window
-    {  MOD ,              XK_Up,          movestep,          {.i=TWOBWM_MOVE_UP}},
-    {  MOD ,              XK_Down,          movestep,          {.i=TWOBWM_MOVE_DOWN}},
-    {  MOD ,              XK_Right,          movestep,          {.i=TWOBWM_MOVE_RIGHT}},
-    {  MOD ,              XK_Left,          movestep,          {.i=TWOBWM_MOVE_LEFT}},
+    {  MOD ,              XK_w,          movestep,          {.i=TWOBWM_MOVE_UP}},
+    {  MOD ,              XK_s,          movestep,          {.i=TWOBWM_MOVE_DOWN}},
+    {  MOD ,              XK_d,          movestep,          {.i=TWOBWM_MOVE_RIGHT}},
+    {  MOD ,              XK_a,          movestep,          {.i=TWOBWM_MOVE_LEFT}},
     // Move a window slower
     {  MOD |CONTROL,      XK_Up,          movestep,          {.i=TWOBWM_MOVE_UP_SLOW}},
     {  MOD |CONTROL,      XK_Down,          movestep,          {.i=TWOBWM_MOVE_DOWN_SLOW}},
@@ -167,7 +168,7 @@ static key keys[] = {
     // Iconify the window
     //{  MOD ,              XK_i,          hide,              {}},
     // Make the window unkillable
-    {  MOD ,              XK_a,          unkillable,        {}},
+    {  MOD ,              XK_j,          unkillable,        {}},
     // Make the window appear always on top
     {  MOD,               XK_t,          always_on_top,     {}},
     // Make the window stay on all workspaces
@@ -189,10 +190,10 @@ static key keys[] = {
     {  MOD ,              XK_Return,     start,             {.com = termdrawn}},
     {  MOD |SHIFT,        XK_Return,     start,             {.com = term}},
     {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
+    {  MOD |CONTROL,	  XK_s, 	 start,		    {.com = screenshot}},
     // Exit or restart 2bwm
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
-    {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}},
-    {  MOD ,              XK_w,          halfandcentered,   {.i=0}},
+    {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}}, 
     // Change current workspace
        DESKTOPCHANGE(     XK_1,                             1)
        DESKTOPCHANGE(     XK_2,                             2)
