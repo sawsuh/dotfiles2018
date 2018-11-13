@@ -1,7 +1,7 @@
-super + {Left,Down,Up,Right}
+super + {a,s,w,d}
 	waitron window_move {-50 0, 0 50, 0 -50, 50 0}
 
-super + alt + {Left,Down,Up,Right}
+super + alt + {a,s,w,d}
 	waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
 
 super + ctrl + {Left,Down,Up,Right}
@@ -16,14 +16,14 @@ super + Escape
 super + g
 	waitron window_snap middle
 
-super + f
+super + x
 	waitron window_maximize
 
-super + w
+super + q
 	waitron window_close; \
 	waitron window_focus $(lsw | tail -1)
 
-super + x
+super + v
 	waitron window_cycle_in_group
 
 super + c
@@ -47,14 +47,14 @@ super + shift + {1-9}
 super + ctrl + r
 	waitron group_remove_window
 
-super + Return
+super + shit + Return
 	bash /home/prashant/.t.sh
 
-super + shift + Return
-	rofi -show run
+super + Return
+	urxvt
 
-super + alt + t 
-	bash ~/.datetoggle.sh&
+#super + alt + t 
+#	bash ~/.datetoggle.sh&
 
 super + @space
         urxvt -g 90x1+595+479 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'

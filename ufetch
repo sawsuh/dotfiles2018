@@ -56,7 +56,7 @@ cat <<EOF
 
 ${nc}whats${ic} ${nc}good${reset}
 ${lc}os  ${ic}arch linux${reset}
-${lc}wm  ${ic}2bwm${reset}
+${lc}wm  ${ic}windowchef${reset}
 ${lc}terminal  ${ic}urxvt${reset}
 ${lc}music player  ${ic}ncmpcpp${reset}
 ${lc}shell  ${ic}zsh${reset}

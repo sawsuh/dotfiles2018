@@ -54,6 +54,20 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true
 
+[bar/main3]
+bottom = false
+height = 60
+width = 100
+offset-y = 80
+offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = t cherry:size=13
+modules-center = ewmh
+override-redirect = true
+wm-restack = true
+enable-ipc = true
+
 [bar/main2]
 bottom = false
 height = 60
