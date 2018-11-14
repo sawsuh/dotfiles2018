@@ -133,10 +133,10 @@ static key keys[] = {
     {  MOD |SHIFT,        XK_x,         maximize,          {.i=TWOBWM_FULLSCREEN}},
     //Full screen window without borders overiding offsets
     {  MOD ,              XK_x,          maximize,          {.i=TWOBWM_FULLSCREEN_OVERRIDE_OFFSETS}},
-    // Maximize vertically
-    {  MOD ,              XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_VERTICALLY}},
-    // Maximize horizontally
-    {  MOD |SHIFT|CONTROL,XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_HORIZONTALLY}},
+/*    // Maximize vertically
+ *   {  MOD ,              XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_VERTICALLY}},
+  *  // Maximize horizontally
+    {  MOD |SHIFT|CONTROL,XK_m,          maxvert_hor,       {.i=TWOBWM_MAXIMIZE_HORIZONTALLY}}, */
     // Maximize and move
     // vertically left
     {  MOD |SHIFT,        XK_y,          maxhalf,           {.i=TWOBWM_MAXHALF_VERTICAL_LEFT}},
@@ -167,12 +167,13 @@ static key keys[] = {
     {  MOD |SHIFT ,       XK_c,          sendtoprevworkspace,{}},
     // Iconify the window
     //{  MOD ,              XK_i,          hide,              {}},
-    // Make the window unkillable
-    {  MOD ,              XK_j,          unkillable,        {}},
+ /*   // Make the window unkillable
+  *  {  MOD ,              XK_j,          unkillable,        {}}, */
     // Make the window appear always on top
     {  MOD,               XK_t,          always_on_top,     {}},
     // Make the window stay on all workspaces
-    {  MOD ,              XK_f,          fix,               {}},
+    {  MOD ,              XK_j,          fix,               {}},
+    {  MOD |SHIFT,        XK_j,          fix,               {}},
     // Move the cursor
   /*  {  MOD ,              XK_Up,         cursor_move,       {.i=TWOBWM_CURSOR_UP_SLOW}},
   *  {  MOD ,              XK_Down,       cursor_move,       {.i=TWOBWM_CURSOR_DOWN_SLOW}},
