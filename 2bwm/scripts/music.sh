@@ -6,5 +6,4 @@ if wmctrl -l | grep $hex; then
 	xdotool mousemove 50 800
 	sleep 0.1
 	xdotool key "Super+f"
-	xdotool key "Super+t"
 fi
