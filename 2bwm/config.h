@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {10,10,20,20};
  *2)fixedcol         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#eee4e5","#42423d","#7a8c5c","#ff6666","#cc9933","#202020","#000000"};
+static const char *colors[] = {"#eee4e5","#42423d","#9dafac","#ff6666","#cc9933","#202020","#000000"};
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;
 ///---Cursor---///
@@ -187,8 +187,8 @@ static key keys[] = {
     {  MOD ,              XK_space,      start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
     {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
-    {  MOD ,              XK_Return,     start,             {.com = termdrawn}},
-    {  MOD |SHIFT,        XK_Return,     start,             {.com = term}},
+    {  MOD ,              XK_z,          start,             {.com = termdrawn}},
+    {  MOD |SHIFT,        XK_z,          start,             {.com = term}},
     {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
     {  MOD |CONTROL,	  XK_s, 	 start,		    {.com = screenshot}},
     // Exit or restart 2bwm
