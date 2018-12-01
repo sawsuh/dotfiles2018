@@ -82,17 +82,33 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
+[bar/bar2]
+bottom = false
+height = 30
+width = 1900
+offset-y = 10
+offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = t cherry:size=13
+modules-left = 2bwm2
+modules-center = title
+modules-right = date2
+override-redirect = true
+wm-restack = true
+enable-ipc = true   
+
 [settings]
 format-underline = ${colors.my_color0}
 
 [module/title]
 type = internal/xwindow
-label = " %title% "
+label = "  %title%  "
 label-empty = 
 label-maxlen = 60
-format-background = ${colors.my_background}
-format-foreground = ${colors.my_foreground}
-format-underline = ${colors.my_background}
+#format-background = ${colors.my_background}
+#format-foreground = ${colors.my_foreground}
+#format-underline = ${colors.my_background}
 #label-separator = 
 #label-separator-padding = 1
 #label-padding = 1
@@ -171,10 +187,25 @@ exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 
 
+[module/date2]
+type = custom/script
+exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
+interval = 5
+format-background = #42423d 
+format-padding = 2
+
 [module/2bwm]
 type = custom/script
 exec = bash ~/.scripts/2bwm.sh
 tail = true
+
+
+[module/2bwm2]
+type = custom/script
+exec = bash ~/.scripts/2bwm.sh
+tail = true
+format-background = #42423d 
+format-padding = 2
 
 [module/ewmh]
 type = internal/xworkspaces
