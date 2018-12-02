@@ -85,9 +85,9 @@ enable-ipc = true
 [bar/bar2]
 bottom = false
 height = 30
-width = 1900
+;width = 1900
 ;offset-y = 10
-offset-x = 10
+;offset-x = 10
 background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = t cherry:size=13
