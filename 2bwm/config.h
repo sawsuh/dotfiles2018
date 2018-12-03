@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {10,40,20,50};
  *2)fixedcol (#9dafac)         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#eee4e5","#42423d","#202020","#ff6666","#cc9933","#202020","#000000"};
+static const char *colors[] = {"#eee4e5","#202020","#202020","#ff6666","#cc9933","#202020","#000000"};
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;
 ///---Cursor---///
@@ -32,7 +32,7 @@ static const bool inverted_colors = false;
 /*0) Outer border size. If you put this negative it will be a square.
  *1) Full borderwidth    2) Magnet border size
  *3) Resize border size  */
-static const uint8_t borders[] = {2,5,5,4};
+static const uint8_t borders[] = {2,5,2,4};
 /* Windows that won't have a border.
  * It uses substring comparison with what is found in the WM_NAME
  * attribute of the window. You can test this using `xprop WM_NAME`
@@ -44,6 +44,7 @@ static const char *menucmd[]   = { "bash", "/home/prashant/.scripts/launcher.sh"
 static const char *files[]   = { "bash", "/home/prashant/.scripts/files.sh", NULL };
 static const char *music[]   = { "bash", "/home/prashant/.scripts/music.sh", NULL };
 static const char *termdrawn[]   = { "bash", "/home/prashant/.scripts/term.sh", NULL };
+static const char *thunar[]   = { "thunar", NULL };
 static const char *term[]   = { "urxvt", NULL };
 static const char *suspendcmd[]   = { "systemctl", "suspend", NULL };
 static const char *screenshot[]   = { "bash", "/home/prashant/.scripts/screenshot.sh", NULL };
@@ -187,7 +188,7 @@ static key keys[] = {
     // Start programs
     {  MOD ,              XK_space,      start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
-    {  MOD |SHIFT,        XK_m,          start,             {.com = music}},
+    {  MOD |SHIFT,        XK_m,          start,             {.com = music}}, 
     {  MOD ,              XK_z,          start,             {.com = termdrawn}},
     {  MOD |SHIFT,        XK_z,          start,             {.com = term}},
     {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
