@@ -90,7 +90,6 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n ${LAUNCHER} ]]; then
     bindkey -s "^M" " & \n"
     bindkey -s "^[" "^U exit \n"
-    return
 fi
 ZSH_DISABLE_COMPFIX=true
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -102,5 +101,6 @@ ZSH_DISABLE_COMPFIX=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ufetch="bash ~/.local/bin/ufetch"
+alias osu="bash ~/.osu.sh"
 task
 

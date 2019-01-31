@@ -9,4 +9,5 @@ xrdb ~/.Xresources
 dunst&
 xsetroot -cursor_name left_ptr&
 xdotool set_desktop 1&
+xsetwacom set 9 Area 2500 2500 7500 7500&
 2bwm

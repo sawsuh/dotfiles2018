@@ -34,7 +34,7 @@ URxvt.color14:      #bacec6
 ! white
 URxvt.color7:       #787376
 URxvt.color15:      #eee4e5
-URxvt.font: xft:t cherry:size=13
+URxvt.font: xft:t cherry:size=13,xft:Wuncon Siji
 URxvt.scrollBar: false
 URxvt.internalBorder: 50
 URxvt.lineSpace:    5
