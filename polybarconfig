@@ -93,6 +93,7 @@ content-background = #787376
 content-foreground = #ffeefc
 content-padding = 2
 content = ""
+click-left = bash ~/.scripts/cal.sh
 
 [module/2bwmicon]
 type = custom/text
