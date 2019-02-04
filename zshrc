@@ -103,4 +103,7 @@ ZSH_DISABLE_COMPFIX=true
 alias ufetch="bash ~/.local/bin/ufetch"
 alias osu="bash ~/.osu.sh"
 task
+TRAPWINCH() {
+  zle && { zle reset-prompt; zle -R }
+}
 
