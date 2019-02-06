@@ -19,7 +19,7 @@ static const uint8_t offsets[] = {10,40,20,50};
  *2)fixedcol (#9dafac)         3)unkilcol
  *4)fixedunkilcol    5)outerbordercol
  *6)emptycol         */
-static const char *colors[] = {"#eee4e5","#42423d","#202020","#ff6666","#cc9933","#202020","#000000"};
+static const char *colors[] = {"#eee4e5","#42423d","#202020","#202020","#202020","#202020","#000000"};
 /* if this is set to true the inner border and outer borders colors will be swapped */
 static const bool inverted_colors = false;
 ///---Cursor---///
@@ -172,6 +172,7 @@ static key keys[] = {
   *  {  MOD ,              XK_j,          unkillable,        {}}, */
     // Make the window appear always on top
     {  MOD,               XK_t,          always_on_top,     {}},
+    {  MOD |SHIFT,	  XK_t,          always_on_top,     {}}, 
     // Make the window stay on all workspaces
     {  MOD ,              XK_j,          fix,               {}},
     {  MOD |SHIFT,        XK_j,          fix,               {}},
