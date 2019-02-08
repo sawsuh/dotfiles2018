@@ -198,16 +198,16 @@ static key keys[] = {
     {  MOD |CONTROL,      XK_q,          twobwm_exit,       {.i=0}},
     {  MOD |CONTROL,      XK_r,          twobwm_restart,    {.i=0}}, 
     // Change current workspace
-       DESKTOPCHANGE(     XK_1,                             1)
-       DESKTOPCHANGE(     XK_2,                             2)
-       DESKTOPCHANGE(     XK_3,                             3)
-       DESKTOPCHANGE(     XK_4,                             4)
-       DESKTOPCHANGE(     XK_5,                             5)
-       DESKTOPCHANGE(     XK_6,                             6)
-       DESKTOPCHANGE(     XK_7,                             7)
-       DESKTOPCHANGE(     XK_8,                             8)
-       DESKTOPCHANGE(     XK_9,                             9)
-       DESKTOPCHANGE(     XK_0,                             0)
+       DESKTOPCHANGE(     XK_1,                             0)
+       DESKTOPCHANGE(     XK_2,                             1)
+       DESKTOPCHANGE(     XK_3,                             2)
+       DESKTOPCHANGE(     XK_4,                             3)
+       DESKTOPCHANGE(     XK_5,                             4)
+       DESKTOPCHANGE(     XK_6,                             5)
+       DESKTOPCHANGE(     XK_7,                             6)
+       DESKTOPCHANGE(     XK_8,                             7)
+       DESKTOPCHANGE(     XK_9,                             8)
+       DESKTOPCHANGE(     XK_0,                             9)
 };
 // the last argument makes it a root window only event
 static Button buttons[] = {
