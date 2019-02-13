@@ -5,6 +5,5 @@ if wmctrl -l | grep $hex; then
 	xdotool windowraise $k 
 	xdotool mousemove 1200 800
 	sleep 0.1
-	xdotool key "Super+t"
 	xdotool key "Super+j"
 fi

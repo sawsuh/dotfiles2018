@@ -4,7 +4,6 @@ hex=$(printf '%x\n' $k)
 if wmctrl -l | grep $hex; then
 	xdotool windowraise $k  
 	xdotool mousemove 50 800
-	sleep 0.1
-	xdotool key "Super+t"
+	sleep 0.1	
 	xdotool key "Super+j"
 fi
