@@ -37,7 +37,7 @@ URxvt.color15:      #eee4e5
 URxvt.font: xft: undefined,undefined medium:Pixelsize=13,xft:Wuncon Siji
 URxvt.scrollBar: false
 URxvt.internalBorder: 60
-URxvt.lineSpace:    5
+URxvt.lineSpace:    10
 URxvt.letterSpace: 0
 Xft.autohint:           0
 Xft.lcdfilter:          lcddefault
