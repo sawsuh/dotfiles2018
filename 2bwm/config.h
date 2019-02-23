@@ -13,7 +13,7 @@ static const float    resize_keep_aspect_ratio= 1.03;
 ///---Offsets---///
 /*0)offsetx          1)offsety
  *2)maxwidth         3)maxheight */
-static const uint8_t offsets[] = {10,40,20,50};
+static const uint8_t offsets[] = {20,65,40,85};
 ///---Colors---///
 /*0)focuscol         1)unfocuscol
  *2)fixedcol (#9dafac)         3)unkilcol

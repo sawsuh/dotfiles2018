@@ -9,18 +9,18 @@
     --bg-light: #9dafac ; 
     --fg-dark: #eee4e5;
     --fg-light: #202020; 
-    --tab-fonts: "t cherry"; 
-    --tab-font-size: 12pt;
+    --tab-fonts: "undefined"; 
+    --tab-font-size: 13pt;
     --tab-text-align: center;
-    --tab-min-height: 25px !important;
+    --tab-min-height: 40px !important;
 
 /*********************************/
 /**** URL BAR VARIABLES ****/
 /*********************************/
     --url-background: var(--bg-dark); 
     --url-foreground: var(--fg-dark);
-    --url-fonts: "t cherry"; 
-    --url-font-size: 12pt;
+    --url-fonts: "undefined"; 
+    --url-font-size: 13pt;
     --url-text-align: center;
 }
 

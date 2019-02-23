@@ -64,3 +64,4 @@ lyrics_fetchers = genius, lyricwiki, azlyrics, sing365, lyricsmania, metrolyrics
 #execute_on_song_change = /home/prashant/.mpdnotif
 fetch_lyrics_for_current_song_in_background = yes
 follow_now_playing_lyrics = yes
+

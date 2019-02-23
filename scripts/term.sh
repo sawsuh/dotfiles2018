@@ -24,8 +24,8 @@ aW=$(( $W + ( $M * 2 ) )) && aH=$(( $H + ( $M * 2 ) ))
 
 if [ "$W" -gt "1" ]; then
     # Calculate width and height to block/font size
-    let W=$(( $W / 7))
-    let H=$(( $H / 11))
+    let W=$(( $W / 12))
+    let H=$(( $H / 26))
 
     urxvt -name "float" -g $W"x"$H"+"$X"+"$Y&
 #active="$(xdotool getactivewindow)"

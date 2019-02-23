@@ -1,4 +1,4 @@
-tdrop -a -h 309 -w 721 -x 10 -y 751 -n 2 -f "-name music -title music -e ncmpcpp" urxvt
+tdrop -a -w 800 -h 400 -x 20 -y 680 -n 2 -f "-name music -title music -e ncmpcpp" urxvt
 k=$(xdotool search --classname "music")
 hex=$(printf '%x\n' $k)
 if wmctrl -l | grep $hex; then

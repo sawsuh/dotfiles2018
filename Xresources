@@ -34,11 +34,11 @@ URxvt.color14:      #bacec6
 ! white
 URxvt.color7:       #787376
 URxvt.color15:      #eee4e5
-URxvt.font: xft:t cherry:size=13,xft:Wuncon Siji
+URxvt.font: xft: undefined,undefined medium:Pixelsize=13,xft:Wuncon Siji
 URxvt.scrollBar: false
-URxvt.internalBorder: 50
+URxvt.internalBorder: 60
 URxvt.lineSpace:    5
-URxvt.letterSpace: -2
+URxvt.letterSpace: 0
 Xft.autohint:           0
 Xft.lcdfilter:          lcddefault
 Xft.hinting:            1
