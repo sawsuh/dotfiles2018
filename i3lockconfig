@@ -174,7 +174,7 @@ y_expr 					= iy - 150 - (ch / 2)
 ; Set the date format. See strftime(3) for a full list of format specifiers
 ; Possible values: string
 ; Default values: %A, %m %Y
-format 					= %A, %m %Y
+format 					= %a %d %b
 ; Set the font of the date
 ; Possible values: string
 ; Default value: sans-serif
