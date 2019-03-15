@@ -189,7 +189,7 @@ static key keys[] = {
     // Start programs
     {  MOD ,              XK_space,      start,             {.com = menucmd}},
     {  MOD |SHIFT,        XK_f,          start,             {.com = files}},
-    {  MOD |SHIFT,        XK_m,          start,             {.com = music}}, 
+//    {  MOD |SHIFT,        XK_m,          start,             {.com = music}}, 
     {  MOD ,              XK_z,          start,             {.com = termdrawn}},
     {  MOD |SHIFT,        XK_z,          start,             {.com = term}},
     {  MOD , 		  XK_Escape, 	 start,		    {.com = suspendcmd}},
