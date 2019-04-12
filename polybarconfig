@@ -51,9 +51,9 @@ background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = undefined,undefined medium:Pixelsize=13
 font-1 = Wuncon Siji:size=16
-modules-left = 2bwmicon 2bwm2
+modules-left = 2bwm2
 modules-center = title
-modules-right = date2 dateicon
+modules-right = date2
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
@@ -79,6 +79,7 @@ exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 format-background = #42423d 
 format-padding = 2 
+click-left = bash ~/.scripts/cal.sh
 
 [module/2bwm2]
 type = custom/script
