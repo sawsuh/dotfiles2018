@@ -51,7 +51,24 @@ background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = undefined,undefined medium:Pixelsize=13
 font-1 = Wuncon Siji:size=16
-modules-left = 2bwm2
+modules-left = bspwm
+modules-center = title
+modules-right = date2
+override-redirect = true
+wm-restack = true
+enable-ipc = true   
+
+[bar/bar3]
+bottom = false
+height = 45
+;width = 1900
+;offset-y = 10
+;offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = undefined,undefined medium:Pixelsize=13
+font-1 = Wuncon Siji:size=16
+modules-left = bspwm
 modules-center = title
 modules-right = date2
 override-redirect = true
@@ -86,7 +103,17 @@ type = custom/script
 exec = bash ~/.scripts/2bwm.sh
 tail = true
 format-background = #42423d 
-format-padding = 2 xf
+format-padding = 2 
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+format-background = #42423d 
+format-padding = 2 
+label-focused = %name%
+label-unfocused = 
+label-occupied =
+label-empty = 
 
 [module/dateicon]
 type = custom/text

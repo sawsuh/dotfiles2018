@@ -8,5 +8,5 @@ redshift -l -35.3:149&
 xrdb ~/.Xresources
 dunst&
 xsetroot -cursor_name left_ptr&
-xsetwacom set 9 Area 2500 2500 7500 7500&
+xsetwacom set 9 Area 0 0 6000 6000&
 2bwm
