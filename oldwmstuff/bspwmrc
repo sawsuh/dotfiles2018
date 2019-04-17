@@ -1,6 +1,6 @@
 #! /bin/sh
-xrandr --output DVI-I-1 --off --output HDMI-1 --scale 0.85x0.85 --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal& 
-feh --bg-fill ~/.wp2.jpg&
+xrandr --output DVI-I-1 --off --output HDMI-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal& 
+nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
 redshift -l -35.3:149&

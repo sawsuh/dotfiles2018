@@ -48,3 +48,4 @@ Xft.rgba: rgb
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
 twobwm.enable_compton: true
+Xft.dpi: 115
