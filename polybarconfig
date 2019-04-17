@@ -58,9 +58,28 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
+[bar/bar4]
+bottom = false
+height = 45
+;width = 1900
+;offset-y = 10
+;offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = undefined,undefined medium:Pixelsize=13
+font-1 = Wuncon Siji:size=16
+modules-left = bspwm
+#modules-center = title
+modules-right = mpd
+override-redirect = true
+wm-restack = true
+enable-ipc = true   
+monitor = DVI-D-1
+
 [bar/bar3]
 bottom = false
 height = 45
+monitor = HDMI-1
 ;width = 1900
 ;offset-y = 10
 ;offset-x = 10
@@ -129,3 +148,17 @@ content = ""
 content-background = #787376
 content-padding = 2
 content-foreground = #ffeefc
+
+[module/mpd]
+type = internal/mpd
+host 127.0.0.1
+port = 6600
+format-stopped = no music
+label-song = %artist% - %title%   
+format-playing = <label-song>
+format-playing-background = #42423d
+format-playing-foreground = #ffeefc
+format-online-background = #42423d
+format-online-foreground = #ffeefc
+format-online-padding = 2
+format-playing-padding = 2

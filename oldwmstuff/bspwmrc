@@ -1,14 +1,16 @@
 #! /bin/sh
-xrandr --output DVI-D-1 --mode 1920x1080 --rate 144&
+xrandr --output DVI-I-1 --off --output HDMI-1 --scale 0.85x0.85 --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal& 
 feh --bg-fill ~/.wp2.jpg&
 compton --config /home/prashant/.compton.conf&
 mopidy&
 redshift -l -35.3:149&
 xrdb ~/.Xresources&
 polybar bar3&
+polybar bar4&
 dunst&
 
-bspc monitor -d one two three four five six seven eight nine ten
+bspc monitor DVI-D-1 -d one two three four five
+bspc monitor HDMI-1 -d six seven eight nine ten
 bspc config top_padding        55
 bspc config bottom_padding     10
 bspc config left_padding       10
@@ -19,6 +21,7 @@ bspc config normal_border_color "#42423d"
 bspc config focused_border_color "#eee4e5"
 bspc config presel_border_color "#ffbec9"
 bspc config split_ratio          0.52
+bspc config focus_follows_pointer true
 
 bspc rule -a mpv state=floating
 bspc rule -a "*:sxiv" state=floating
@@ -26,9 +29,11 @@ bspc rule -a URxvt:stick state=floating sticky=on center
 bspc rule -a URxvt:stick1 state=floating sticky=on
 bspc rule -a URxvt:stick2 state=floating sticky=on
 bspc rule -a URxvt:float state=floating
+bspc rule -a URxvt:cal state=floating sticky=on
 bspc rule -a Steam:"Friends List" state=floating
 bspc rule -a "polybar" layer=above
 bspc rule -a "dotnet" state=floating
 
 xsetroot -cursor_name left_ptr&
 xsetwacom set 9 Area 0 0 6000 6000&
+xsetwacom set 9 MapToOutput 1920x1080+0+0&

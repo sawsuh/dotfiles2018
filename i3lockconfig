@@ -32,7 +32,7 @@ internal_line_source 	= 0
 ; If unspecified, screen will be filled with 'color' color
 ; Possible values: none or path to image
 ; Default value: none
-image_path 				= ~/.screen.png
+image_path 				= 
 ; Tile background image if it is smaller than screen
 ; Possible values: 0 or 1
 ; Default value: 0
@@ -94,7 +94,7 @@ circle_radius 			= 90.0
 ; If no background image specified, screen will be filled with this color
 ; Possible values: 3-byte hexadecimal color: #rrggbb - # is optional
 ; Default value: #000000
-color 					= #000000
+color 					= #202020
 
 ; All colors bellow are in 4-byte hexadecimal format: #rrggbbaa - # is optional
 
@@ -148,6 +148,7 @@ refresh_rate 			= 1.0
 ; Possible values: string
 ; Default value: %H:%M:%S
 format 					= %H:%M
+
 ; Set the font of clock
 ; Possible values: string
 ; Default value: sans-serif
@@ -175,6 +176,7 @@ y_expr 					= iy - 150 - (ch / 2)
 ; Possible values: string
 ; Default values: %A, %m %Y
 format 					= %a %d %b
+ 
 ; Set the font of the date
 ; Possible values: string
 ; Default value: sans-serif
