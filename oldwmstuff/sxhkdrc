@@ -60,10 +60,10 @@ super + @space
         urxvt -g 90x1+595+479 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
 
 super + shift + f
-	tdrop -a -h 309 -w 721 -x 1183 -y 755 -n 1 -f "-e ranger" urxvt
+	tdrop -a -h 309 -w 721 -x 1183 -y 710 -n 1 -f "-e ranger" urxvt
 
 super + shift + m
-	tdrop -a -h 309 -w 721 -x 10 -y 755 -n 2 -f "-e ncmpcpp" urxvt
+	tdrop -a -h 309 -w 721 -x 10 -y 710 -n 2 -f "-e ncmpcpp" urxvt
 
 super + alt + s
 	scrot -z ~/screenshots/$(date +%F-%T).png; \

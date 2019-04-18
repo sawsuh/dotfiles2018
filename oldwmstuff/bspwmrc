@@ -1,5 +1,5 @@
 #! /bin/sh
-xrandr --output DVI-I-1 --off --output HDMI-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --rate 144 --pos 0x0 --rotate normal& 
+xrandr --output DVI-I-1 --off --output HDMI-1 --mode 2560x1440 --pos 1920x0 --rotate left --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 144
 nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
@@ -11,8 +11,8 @@ dunst&
 
 bspc monitor DVI-D-1 -d one two three four five
 bspc monitor HDMI-1 -d six seven eight nine ten
-bspc config top_padding        55
-bspc config bottom_padding     10
+bspc config top_padding        10
+bspc config bottom_padding     55
 bspc config left_padding       10
 bspc config right_padding      10
 bspc config border_width         3

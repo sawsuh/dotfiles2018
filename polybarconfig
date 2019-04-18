@@ -59,27 +59,8 @@ wm-restack = true
 enable-ipc = true   
 
 [bar/bar4]
-bottom = false
+bottom = true
 height = 45
-;width = 1900
-;offset-y = 10
-;offset-x = 10
-background = #202020
-foreground =  ${colors.my_foreground}
-font-0 = undefined,undefined medium:Pixelsize=13
-font-1 = Wuncon Siji:size=16
-modules-left = bspwm
-#modules-center = title
-modules-right = mpd
-override-redirect = true
-wm-restack = true
-enable-ipc = true   
-monitor = DVI-D-1
-
-[bar/bar3]
-bottom = false
-height = 45
-monitor = HDMI-1
 ;width = 1900
 ;offset-y = 10
 ;offset-x = 10
@@ -90,6 +71,25 @@ font-1 = Wuncon Siji:size=16
 modules-left = bspwm
 modules-center = title
 modules-right = date2
+override-redirect = true
+wm-restack = true
+enable-ipc = true   
+monitor = HDMI-1
+
+[bar/bar3]
+bottom = true
+height = 45
+monitor = DVI-D-1
+;width = 1900
+;offset-y = 10
+;offset-x = 10
+background = #202020
+foreground =  ${colors.my_foreground}
+font-0 = undefined,undefined medium:Pixelsize=13
+font-1 = Wuncon Siji:size=16
+modules-left = bspwm
+modules-center = 
+modules-right = mpd
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
