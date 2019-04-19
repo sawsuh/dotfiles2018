@@ -1,5 +1,5 @@
 #! /bin/sh
-xrandr --output DVI-I-1 --off --output HDMI-1 --mode 2560x1440 --pos 1920x0 --rotate left --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 144
+xrandr --output DVI-I-1 --off --output HDMI-1 --mode 2560x1440 --pos 1920x0 1x1 --output DP-1 --off --output DVI-D-1 --primary --mode 1920x1080 --rate 144
 nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
