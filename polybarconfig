@@ -80,16 +80,14 @@ monitor = HDMI-1
 bottom = true
 height = 45
 monitor = DVI-D-1
-;width = 1900
+width = 100
 ;offset-y = 10
-;offset-x = 10
-background = #202020
+offset-x = 910
+background = #42423d
 foreground =  ${colors.my_foreground}
 font-0 = undefined,undefined medium:Pixelsize=13
 font-1 = Wuncon Siji:size=16
-modules-left = bspwm
-modules-center = 
-modules-right = mpd
+modules-center = bspwm 
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
