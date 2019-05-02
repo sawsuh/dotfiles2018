@@ -9,8 +9,8 @@
     --bg-light: #9dafac ; 
     --fg-dark: #eee4e5;
     --fg-light: #202020; 
-    --tab-fonts: "undefined"; 
-    --tab-font-size: 13pt;
+    --tab-fonts: "xos4 Terminus"; 
+    --tab-font-size: 12pt;
     --tab-text-align: center;
     --tab-min-height: 40px !important;
 
@@ -19,8 +19,8 @@
 /*********************************/
     --url-background: var(--bg-dark); 
     --url-foreground: var(--fg-dark);
-    --url-fonts: "undefined"; 
-    --url-font-size: 13pt;
+    --url-fonts: "xos4 Terminus"; 
+    --url-font-size: 12pt;
     --url-text-align: center;
 }
 
