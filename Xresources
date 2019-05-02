@@ -34,7 +34,7 @@ URxvt.color14:      #bacec6
 ! white
 URxvt.color7:       #787376
 URxvt.color15:      #eee4e5
-URxvt.font: xft: xos4 Terminus :size=12
+URxvt.font: xft: Fira Code :size=10
 URxvt.scrollBar: false
 URxvt.internalBorder: 60
 URxvt.lineSpace:    10
