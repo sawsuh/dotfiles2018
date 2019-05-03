@@ -3,7 +3,6 @@ xrandr --output HDMI-1 --right-of DVI-D-1 --mode 2560x1440 --pos 1920x0 --rotate
 nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
-redshift -l -35.3:149&
 xrdb ~/.Xresources&
 polybar bar3&
 polybar bar4&
@@ -34,6 +33,7 @@ bspc rule -a Steam:"Friends List" state=floating
 bspc rule -a "polybar" layer=above
 bspc rule -a "dotnet" state=floating
 
+redshift -l -35.3:149&
 xsetroot -cursor_name left_ptr&
 xsetwacom set 9 Area 0 0 6000 6000&
 xsetwacom set 9 MapToOutput 1920x1080+0+0&
