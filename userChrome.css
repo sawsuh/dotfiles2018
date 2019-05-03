@@ -10,7 +10,7 @@
     --fg-dark: #eee4e5;
     --fg-light: #202020; 
     --tab-fonts: "Fira Code"; 
-    --tab-font-size: 10pt;
+    --tab-font-size: 12pt;
     --tab-text-align: center;
     --tab-min-height: 40px !important;
 
@@ -20,7 +20,7 @@
     --url-background: var(--bg-dark); 
     --url-foreground: var(--fg-dark);
     --url-fonts: "Fira Code"; 
-    --url-font-size: 10pt;
+    --url-font-size: 12pt;
     --url-text-align: center;
 }
 

@@ -66,7 +66,7 @@ height = 45
 ;offset-x = 10
 background = #202020
 foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=14
+font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
 modules-left = bspwm
 modules-center = title
@@ -85,7 +85,7 @@ width = 100
 offset-x = 910
 background = #202020
 foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=14
+font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
 modules-center = bspwm2 
 override-redirect = true
