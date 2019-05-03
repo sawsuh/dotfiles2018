@@ -152,11 +152,11 @@ format 					= %H:%M
 ; Set the font of clock
 ; Possible values: string
 ; Default value: sans-serif
-font 					= undefined
+font 					= Fira Code
 ; Set the font size of the clock
 ; Possible values: floats
 ; Default value: 32.0
-font_size 				= 18.0
+font_size 				= 16.0
 
 ; Set the position of the time string. All the variables from unlock_%_expr
 ; may be used, in addition to:
@@ -180,11 +180,11 @@ format 					= %a %d %b
 ; Set the font of the date
 ; Possible values: string
 ; Default value: sans-serif
-font 					= undefined
+font 					= Fira Code
 ; Set the font size of the date
 ; Possible values: floats
 ; Default value: 14.0
-font_size 				= 18.0
+font_size 				= 16.0
 
 ; Set the position of the date string. All the variables from unlock_%_expr
 ; and x_expr in [time] may be used, in addition to:
@@ -208,11 +208,11 @@ show_caps_state 		= 1
 ; Font to be used to show keyboard indicators
 ; Possible values: string
 ; Default values: sans-serif
-font 					= undefined
+font 					= Fira Code	
 ; Size of font used to show layout indicators
 ; Possible values: floats
 ; Default values: 32.0
-font_size				= 18.0
+font_size				= 16.0
 
 ; Set the position of the date string. All the variables from unlock_%_expr
 ; may be used.
