@@ -83,11 +83,11 @@ monitor = DVI-D-1
 width = 100
 ;offset-y = 10
 offset-x = 910
-background = #42423d
+background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=14
 font-1 = Wuncon Siji:size=16
-modules-center = bspwm 
+modules-center = bspwm2 
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
@@ -126,6 +126,16 @@ format-padding = 2
 type = internal/bspwm
 pin-workspaces = true
 format-background = #42423d 
+format-padding = 2 
+label-focused = %name%
+label-unfocused = 
+label-occupied =
+label-empty = 
+
+[module/bspwm2]
+type = internal/bspwm
+pin-workspaces = true
+format-background = #202020 
 format-padding = 2 
 label-focused = %name%
 label-unfocused = 
