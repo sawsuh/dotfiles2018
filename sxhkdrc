@@ -1,0 +1,134 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + z
+	urxvt -name term
+#	termite --name=term
+
+super + shift + z
+	bash /home/prashant/.t.sh
+
+# program launcher
+super + shift + @space
+	rofi -show run -display-run ">  ~ "
+
+super + @space
+        urxvt -name stick -g 90x1 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
+#	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# suspend
+super + alt + Escape
+	systemctl suspend
+
+# quit bspwm 
+super + alt + shift + Escape
+	pkill bspwm
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+# start file browser mon 1
+super + shift + f
+	tdrop -a -h 500 -w 1000 -x 3464 -y 879 -n 1 -f "-name stick1 -e ranger" urxvt
+
+# start file browser mon 2
+super + ctrl + f
+	tdrop -a -h 450 -w 884 -x 1020 -y 614 -n 1 -f "-name stick1 -e ranger" urxvt
+
+# start music player mon 1
+super + shift + m
+	tdrop -a -h 500 -w 1000 -x 1930 -y 879 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+
+# start music player mon 2
+super + ctrl + m
+	tdrop -a -h 450 -w 884 -x 10 -y 614 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+
+# set the window state
+
+super + {t,shift + t,x,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {x,y,z}
+	bspc node -g {locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{a,s,w,d}
+	bspc node -{f,s} {west,south,north,east}
+
+
+# focus the next in the current desktop
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + {c,v}
+	bspc desktop -f {prev,next}.local; 
+
+# send to the given desktop
+super + shift + {1-9,0}
+	bspc node -d '^{1-9,10}'
+
+# send to next desktop
+super + shift +{c,v}
+	bspc node -d {prev,next}
+
+# focus the given desktop
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'; 
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {a,s,w,d}
+	bspc node -p {west,south,north,east}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {a,s,w,d}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {a,s,w,d}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# take a screenshot
+super + alt + s
+	scrot -z ~/screenshots/$(date +%F-%T).png; \
+	dunstify -r 1 "screenshot taken"
+
+# shift window into preselected region
+super + ctrl + shift + {a,s,w,d}
+	bspc node --to-node {west,south,north,east}
+
+# open ufetch window
+super + ctrl + u 
+	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
+#	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
