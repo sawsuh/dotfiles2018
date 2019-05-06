@@ -102,6 +102,9 @@ ZSH_DISABLE_COMPFIX=true
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ufetch="bash ~/.local/bin/ufetch"
 alias osu="bash ~/.osu.sh"
+alias y="yay"
+alias yu="yay -Syu --devel"
+alias gu="bash ~/.github_update" 
 task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
