@@ -103,7 +103,7 @@ ZSH_DISABLE_COMPFIX=true
 alias osu="bash ~/.osu.sh"
 alias y="yay"
 alias yu="yay -Syu --devel"
-alias gu="bash ~/.github_update" 
+alias dfu="bash ~/.github_update" 
 task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
