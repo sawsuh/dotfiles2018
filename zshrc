@@ -100,7 +100,6 @@ ZSH_DISABLE_COMPFIX=true
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ufetch="bash ~/.local/bin/ufetch"
 alias osu="bash ~/.osu.sh"
 alias y="yay"
 alias yu="yay -Syu --devel"
