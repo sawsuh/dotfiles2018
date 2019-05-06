@@ -3,6 +3,6 @@ commit_message=$1
 current_dir=$PWD
 cd ~/.dots
 git add .
-git commit -m "$1"
+git commit -m "$commit_message"
 git push
 cd $current_dir
