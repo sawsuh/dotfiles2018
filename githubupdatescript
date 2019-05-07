@@ -1,5 +1,5 @@
 #!/bin/bash
-commit_message=$1
+read -p "commit message> " commit_message
 current_dir=$PWD
 cd ~/.dots
 git add .
