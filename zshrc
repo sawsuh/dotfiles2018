@@ -105,8 +105,10 @@ alias y="yay"
 alias yu="yay -Syu --devel"
 alias dfu="bash ~/.dotfileupdater" 
 if [[ -n ${PASS} ]]; then
-    bash ~/.pwscript
-    exit
+    pass  
+    vared -p "selection> " -c tmp
+    pass -c "$tmp"
+    exit  
 else
     task
 fi
