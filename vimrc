@@ -12,5 +12,9 @@ augroup MyIMAPs
     au!
     au VimEnter * call IMAP('``s','\sum_{<++>}^{<++>}<++>','tex')
     au VimEnter * call IMAP('``p','\prod_{<++>}^{<++>}<++>','tex')
-    au VimEnter * call IMAP('``(','\left(<++>\right)<++>','tex')
+    au VimEnter * call IMAP('``9','\left(<++>\right)<++>','tex')
+    au VimEnter * call IMAP('``n','\mathbb{N}','tex')
+    au VimEnter * call IMAP('``r','\mathbb{R}','tex')
+    au VimEnter * call IMAP('``q','\mathbb{Q}','tex')
+    au VimEnter * call IMAP('``z','\mathbb{Z}','tex')
 augroup END
