@@ -1,11 +1,12 @@
 {
-  "version": "1.14.5.12",
-  "date": 1550900651482,
+  "version": "1.14.7.3",
+  "date": 1557287134993,
   "Conf": {
     "Redirect to HTTPS": true,
     "JSON Index": true,
     "Use 4chan X Catalog": true,
     "Index Refresh Notifications": false,
+    "Follow Cursor": true,
     "Open Threads in New Tab": false,
     "External Catalog": false,
     "Catalog Links": false,
@@ -154,6 +155,7 @@
     "Auto Watch": true,
     "Auto Watch Reply": true,
     "Auto Prune": false,
+    "Show Page": true,
     "Show Unread Count": true,
     "Show Site Prefix": true,
     "Require OP Quote Link": false,
@@ -164,6 +166,7 @@
     "tripcode": "# Filter any tripfag\n#/^!/",
     "capcode": "# Set a custom class for mods:\n#/Mod$/;highlight:mod;op:yes\n# Set a custom class for admins:\n#/Admin$/;highlight:admin;op:yes",
     "pass": "# Filter anyone using since4pass:\n#/./",
+    "email": "",
     "subject": "# Filter Generals on /v/:\n#/general/i;boards:v;op:only",
     "comment": "# Filter Stallman copypasta on /g/:\n#/what you're refer+ing to as linux/i;boards:g\n# Filter posts with 20 or more quote links:\n#/(?:>>\\d(?:(?!>>\\d)[^])*){20}/\n# Filter posts like T H I S / H / I / S:\n#/^>?\\s?\\w\\s?(\\w)\\s?(\\w)\\s?(\\w).*$[\\s>]+\\1[\\s>]+\\2[\\s>]+\\3/im",
     "flag": "",
@@ -171,11 +174,11 @@
     "dimensions": "# Highlight potential wallpapers:\n#/1920x1080/;op:yes;highlight;top:no;boards:w,wg",
     "filesize": "",
     "MD5": "",
-    "sauces": "# Known filename formats:\nhttp://www.pixiv.net/member_illust.php?mode=medium&illust_id=%$1;regexp:/^(\\d+)_p\\d+/\n//%$1.deviantart.com/gallery/#/d%$2;regexp:/^\\w+_by_(\\w+)-d([\\da-z]+)/\n//imgur.com/%$1;regexp:/^(?![a-zA-Z][a-z]{6})(?![A-Z]{7})(?!\\d{7})([\\da-zA-Z]{7})(?: \\(\\d+\\))?\\.\\w+$/\nhttp://flickr.com/photo.gne?id=%$1;regexp:/^(\\d+)_[\\da-f]{10}(?:_\\w)*\\b/\nhttps://www.facebook.com/photo.php?fbid=%$1;regexp:/^\\d+_(\\d+)_\\d+_[no]\\b/\n\n# Reverse image search:\nhttps://www.google.com/searchbyimage?image_url=%IMG&safe=off\nhttps://www.yandex.com/images/search?rpt=imageview&img_url=%IMG\n#//tineye.com/search?url=%IMG\n#//www.bing.com/images/search?q=imgurl:%IMG&view=detailv2&iss=sbi#enterInsights\n\n# Specialized reverse image search:\n//iqdb.org/?url=%IMG\nhttps://trace.moe/?auto&url=%IMG;text:wait\n#//3d.iqdb.org/?url=%IMG\n#//saucenao.com/search.php?url=%IMG\n\n# \"View Same\" in archives:\nhttp://eye.swfchan.com/search/?q=%name;types:swf\n#https://desuarchive.org/_/search/image/%sMD5/\n#https://archive.4plebs.org/_/search/image/%sMD5/\n#https://boards.fireden.net/_/search/image/%sMD5/\n#https://foolz.fireden.net/_/search/image/%sMD5/\n\n# Other tools:\n#http://exif.regex.info/exif.cgi?imgurl=%URL\n#//imgops.com/%URL;types:gif,jpg,png\n#//www.gif-explode.com/%URL;types:gif",
+    "sauces": "# Known filename formats:\nhttp://www.pixiv.net/member_illust.php?mode=medium&illust_id=%$1;regexp:/^(\\d+)_p\\d+/\n//www.deviantart.com/gallery/#/d%$1%$2;regexp:/^\\w+_by_\\w+[_-]d([\\da-z]{6})\\b|^d([\\da-z]{6})-[\\da-z]{8}-/\n//imgur.com/%$1;regexp:/^(?![a-zA-Z][a-z]{6})(?![A-Z]{7})(?!\\d{7})([\\da-zA-Z]{7})(?: \\(\\d+\\))?\\.\\w+$/\nhttp://flickr.com/photo.gne?id=%$1;regexp:/^(\\d+)_[\\da-f]{10}(?:_\\w)*\\b/\nhttps://www.facebook.com/photo.php?fbid=%$1;regexp:/^\\d+_(\\d+)_\\d+_[no]\\b/\n\n# Reverse image search:\nhttps://www.google.com/searchbyimage?image_url=%IMG&safe=off\nhttps://www.yandex.com/images/search?rpt=imageview&img_url=%IMG\n#//tineye.com/search?url=%IMG\n#//www.bing.com/images/search?q=imgurl:%IMG&view=detailv2&iss=sbi#enterInsights\n\n# Specialized reverse image search:\n//iqdb.org/?url=%IMG\nhttps://trace.moe/?auto&url=%IMG;text:wait\n#//3d.iqdb.org/?url=%IMG\n#//saucenao.com/search.php?url=%IMG\n\n# \"View Same\" in archives:\nhttp://eye.swfchan.com/search/?q=%name;types:swf\n#https://desuarchive.org/_/search/image/%sMD5/\n#https://archive.4plebs.org/_/search/image/%sMD5/\n#https://boards.fireden.net/_/search/image/%sMD5/\n#https://foolz.fireden.net/_/search/image/%sMD5/\n\n# Other tools:\n#http://exif.regex.info/exif.cgi?imgurl=%URL\n#//imgops.com/%URL;types:gif,jpg,png\n#//www.gif-explode.com/%URL;types:gif",
     "werk": false,
     "Custom CSS": true,
-    "Index Mode": "catalog",
-    "Previous Index Mode": "paged",
+    "Index Mode": "infinite",
+    "Previous Index Mode": "infinite",
     "Index Size": "small",
     "Show Replies": true,
     "Catalog Hover Expand": false,
@@ -193,7 +196,7 @@
     "Shortcut Icons": true,
     "Custom Board Navigation": true,
     "archiveLists": "https://mayhemydg.github.io/archives.json/archives.json",
-    "lastarchivecheck": 1550899974032,
+    "lastarchivecheck": 1557160913869,
     "archiveAutoUpdate": true,
     "boardnav": "biz-text:\"bog\"\ng-text:\"tech\" \nfit-text:\"fit\"\nlit-text:\"books\"\nmu-text:\"music\"\ntv-text:\"kino\"\nv-text:\"vidya\"\nvg-text:\"vgens\"\nwg-text:\"walls\"",
     "QR.personas": "#options:\"sage\";boards:jp;always",
@@ -207,7 +210,7 @@
     "fileInfo": "%l %d (%p%s, %r%g)",
     "favicon": "ferongr",
     "usercss": "/* Board title rice */\ndiv.boardTitle {\n  font-weight: 400 !important;\n}\n:root.yotsuba div.boardTitle {\n  font-family: sans-serif !important;\n  text-shadow: 1px 1px 1px rgba(100,0,0,0.6);\n}\n:root.yotsuba-b div.boardTitle {\n  font-family: sans-serif !important;\n  text-shadow: 1px 1px 1px rgba(105,10,15,0.6);\n}\n:root.photon div.boardTitle {\n  font-family: sans-serif !important;\n  text-shadow: 1px 1px 1px rgba(0,74,153,0.6);\n}\n:root.tomorrow div.boardTitle {\n  font-family: sans-serif !important;\n  text-shadow: 1px 1px 1px rgba(167,170,168,0.6);\n}\n",
-    "Toggle board list": "Ctrl+b",
+    "Toggle board list": "",
     "Toggle header": "Shift+h",
     "Open empty QR": "q",
     "Open QR": "Shift+q",
@@ -227,34 +230,35 @@
     "Update": "r",
     "Update thread watcher": "Shift+r",
     "Toggle thread watcher": "t",
+    "Toggle threading": "Shift+t",
     "Mark thread read": "Ctrl+0",
     "Expand image": "Shift+e",
     "Expand images": "e",
     "Open Gallery": "g",
-    "Next Gallery Image": "Right",
-    "Previous Gallery Image": "Left",
+    "Next Gallery Image": "l",
+    "Previous Gallery Image": "j",
     "Advance Gallery": "Enter",
     "Pause": "p",
     "Slideshow": "Ctrl+Right",
-    "fappeTyme": "f",
+    "fappeTyme": "",
     "werkTyme": "Shift+w",
     "Front page": "1",
     "Open front page": "Shift+1",
     "Next page": "Ctrl+Right",
     "Previous page": "Ctrl+Left",
     "Paged mode": "Alt+1",
-    "Infinite scrolling mode": "Alt+2",
+    "Infinite scrolling mode": "f",
     "All pages mode": "Alt+3",
-    "Open catalog": "Shift+c",
+    "Open catalog": "h",
     "Search form": "Ctrl+Alt+s",
     "Cycle sort type": "Alt+x",
-    "Next thread": "Ctrl+Down",
-    "Previous thread": "Ctrl+Up",
+    "Next thread": "m",
+    "Previous thread": "n",
     "Expand thread": "Ctrl+e",
     "Open thread": "o",
     "Open thread tab": "Shift+o",
-    "Next reply": "j",
-    "Previous reply": "k",
+    "Next reply": "k",
+    "Previous reply": "i",
     "Deselect reply": "Shift+d",
     "Hide": "x",
     "Quick Filter MD5": "5",
@@ -281,284 +285,314 @@
     "hiddenThreads": {
       "4chan.org": {
         "boards": {},
-        "lastChecked": 1550900594184
+        "lastChecked": 1557287122379
       }
     },
     "hiddenPosts": {
       "4chan.org": {
         "boards": {},
-        "lastChecked": 1550900594184
+        "lastChecked": 1557287122380
       }
     },
     "lastReadPosts": {
       "4chan.org": {
         "boards": {
-          "tv": {
-            "109795384": 109807392,
-            "109796355": 109807204,
-            "109803868": 109807153,
-            "109806864": 109807039,
-            "109857137": 109860510,
-            "109880676": 109881462,
-            "109881235": 109881591,
-            "109969591": 109972692,
-            "109969728": 109975308,
-            "109971268": 109974790,
-            "109971815": 109975167,
-            "109974883": 109975211
-          },
           "fit": {
-            "49535202": 49540406,
-            "49538099": 49544023,
-            "49538498": 49538731,
-            "49549341": 49551465,
-            "49549527": 49552285,
-            "49550295": 49552233,
-            "49556610": 49562570,
-            "49558232": 49558361,
-            "49561478": 49562621,
-            "49561571": 49561764,
-            "49561943": 49562529,
-            "49565777": 49565861,
-            "49569955": 49570015,
-            "49571057": 49580069,
-            "49572102": 49577476,
-            "49574730": 49586127,
-            "49574975": 49580673,
-            "49579244": 49580850,
-            "49579957": 49580911,
-            "49580226": 49580599,
-            "49581053": 49585938,
-            "49581693": 49585914,
-            "49584401": 49585346,
-            "49585605": 49585850,
-            "49585859": 49585993,
-            "49591472": 49592040,
-            "49591555": 49594109,
-            "49597518": 49620738,
-            "49605699": 49616128,
-            "49608544": 49623670,
-            "49615228": 49616345,
-            "49615456": 49615859,
-            "49616260": 49616372,
-            "49616783": 49616783,
-            "49616792": 49616792,
-            "49616803": 49616918,
-            "49620780": 49622353,
-            "49621203": 49621479,
-            "49621684": 49622245,
-            "49622182": 49622494,
-            "49622688": 49623359,
-            "49622838": 49623377,
-            "49624035": 49627629,
-            "49627312": 49628057,
-            "49628953": 49630738,
-            "49629688": 49630644,
-            "49629709": 49630677,
-            "49629876": 49630741,
-            "49630686": 49630686,
-            "49636853": 49643220,
-            "49638557": 49641209,
-            "49639799": 49643296,
-            "49642806": 49643230,
-            "49643124": 49648902,
-            "49643157": 49643229,
-            "49643251": 49643272,
-            "49657419": 49657690,
-            "49660506": 49660983,
-            "49662085": 49663955,
-            "49664005": 49668353,
-            "49665542": 49665705,
-            "49666076": 49666254,
-            "49666326": 49672228,
-            "49667627": 49668185,
-            "49667775": 49668201,
-            "49668055": 49668505,
-            "49668337": 49668356,
-            "49668415": 49668509,
-            "49669850": 49672154,
-            "49670689": 49670995,
-            "49670992": 49671116,
-            "49671417": 49672138,
-            "49671746": 49672198,
-            "49671929": 49672237,
-            "49672058": 49672162
-          },
-          "mu": {
-            "85838537": 85842101,
-            "85885854": 85887009,
-            "85886825": 85886972,
-            "85931403": 85931467
+            "17018018": 17020302,
+            "50565491": 50565524,
+            "50565562": 50566127,
+            "50570995": 50578718,
+            "50576426": 50578340,
+            "50576875": 50578349,
+            "50578706": 50578715,
+            "50582426": 50603438,
+            "50587291": 50590446,
+            "50600255": 50600708,
+            "50600258": 50600371,
+            "50601839": 50603523,
+            "50602781": 50603469,
+            "50602995": 50603511,
+            "50615944": 50617448,
+            "50619280": 50619396,
+            "50622401": 50627294,
+            "50622462": 50622667,
+            "50627075": 50629822,
+            "50628335": 50628423,
+            "50628711": 50629523,
+            "50629597": 50629597,
+            "50629614": 50629825,
+            "50629666": 50629746,
+            "50629793": 50629811,
+            "50631826": 50632601,
+            "50634257": 50634559,
+            "50634274": 50637564,
+            "50638077": 50638337,
+            "50639026": 50639079,
+            "50639435": 50639502,
+            "50639619": 50640462,
+            "50640286": 50640799,
+            "50640435": 50640439,
+            "50641814": 50641927,
+            "50653289": 50653427,
+            "50653443": 50654140,
+            "50653448": 50654145,
+            "50653525": 50654194,
+            "50653965": 50654060,
+            "50655760": 50658852,
+            "50656809": 50658284,
+            "50658335": 50658795,
+            "50659059": 50661365,
+            "50664394": 50664624,
+            "50664634": 50670490,
+            "50667771": 50671402,
+            "50668936": 50670058,
+            "50676404": 50702322,
+            "50680227": 50682186,
+            "50689847": 50707204,
+            "50696303": 50702290,
+            "50699922": 50701208,
+            "50700819": 50701738,
+            "50701893": 50702459,
+            "50701894": 50702433,
+            "50702038": 50702429,
+            "50702092": 50702449
           },
           "g": {
-            "69728704": 69736266,
-            "69749570": 69753417,
-            "69752228": 69757775,
-            "69773961": 69783114,
-            "69774382": 69790522,
-            "69775573": 69778331,
-            "69776647": 69777008,
-            "69778053": 69778329,
-            "69778158": 69778260,
-            "69781038": 69784088,
-            "69794848": 69802623,
-            "69801289": 69804949,
-            "69809328": 69809529,
-            "69810964": 69822906,
-            "69812312": 69823137,
-            "69820514": 69821782,
-            "69821479": 69821541,
-            "69852735": 69862209,
-            "69853624": 69862117,
-            "69858993": 69862192,
-            "69861499": 69861678
-          },
-          "lit": {
-            "12610175": 12611325
-          },
-          "a": {
-            "184572975": 184583442,
-            "184604951": 184606800
-          },
-          "biz": {
-            "12717095": 12717135,
-            "12717449": 12720445,
-            "12724890": 12725021
+            "70676969": 70677296,
+            "70696983": 70697264,
+            "70709945": 70713983,
+            "70733202": 70739350,
+            "70734213": 70734520,
+            "70752515": 70753172,
+            "70763344": 70764463,
+            "70780472": 70780630,
+            "70784923": 70786378,
+            "70789199": 70789199,
+            "70790548": 70792892,
+            "70790736": 70792890,
+            "70790753": 70792903,
+            "70791475": 70792985,
+            "70792666": 70792830,
+            "70793877": 70802967,
+            "70802273": 70809690,
+            "70803636": 70809769,
+            "70804254": 70805284,
+            "70806178": 70809680,
+            "70808521": 70809768,
+            "70808725": 70809541,
+            "70809752": 70811588,
+            "70810348": 70820839,
+            "70817408": 70820300,
+            "70818419": 70818501,
+            "70819022": 70819126,
+            "70819142": 70820822,
+            "70819817": 70820721,
+            "70820039": 70821046,
+            "70820080": 70856220,
+            "70820116": 70820796,
+            "70823057": 70826304,
+            "70834738": 70836455,
+            "70836034": 70839243,
+            "70838930": 70839190,
+            "70846643": 70850735,
+            "70847275": 70850699
           },
           "wg": {
-            "7353236": 7365690,
-            "7361040": 7362777
+            "7374715": 7386157,
+            "7380523": 7380829,
+            "7381238": 7396956,
+            "7382032": 7382036,
+            "7383259": 7398546,
+            "7383943": 7405781,
+            "7386290": 7389480,
+            "7386415": 7405789,
+            "7387685": 7398761,
+            "7389178": 7398028,
+            "7390324": 7395506,
+            "7392200": 7398995,
+            "7392638": 7406285,
+            "7392789": 7398574,
+            "7392859": 7405106,
+            "7393311": 7398641,
+            "7394497": 7398912,
+            "7394654": 7404116,
+            "7394767": 7405207,
+            "7394858": 7398611,
+            "7396008": 7404159,
+            "7396043": 7396104,
+            "7396070": 7398632,
+            "7396091": 7398999,
+            "7396642": 7396780,
+            "7396896": 7404699,
+            "7397444": 7404752,
+            "7397981": 7398838,
+            "7398508": 7398773,
+            "7398809": 7398851,
+            "7399026": 7406132,
+            "7399166": 7404117,
+            "7399638": 7404251,
+            "7400196": 7404108,
+            "7400221": 7406248,
+            "7400567": 7404023,
+            "7400921": 7400942,
+            "7401613": 7405136,
+            "7402007": 7404054,
+            "7402072": 7402158,
+            "7402483": 7403657,
+            "7403301": 7404778,
+            "7404329": 7404377,
+            "7404518": 7404697,
+            "7405816": 7406200,
+            "7406748": 7406773
+          },
+          "w": {
+            "2072797": 2077488,
+            "2073309": 2104760,
+            "2099279": 2130059,
+            "2106806": 2112994,
+            "2107161": 2113701,
+            "2110155": 2131500,
+            "2114107": 2130951,
+            "2114764": 2116803,
+            "2119133": 2129983,
+            "2125796": 2126634,
+            "2126169": 2131562,
+            "2128190": 2131502,
+            "2129004": 2131493,
+            "2129589": 2131768,
+            "2129688": 2131160,
+            "2130461": 2131647,
+            "2130491": 2131171
+          },
+          "tv": {
+            "113519413": 113522160,
+            "113522427": 113523174,
+            "113524238": 113525166,
+            "113525564": 113530527,
+            "113531041": 113531818,
+            "113962939": 113967227,
+            "113964909": 113966135,
+            "113965329": 113966134
+          },
+          "biz": {
+            "13449500": 13449699,
+            "13450747": 13450921,
+            "13467677": 13468728,
+            "13468095": 13468878,
+            "13506304": 13507292,
+            "13517949": 13519815,
+            "13541594": 13543636
+          },
+          "mu": {
+            "87538163": 87540863,
+            "87538393": 87539545,
+            "87539611": 87540948,
+            "87540860": 87540945,
+            "87584205": 87586127,
+            "87587018": 87588145,
+            "87587986": 87587999,
+            "87588002": 87588010
+          },
+          "vg": {
+            "251883576": 251888658
+          },
+          "v": {
+            "460815305": 460818686
+          },
+          "lit": {
+            "13050761": 13053222,
+            "13052886": 13053027,
+            "13052938": 13052938
           }
         },
-        "lastChecked": 1550899973134
+        "lastChecked": 1557287122387
       },
-      "version": 2964
+      "version": 11742
     },
     "yourPosts": {
       "4chan.org": {
         "boards": {
           "fit": {
-            "49535202": {
-              "49540397": true
+            "50629793": {
+              "50629811": true
             },
-            "49538099": {
-              "49551796": true
+            "50640435": {
+              "50640439": true
             },
-            "49556610": {
-              "49562561": true
+            "50653289": {
+              "50654078": true
             },
-            "49571057": {
-              "49579672": true,
-              "49579702": true
+            "50653965": {
+              "50654060": true
             },
-            "49581693": {
-              "49585914": true
-            },
-            "49616803": {
-              "49616848": true
-            },
-            "49639799": {
-              "49643285": true,
-              "49643296": true
-            },
-            "49666326": {
-              "49672228": true
-            },
-            "49668337": {
-              "49668443": true
-            },
-            "49670992": {
-              "49671015": true
+            "50689847": {
+              "50702493": true,
+              "50702507": true,
+              "50702528": true,
+              "50702578": true,
+              "50702602": true
+            }
+          },
+          "lit": {
+            "13052886": {
+              "13052968": true
             }
           },
           "g": {
-            "69752228": {
-              "69754326": true
-            },
-            "69774382": {
-              "69778911": true,
-              "69784103": true
+            "70820080": {
+              "70844013": true
             }
           },
           "biz": {
-            "12717449": {
-              "12719516": true
-            }
-          },
-          "mu": {
-            "85838537": {
-              "85842101": true
+            "13541594": {
+              "13543451": true
             }
           }
         },
-        "lastChecked": 1550899973129
+        "lastChecked": 1557287122382
       },
-      "version": 27
+      "version": 65
     },
     "watchedThreads": {
       "4chan.org": {
         "boards": {
-          "fit": {
-            "49581693": {
-              "excerpt": "/fit/ - >shredded arms and legs, can even see striations // >torso is ...",
-              "last": 49585914,
-              "isDead": true,
-              "unread": 0,
-              "quotingYou": false
-            },
-            "49616803": {
-              "excerpt": "/fit/ - How can one man be so based?",
-              "last": 49619552,
-              "isDead": true,
-              "unread": 14,
-              "quotingYou": false
-            },
-            "49639799": {
-              "excerpt": "/fit/ - Ideals thread",
-              "last": 49673360,
-              "isDead": true,
-              "unread": 254,
-              "quotingYou": false
-            },
-            "49666326": {
-              "excerpt": "/fit/ - What does your \"squad\" look like? Are you /fit/, /fat/ or /ffs/?",
-              "last": 49690676,
-              "isDead": true,
-              "unread": 137,
-              "quotingYou": false
-            },
-            "49668337": {
-              "excerpt": "/fit/ - >tfw you miscount the weights and accidentally set a new pr //...",
-              "last": 49669369,
-              "isDead": true,
-              "unread": 3,
-              "quotingYou": false
-            },
-            "49670992": {
-              "excerpt": "/fit/ - now that the dust has settled, what bf is the best for face ae...",
-              "last": 49674759,
-              "isDead": true,
-              "unread": 15,
-              "quotingYou": false
-            }
-          },
           "g": {
-            "69774382": {
+            "70820080": {
               "excerpt": "/g/ - /mkg/ - Mechanical Keyboard General",
-              "last": 69794374,
+              "modified": 1557246778,
+              "last": 70859323,
+              "replies": 324,
               "isDead": true,
-              "unread": 85,
+              "unread": 37,
               "quotingYou": false
             }
           }
         }
       },
-      "lastChecked": 1550900522509,
-      "version": 558
+      "lastChecked": 1557287122487,
+      "version": 1556,
+      "lastChecked2": 1557287122488
+    },
+    "watcherLastModified": {
+      "4chan.org": {
+        "boards": {
+          "g": {
+            "https://a.4cdn.org/g/threads.json": "Wed, 08 May 2019 03:45:15 GMT"
+          }
+        }
+      },
+      "version": 147
     },
     "customTitles": {
       "4chan.org": {
-        "boards": {}
+        "boards": {
+          "qa": {
+            "boardTitle": {
+              "orig": "/qa/ - Question & Answer",
+              "title": "/qa/ - 2D / Random"
+            }
+          }
+        }
       }
     },
     "archives": [
@@ -1060,34 +1094,46 @@
     ],
     "selectedArchives": {},
     "cooldowns": {
-      "lit": {
-        "1549810588393": {
-          "threadID": 12563952,
-          "postID": 12571196
-        }
-      },
-      "biz": {
-        "1549874410807": {
-          "threadID": 12717449,
-          "postID": 12719516
-        }
-      },
       "mu": {
         "1549898461230": {
           "threadID": 85838537,
           "postID": 85842101
         }
       },
+      "tv": {
+        "1551011135678": {
+          "threadID": 110404516,
+          "postID": 110417616
+        }
+      },
+      "vg": {
+        "1555152704622": {
+          "threadID": 249970367,
+          "postID": 249990565
+        }
+      },
+      "lit": {
+        "1556956090823": {
+          "threadID": 13052886,
+          "postID": 13052968
+        }
+      },
       "g": {
-        "1550068588343": {
-          "threadID": 69774382,
-          "postID": 69784103
+        "1557161270183": {
+          "threadID": 70820080,
+          "postID": 70844013
+        }
+      },
+      "biz": {
+        "1557194025657": {
+          "threadID": 13541594,
+          "postID": 13543451
         }
       },
       "fit": {
-        "1550586157395": {
-          "threadID": 49666326,
-          "postID": 49672228
+        "1557196367526": {
+          "threadID": 50689847,
+          "postID": 50702602
         }
       }
     },
@@ -1099,10 +1145,10 @@
         "software": "yotsuba"
       },
       "4channel.org": {
-        "software": "yotsuba"
+        "canonical": "4chan.org"
       },
       "4cdn.org": {
-        "software": "yotsuba"
+        "canonical": "4chan.org"
       }
     },
     "Except Archives from Encryption": false,
