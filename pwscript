@@ -1,0 +1,3 @@
+pass 
+read -p "selection> " selection
+pass -c "$selection"

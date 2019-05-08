@@ -18,6 +18,10 @@ super + @space
         urxvt -name stick -g 90x1 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
 #	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 
+# password manager
+super + ctrl + p
+        urxvt -name stick -e bash -c 'PASS=true /bin/zsh -i -t'
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd

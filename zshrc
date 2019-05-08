@@ -104,7 +104,12 @@ alias osu="bash ~/.osu.sh"
 alias y="yay"
 alias yu="yay -Syu --devel"
 alias dfu="bash ~/.dotfileupdater" 
-task
+if [[ -n ${PASS} ]]; then
+    bash ~/.pwscript
+    exit
+else
+    task
+fi
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
 }
