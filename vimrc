@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'junegunn/goyo.vim'
 call plug#end()
 filetype plugin on
 filetype indent on
@@ -17,4 +18,14 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``r','\mathbb{R}','tex')
     au VimEnter * call IMAP('``q','\mathbb{Q}','tex')
     au VimEnter * call IMAP('``z','\mathbb{Z}','tex')
-augroup END
+augroup END 
+ca wq :w<cr>:call Quit()<cr>
+ca q :call Quit()<cr>
+map <S-z><S-z> :w<Cr>:call Quit()<cr>
+function! Quit()
+    if exists('#goyo')
+        Goyo
+    endif
+    quit
+endfunction
+autocmd VimEnter * Goyo
