@@ -20,7 +20,7 @@ super + @space
 
 # password manager
 super + p
-        urxvt -name stick -e bash -c 'PASS=true /bin/zsh -i -t'
+        urxvt -name stick -g 50x10 -e bash -c 'PASS=true /bin/zsh -i -t'
 
 # make sxhkd reload its configuration files:
 super + Escape
