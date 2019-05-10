@@ -109,7 +109,7 @@ if [[ -n ${PASS} ]]; then
     cd ~/.password-store
     find | grep 'gpg$' | sed 's/^.\///' | sed 's/.gpg$//'  
     echo " "
-    vared -p "> " -c tmp
+    vared -p "$fg_bold[green]> $reset_color" -c tmp
     pass -c "$tmp"
     exit  
 fi
