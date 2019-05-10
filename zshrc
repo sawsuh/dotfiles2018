@@ -113,9 +113,8 @@ if [[ -n ${PASS} ]]; then
     vared -p "selection> " -c tmp
     pass -c "$tmp"
     exit  
-else
-    task
 fi
+task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
 }
