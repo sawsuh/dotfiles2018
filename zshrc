@@ -110,7 +110,7 @@ if [[ -n ${PASS} ]]; then
     cd ~/.password-store
     find | grep 'gpg$' | sed 's/^.\///' | sed 's/.gpg$//'  
     echo " "
-    vared -p "selection> " -c tmp
+    vared -p "> " -c tmp
     pass -c "$tmp"
     exit  
 fi
