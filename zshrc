@@ -105,8 +105,7 @@ alias y="yay"
 alias yu="yay -Syu --devel"
 alias dfu="bash ~/.dotfileupdater" 
 if [[ -n ${PASS} ]]; then
-    bindkey -s "^M" " & \n"
-    bindkey -s "^[" "^U exit \n"
+    bindkey -s "^[" "^U \n"
     cd ~/.password-store
     find | grep 'gpg$' | sed 's/^.\///' | sed 's/.gpg$//'  
     echo " "
