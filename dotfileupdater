@@ -1,8 +1,0 @@
-#!/bin/bash
-read -p "commit message> " commit_message
-current_dir=$PWD
-cd ~/.dots
-git add .
-git commit -m "$commit_message"
-git push
-cd $current_dir

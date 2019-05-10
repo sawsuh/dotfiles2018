@@ -103,18 +103,24 @@ ZSH_DISABLE_COMPFIX=true
 alias osu="bash ~/.osu.sh"
 alias y="yay"
 alias yu="yay -Syu --devel"
-alias dfu="bash ~/.dotfileupdater" 
+alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
+	   current_dir=$PWD &&
+	   cd ~/.dots &&
+	   git add . &&
+	   git commit -m "$commit_message" &&
+	   git push &&
+	   cd $current_dir'
 if [[ -n ${PASS} ]]; then
     bindkey -s "^[" "^U \n"
     cd ~/.password-store
     find | grep 'gpg$' | sed 's/^.\///' | sed 's/.gpg$//'  
     echo " "
-    vared -p "$fg_bold[green]> $reset_color" -c tmp
+    vared -p "  $fg_bold[green]> $reset_color" -c tmp
     pass -c "$tmp"
     exit  
 fi
 task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
-}
+} 
 
