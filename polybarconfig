@@ -61,10 +61,10 @@ enable-ipc = true
 [bar/bar4]
 bottom = true
 height = 45
-;width = 1900
-;offset-y = 10
-;offset-x = 10
-background = #202020
+width = 2500
+offset-y = 15
+offset-x = 30
+background = #00000000
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
@@ -81,7 +81,7 @@ bottom = true
 height = 45
 monitor = DVI-D-1
 width = 100
-;offset-y = 10
+offset-y = 15
 offset-x = 910
 background = #202020
 foreground =  ${colors.my_foreground}
@@ -100,7 +100,7 @@ type = internal/xwindow
 label = "  %title%  "
 label-empty = 
 label-maxlen = 60
-#format-background = ${colors.my_background}
+format-background = ${colors.my_background}
 #format-foreground = ${colors.my_foreground}
 #format-underline = ${colors.my_background}
 #label-separator = 
@@ -111,7 +111,7 @@ label-maxlen = 60
 type = custom/script
 exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
-format-background = #42423d 
+format-background = #202020 
 format-padding = 2 
 click-left = bash ~/.scripts/cal.sh
 
@@ -125,7 +125,7 @@ format-padding = 2
 [module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
-format-background = #42423d 
+format-background = #202020 
 format-padding = 2 
 label-focused = %name%
 label-unfocused = 

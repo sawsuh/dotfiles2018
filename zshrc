@@ -108,7 +108,7 @@ alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
 	   cd ~/.dots &&
 	   git add . &&
 	   git commit -m "$commit_message" &&
-	   git push &&
+	   git push;
 	   cd "$current_dir"'
 if [[ -n ${PASS} ]]; then
     bindkey -s "^[" "^U \n"
