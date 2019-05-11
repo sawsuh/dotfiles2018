@@ -109,7 +109,7 @@ alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
 	   git add . &&
 	   git commit -m "$commit_message" &&
 	   git push &&
-	   cd $current_dir'
+	   cd "$current_dir"'
 if [[ -n ${PASS} ]]; then
     bindkey -s "^[" "^U \n"
     cd ~/.password-store
