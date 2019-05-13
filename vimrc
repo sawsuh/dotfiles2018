@@ -5,6 +5,8 @@ call plug#end()
 filetype plugin on
 filetype indent on
 syntax on
+set breakindent
+set breakindentopt=shift:2
 let g:tex_flavor='latex'
 let g:livepreview_previewer = 'mupdf'
 let g:Tex_DefaultTargetFormat = 'pdf'
