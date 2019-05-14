@@ -17,7 +17,7 @@ height = 45
 width = 2560
 ;offset-y = 15
 ;offset-x = 30
-background = #202020
+background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
@@ -36,7 +36,7 @@ monitor = DVI-D-1
 width = 1920
 ;offset-y = 15
 ;offset-x = 910
-background = #202020
+background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
