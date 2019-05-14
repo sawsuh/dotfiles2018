@@ -15,7 +15,7 @@
     #
     # If this option is set to mouse or keyboard, the monitor option
     # will be ignored.
-    follow = mouse
+    follow = keyboard
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -29,7 +29,7 @@
     # the top and down respectively.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "400x200+20+65"
+    geometry = "400x200+10+10"
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = no
@@ -61,7 +61,7 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 0
+    frame_width = 3
 
     # Defines color of the frame around the notification window.
     frame_color = "#42423d"
@@ -85,7 +85,7 @@
 
     ### Text ###
 
-    font = undefined 13
+    font = Fira Code 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

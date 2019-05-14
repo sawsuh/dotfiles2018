@@ -42,7 +42,7 @@ font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
 modules-left = mpd
 modules-center = bspwm2
-modules-right = audio 
+modules-right =  
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
