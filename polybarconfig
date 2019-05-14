@@ -10,53 +10,6 @@
 my_background 	= #202020
 my_foreground 	= #eee4e5
 my_color0	= #42423d
-my_color1	= #545d67
-my_color2	= #c05c47
-my_color3	= #c16772
-my_color4	= #428e8e
-my_color5	= #afda6e
-my_color6	= #e4b226
-my_color7	= #ebcf1a
-my_color8	= #4457a3
-my_color9	= #4880a5
-my_color10	= #903a62
-my_color11	= #9568a1
-my_color12	= #7aa1dc
-my_color13	= #abbcda
-my_color14	= #c4b7c5
-my_color15	= #ffeefc
-
-[bar/main]
-bottom = false
-height = 113
-width = 250
-offset-y = 10
-offset-x = 10
-background = #202020
-foreground =  ${colors.my_foreground}
-font-2 = "Wuncon Siji"
-font-1 = t cherry:size=13
-modules-center = date
-override-redirect = true
-wm-restack = true
-enable-ipc = true
-
-[bar/bar2]
-bottom = false
-height = 45
-;width = 1900
-;offset-y = 10
-;offset-x = 10
-background = #202020
-foreground =  ${colors.my_foreground}
-font-0 = undefined,undefined medium:Pixelsize=13
-font-1 = Wuncon Siji:size=16
-modules-left = bspwm
-modules-center = title
-modules-right = date2
-override-redirect = true
-wm-restack = true
-enable-ipc = true   
 
 [bar/bar4]
 bottom = true
@@ -94,9 +47,6 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
-[settings]
-format-underline = ${colors.my_color0}
-
 [module/title]
 type = internal/xwindow
 label = "  %title%  "
@@ -113,21 +63,14 @@ format-background = ${colors.my_background}
 type = custom/script
 exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
-format-background = #42423d
+format-background = ${colors.my_color0}
 format-padding = 2 
 click-left = bash ~/.scripts/cal.sh
-
-[module/2bwm2]
-type = custom/script
-exec = bash ~/.scripts/2bwm.sh
-tail = true
-format-background = #42423d 
-format-padding = 2 
 
 [module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
-format-background = #42423d 
+format-background = ${colors.my_color0} 
 format-padding = 2 
 label-focused = %name%
 label-unfocused = 
@@ -137,27 +80,12 @@ label-empty =
 [module/bspwm2]
 type = internal/bspwm
 pin-workspaces = true
-format-background = #202020 
+format-background = ${colors.my_background} 
 format-padding = 2 
 label-focused = %name%
 label-unfocused = 
 label-occupied =
 label-empty = 
-
-[module/dateicon]
-type = custom/text
-content-background = #787376
-content-foreground = #ffeefc
-content-padding = 2
-content = ""
-click-left = bash ~/.scripts/cal.sh
-
-[module/2bwmicon]
-type = custom/text
-content = ""
-content-background = #787376
-content-padding = 2
-content-foreground = #ffeefc
 
 [module/mpd]
 type = internal/mpd
@@ -166,10 +94,10 @@ port = 6600
 format-stopped = no music
 label-song = %artist% - %title%   
 format-playing = <label-song>
-format-playing-background = #42423d
-format-playing-foreground = #ffeefc
-format-online-background = #42423d
-format-online-foreground = #ffeefc
+format-playing-background = ${colors.my_color0}
+format-playing-foreground = ${colors.my_foreground}
+format-online-background = ${colors.my_color0}
+format-online-foreground = ${colors.my_foreground}
 format-online-padding = 2
 format-playing-padding = 2
 
@@ -178,7 +106,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = %percentage%
 label-muted = muted
-label-muted-background = #42423d
+label-muted-background = ${colors.my_color0}
 label-muted-padding = 2
-label-volume-background = #42423d
+label-volume-background = ${colors.my_color0}
 label-volume-padding = 2
