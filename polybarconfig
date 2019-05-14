@@ -61,10 +61,10 @@ enable-ipc = true
 [bar/bar4]
 bottom = true
 height = 45
-width = 2500
-offset-y = 15
-offset-x = 30
-background = #00000000
+width = 2560
+;offset-y = 15
+;offset-x = 30
+background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
@@ -80,14 +80,16 @@ monitor = HDMI-1
 bottom = true
 height = 45
 monitor = DVI-D-1
-width = 100
-offset-y = 15
-offset-x = 910
+width = 1920
+;offset-y = 15
+;offset-x = 910
 background = #202020
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
-modules-center = bspwm2 
+modules-left = mpd
+modules-center = bspwm2
+modules-right = audio 
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
@@ -111,7 +113,7 @@ format-background = ${colors.my_background}
 type = custom/script
 exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
-format-background = #202020 
+format-background = #42423d
 format-padding = 2 
 click-left = bash ~/.scripts/cal.sh
 
@@ -125,7 +127,7 @@ format-padding = 2
 [module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
-format-background = #202020 
+format-background = #42423d 
 format-padding = 2 
 label-focused = %name%
 label-unfocused = 
@@ -170,3 +172,13 @@ format-online-background = #42423d
 format-online-foreground = #ffeefc
 format-online-padding = 2
 format-playing-padding = 2
+
+[module/audio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+label-volume = %percentage%
+label-muted = muted
+label-muted-background = #42423d
+label-muted-padding = 2
+label-volume-background = #42423d
+label-volume-padding = 2

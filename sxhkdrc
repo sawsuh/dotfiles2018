@@ -48,19 +48,19 @@ super + {_,shift + }q
 
 # start file browser mon 1
 super + shift + f
-	tdrop -a -h 500 -w 1000 -x 3464 -y 864 -n 1 -f "-name stick1 -e ranger" urxvt
+	tdrop -a -h 500 -w 1000 -x 3464 -y 879 -n 1 -f "-name stick1 -e ranger" urxvt
 
 # start file browser mon 2
 super + ctrl + f
-	tdrop -a -h 450 -w 884 -x 1020 -y 609 -n 1 -f "-name stick1 -e ranger" urxvt
+	tdrop -a -h 450 -w 884 -x 1020 -y 569 -n 1 -f "-name stick1 -e ranger" urxvt
 
 # start music player mon 1
 super + shift + m
-	tdrop -a -h 500 -w 1000 -x 1930 -y 864 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+	tdrop -a -h 500 -w 1000 -x 1930 -y 879 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
 
 # start music player mon 2
 super + ctrl + m
-	tdrop -a -h 450 -w 884 -x 10 -y 609 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
+	tdrop -a -h 450 -w 884 -x 10 -y 569 -n 2 -f "-name stick2 -e ncmpcpp" urxvt
 
 # set the window state
 
@@ -136,3 +136,7 @@ super + ctrl + shift + {a,s,w,d}
 super + ctrl + u 
 	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
 #	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
+
+# volume control
+super + {m,n}
+	pactl -- set-sink-volume 1 {+3%,-3%}
