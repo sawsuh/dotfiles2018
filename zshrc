@@ -113,7 +113,7 @@ alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
 if [[ -n ${PASS} ]]; then
     bindkey -s "^[" "^U \n"
     cd ~/.password-store
-    find | grep 'gpg$' | sed 's/^.\///' | sed 's/.gpg$//'  
+    find | grep 'gpg$' | sed -e 's/^.\///' -e 's/.gpg$//'  
     echo " "
     vared -p " $fg_bold[green]> $reset_color" -c tmp
     pass -c "$tmp"
