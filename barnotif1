@@ -1,0 +1,7 @@
+process=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
+if [[ "$process" != "" ]] 
+then
+	kill $process
+else
+	polybar pop1& > /dev/null
+fi
