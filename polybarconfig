@@ -9,7 +9,7 @@
 [colors]
 my_background 	= #202020
 my_foreground 	= #eee4e5
-my_color0	= #42423d
+my_color0	= #202020
 
 [bar/bar4]
 bottom = true
@@ -40,16 +40,16 @@ background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
 font-1 = Wuncon Siji:size=16
-modules-left = mpd
-modules-center = bspwm2
-modules-right =  
+modules-right = mpd
+modules-left = bspwm2
+modules-center =   
 override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
 [module/title]
 type = internal/xwindow
-label = "  %title%  "
+label = "%title%"
 label-empty = 
 label-maxlen = 60
 format-background = ${colors.my_background}
@@ -72,7 +72,7 @@ type = internal/bspwm
 pin-workspaces = true
 format-background = ${colors.my_color0} 
 format-padding = 2 
-label-focused = %name%
+label-focused = >%name%
 label-unfocused = 
 label-occupied =
 label-empty = 
@@ -82,7 +82,7 @@ type = internal/bspwm
 pin-workspaces = true
 format-background = ${colors.my_background} 
 format-padding = 2 
-label-focused = %name%
+label-focused = >%name%
 label-unfocused = 
 label-occupied =
 label-empty = 
