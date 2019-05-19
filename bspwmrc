@@ -4,14 +4,14 @@ nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
 xrdb ~/.Xresources&
-polybar bar3&
-polybar bar4&
+#polybar bar3&
+#polybar bar4&
 dunst&
 
 bspc monitor DVI-D-1 -d one two three four five
 bspc monitor HDMI-1 -d six seven eight nine ten
 bspc config top_padding        10
-bspc config bottom_padding     55
+bspc config bottom_padding     10
 bspc config left_padding       10
 bspc config right_padding      10
 bspc config border_width         3

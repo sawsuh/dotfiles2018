@@ -47,6 +47,48 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
+[bar/pop1]
+bottom = false
+height = 121
+monitor = DVI-D-1
+width = 400
+offset-y = 10
+offset-x = 10
+background = ${colors.my_background}
+foreground =  ${colors.my_foreground}
+font-0 = Fira Code:size=12
+font-1 = Wuncon Siji:size=16
+modules-right = 
+modules-left = 
+modules-center = date2 bspwm   
+override-redirect = true
+#wm-restack = true
+enable-ipc = true   
+separator = " "
+border-size = 3
+border-color = #42423d
+
+[bar/pop2]
+bottom = false
+height = 121
+monitor = HDMI-1
+width = 400
+offset-y = 10
+offset-x = 10
+background = ${colors.my_background}
+foreground =  ${colors.my_foreground}
+font-0 = Fira Code:size=12
+font-1 = Wuncon Siji:size=16
+modules-right = 
+modules-left = 
+modules-center = date2 bspwm2  
+override-redirect = true
+#wm-restack = true
+enable-ipc = true   
+separator = " "
+border-size = 3
+border-color = #42423d
+
 [module/title]
 type = internal/xwindow
 label = "%title%"
@@ -65,7 +107,7 @@ exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 format-background = ${colors.my_color0}
 format-padding = 2 
-click-left = bash ~/.scripts/cal.sh
+#click-left = bash ~/.scripts/cal.sh
 
 [module/bspwm]
 type = internal/bspwm

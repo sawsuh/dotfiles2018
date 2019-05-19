@@ -1,0 +1,7 @@
+if pgrep polybar > /dev/null
+then
+	pkill polybar
+else
+	polybar pop1&
+	polybar pop2&
+fi
