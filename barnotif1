@@ -1,9 +1,21 @@
-process=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
-if [[ "$process" != "" ]] 
+pid=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
+if [[ "$pid" != "" ]] 
 then
-	kill $process
+	wid=$(xdotool search --pid $pid --onlyvisible)
+	if [[ "$wid" != "" ]] 
+	then
+		xdotool windowunmap $wid
+	else
+		wid=$(xdotool search --pid $pid)
+		xdotool windowmap $wid
+		pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
+		wid2=$(xdotool search --pid $pid2 --onlyvisible)
+		xdotool windowunmap $wid2
+	fi
 else
-	process2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
-	kill $process2
 	polybar pop1& > /dev/null
+	pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
+	wid2=$(xdotool search --pid $pid2 --onlyvisible)
+	xdotool windowunmap $wid2
 fi
+
