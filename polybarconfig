@@ -57,10 +57,10 @@ offset-x = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
-font-1 = Wuncon Siji:size=16
+font-1 = font-logos:size=16
 modules-right = 
 modules-left = 
-modules-center = date2 bspwm   
+modules-center = date2 bspwm audio
 override-redirect = true
 #wm-restack = true
 enable-ipc = true   
@@ -78,10 +78,10 @@ offset-x = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
-font-1 = Wuncon Siji:size=16
+font-1 = font-logos:size=16
 modules-right = 
 modules-left = 
-modules-center = date2 bspwm2  
+modules-center = date2 bspwm2 audio 
 override-redirect = true
 #wm-restack = true
 enable-ipc = true   
@@ -103,7 +103,8 @@ format-background = ${colors.my_background}
 
 [module/date2]
 type = custom/script
-exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
+;exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
+exec = date +'%d/%m %I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 format-background = ${colors.my_color0}
 format-padding = 2 
@@ -146,7 +147,7 @@ format-playing-padding = 2
 [module/audio]
 type = internal/pulseaudio
 format-volume = <label-volume>
-label-volume = %percentage%
+label-volume = ♪%percentage%
 label-muted = muted
 label-muted-background = ${colors.my_color0}
 label-muted-padding = 2

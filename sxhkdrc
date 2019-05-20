@@ -139,7 +139,8 @@ super + ctrl + u
 
 # volume control
 super + {m,n} 
-	pactl -- set-sink-volume 1 {+3%,-3%} &&  dunstify "volume: $((pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 2 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'))" -r 1
+	pactl -- set-sink-volume 1 {+3%,-3%}
+# &&  dunstify "volume: $((pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 2 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'))" -r 1
 
 # bar notification toggle mon 1
 super + b
