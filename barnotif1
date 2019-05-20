@@ -3,5 +3,7 @@ if [[ "$process" != "" ]]
 then
 	kill $process
 else
+	process2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
+	kill $process2
 	polybar pop1& > /dev/null
 fi
