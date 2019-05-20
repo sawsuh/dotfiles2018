@@ -57,7 +57,7 @@ offset-x = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
-font-1 = font-logos:size=16
+font-1 = font-logos:size=18
 modules-right = 
 modules-left = 
 modules-center = date2 bspwm audio
@@ -78,7 +78,7 @@ offset-x = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
-font-1 = font-logos:size=16
+font-1 = font-logos:size=18
 modules-right = 
 modules-left = 
 modules-center = date2 bspwm2 audio 
