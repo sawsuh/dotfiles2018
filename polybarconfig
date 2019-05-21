@@ -86,7 +86,7 @@ format-background = ${colors.my_background}
 [module/date2]
 type = custom/script
 ;exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
-exec = date +'%a %d/%m %I %M %p' | tr '[:upper:]' '[:lower:]'
+exec = date +'%a %-d/%-m %-I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 format-background = ${colors.my_color0}
 format-padding = 1 
