@@ -124,9 +124,10 @@ super + alt + shift + {a,s,w,d}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # take a screenshot
-super + alt + s
-	scrot -z ~/screenshots/$(date +%F-%T).png; \
-	dunstify -r 1 "screenshot taken"
+super + alt + c
+	bash ~/.scr.sh
+# scrot -z ~/screenshots/$(date +%F-%T).png; \
+# 	dunstify -r 1 "screenshot taken"
 
 # shift window into preselected region
 super + ctrl + shift + {a,s,w,d}

@@ -1,0 +1,9 @@
+xcord=$(xdotool getmouselocation --shell | awk -F '=' '{print $2; exit}')
+if [[ "$xcord" > 1920 ]]
+then
+	maim -f png -u -g 2560x1440+1920+0 screenshots/$(date +'%-d-%-m-%-y_%-R')mon2.png
+else
+	maim -f png -u -g 1920x1080+0+0 screenshots/$(date +'%-d-%-m-%-y_%-R')mon1.png
+fi
+sleep 1;
+dunstify "screenshot taken"
