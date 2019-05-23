@@ -101,6 +101,7 @@ ZSH_DISABLE_COMPFIX=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias osu="bash ~/.osu.sh"
+alias uf="bash ~/.local/bin/ufetch"
 alias y="yay"
 alias yu="yay -Syu --devel"
 alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
