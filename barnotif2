@@ -1,0 +1,21 @@
+pid=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
+if [[ "$pid" != "" ]] 
+then
+	wid=$(xdotool search --pid $pid --onlyvisible)
+	if [[ "$wid" != "" ]]
+	then
+		xdotool windowunmap $wid
+	else
+		wid=$(xdotool search --pid $pid)
+		xdotool windowmap $wid
+		xdotool windowraise $wid
+		pid1=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
+		wid1=$(xdotool search --pid $pid1)
+		xdotool windowunmap $wid1
+	fi
+else
+	polybar pop2& > /dev/null
+	pid1=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
+	wid1=$(xdotool search --pid $pid1)
+	xdotool windowunmap $wid1
+fi

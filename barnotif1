@@ -1,25 +1,21 @@
 pid=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
 if [[ "$pid" != "" ]] 
 then
-#	wid=$(xdotool search --pid $pid --onlyvisible)
-#	if [[ "$wid" != "" ]] 
-#	then
-#		xdotool windowunmap $wid
-#	else
-#		wid=$(xdotool search --pid $pid)
-#		xdotool windowmap $wid
-#		bspc config top_padding 10
-#		pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
-#		wid2=$(xdotool search --pid $pid2 --onlyvisible)
-#		xdotool windowunmap $wid2
-#	fi
-	kill $pid
+	wid=$(xdotool search --pid $pid --onlyvisible)
+	if [[ "$wid" != "" ]]
+	then
+		xdotool windowunmap $wid
+	else
+		wid=$(xdotool search --pid $pid)
+		xdotool windowmap $wid
+		xdotool windowraise $wid
+		pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
+		wid2=$(xdotool search --pid $pid2)
+		xdotool windowunmap $wid2
+	fi
 else
 	polybar pop1& > /dev/null
 	pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
-	kill $pid2
-#	bspc config top_padding 10
-#	wid2=$(xdotool search --pid $pid2 --onlyvisible)
-#	xdotool windowunmap $wid2
+	wid2=$(xdotool search --pid $pid2)
+	xdotool windowunmap $wid2
 fi
-
