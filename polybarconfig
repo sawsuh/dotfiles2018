@@ -52,7 +52,6 @@ bottom = false
 height = 121
 width = 400
 offset-y = 10
-offset-x = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=12
@@ -66,10 +65,12 @@ border-color = #42423d
 [bar/pop1]
 inherit = section/popups
 monitor = DVI-D-1
+offset-x = 1510
 
 [bar/pop2]
 monitor = HDMI-1
 inherit = section/popups
+offset-x = 10
 
 [module/title]
 type = internal/xwindow
