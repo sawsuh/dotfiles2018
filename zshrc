@@ -116,7 +116,7 @@ if [[ -n ${PASS} ]]; then
     pass -c "$tmp"
     exit  
 fi
-cat ~/.shortcuts | awk -F": " '{print "alias alias-name "$1"=\""$2"\""";"}' > ~/.shorttemp
+cat ~/.shortcuts | awk -F": " '{print "alias alias-name "$1"=\""$2"\""}' > ~/.shorttemp
 source ~/.shorttemp
 rm ~/.shorttemp
 task
