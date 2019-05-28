@@ -1,0 +1,8 @@
+xr: ~/.Xresources
+sxrc: ~/.config/sxhkd/sxhkdrc1
+bsprc: ~/.config/bspwm/bspwmrc
+pbar: ~/.config/polybar/config
+osu: "bash ~/.osu.sh"
+uf: "bash ~/.local/bin/ufetch"
+y: "yay"
+yu: "yay -Syu --devel"

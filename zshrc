@@ -100,10 +100,6 @@ ZSH_DISABLE_COMPFIX=true
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias osu="bash ~/.osu.sh"
-alias uf="bash ~/.local/bin/ufetch"
-alias y="yay"
-alias yu="yay -Syu --devel"
 alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
 	   current_dir=$PWD &&
 	   cd ~/.dots &&
@@ -120,6 +116,9 @@ if [[ -n ${PASS} ]]; then
     pass -c "$tmp"
     exit  
 fi
+cat ~/.shortcuts | awk -F": " '{print "alias alias-name "$1"=\""$2"\""";"}' > ~/.shorttemp
+source ~/.shorttemp
+rm ~/.shorttemp
 task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }
