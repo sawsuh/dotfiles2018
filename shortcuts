@@ -1,9 +1,12 @@
-xr: vim ~/.Xresources
-sxrc: vim ~/.config/sxhkd/sxhkdrc1
-bsprc: vim ~/.config/bspwm/bspwmrc
-pbar: vim ~/.config/polybar/config
+--Commands
 dots: cd ~/.dots
-osu: bash ~/.osu.sh
-uf: bash ~/.local/bin/ufetch
+osu: bash ~/.osu.sh 
 y: yay
 yu: yay -Syu --devel
+vtex: vtex(){ mupdf "$1".pdf& vim "$1".tex }; vtex 
+--FilestoVim
+xr: ~/.Xresources
+sxrc: ~/.config/sxhkd/sxhkdrc1
+bsprc: ~/.config/bspwm/bspwmrc
+pbar: ~/.config/polybar/config
+rng: ~/.config/ranger/rc.conf
