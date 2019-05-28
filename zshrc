@@ -91,6 +91,15 @@ if [[ -n ${LAUNCHER} ]]; then
     bindkey -s "^M" " & \n"
     bindkey -s "^[" "^U exit \n"
 fi
+if [[ -n ${PASS} ]]; then
+    bindkey -s "^[" "^U \n"
+    cd ~/.password-store
+    find | grep 'gpg$' | sed -e 's/^.\///' -e 's/.gpg$//'  
+    echo " "
+    vared -p " $fg_bold[green]> $reset_color" -c tmp
+    pass -c "$tmp"
+    exit  
+fi
 ZSH_DISABLE_COMPFIX=true
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -107,15 +116,6 @@ alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
 	   git commit -m "$commit_message" &&
 	   git push;
 	   cd "$current_dir"'
-if [[ -n ${PASS} ]]; then
-    bindkey -s "^[" "^U \n"
-    cd ~/.password-store
-    find | grep 'gpg$' | sed -e 's/^.\///' -e 's/.gpg$//'  
-    echo " "
-    vared -p " $fg_bold[green]> $reset_color" -c tmp
-    pass -c "$tmp"
-    exit  
-fi
 awk '/--Commands/, /--Files/' .shortcuts | sed '1d;$d' | awk -F": " '{print "alias "$1"=\x27"$2"\x27"}' > ~/.shorttemp
 awk '/--Files/,EOF' .shortcuts | sed '1d' | awk -F ": " '{print "alias "$1"=\"vim "$2"\""}' >> ~/.shorttemp
 source ~/.shorttemp
