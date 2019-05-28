@@ -2,6 +2,7 @@ xr: vim ~/.Xresources
 sxrc: vim ~/.config/sxhkd/sxhkdrc1
 bsprc: vim ~/.config/bspwm/bspwmrc
 pbar: vim ~/.config/polybar/config
+dots: cd ~/.dots
 osu: bash ~/.osu.sh
 uf: bash ~/.local/bin/ufetch
 y: yay
