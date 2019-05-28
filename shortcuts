@@ -4,6 +4,8 @@ osu: bash ~/.osu.sh
 y: yay
 yu: yay -Syu --devel
 vtex: vtex(){ mupdf "$1".pdf& vim "$1".tex }; vtex 
+ff: firefox
+cr: chromium
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
