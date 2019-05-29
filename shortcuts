@@ -6,6 +6,7 @@ yu: yay -Syu --devel
 vtex: vtex(){ mupdf "$1".pdf& vim "$1".tex }; vtex 
 ff: firefox
 cr: chromium
+nit: nitrogen
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
