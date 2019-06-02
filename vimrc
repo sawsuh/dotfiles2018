@@ -16,6 +16,7 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``i','\indent <++>','tex')
     au VimEnter * call IMAP('``s','\sum_{<++>}^{<++>}<++>','tex')
     au VimEnter * call IMAP('``p','\prod_{<++>}^{<++>}<++>','tex')
+    au VimEnter * call IMAP('``b','\binom{<++>}{<++>}<++>','tex')
     au VimEnter * call IMAP('``9','\left(<++>\right)<++>','tex')
     au VimEnter * call IMAP('``[','\left[<++>\right]<++>','tex')
     au VimEnter * call IMAP('``\','\left|<++>\right|<++>','tex')

@@ -13,3 +13,4 @@ sxrc: ~/.config/sxhkd/sxhkdrc1
 bsprc: ~/.config/bspwm/bspwmrc
 pbar: ~/.config/polybar/config
 rng: ~/.config/ranger/rc.conf
+vrc: ~/.vimrc

@@ -35,6 +35,7 @@ URxvt.color14:      #bacec6
 URxvt.color7:       #787376
 URxvt.color15:      #eee4e5
 URxvt.font: xft: Fira Code :size=12
+
 URxvt.scrollBar: false
 URxvt.internalBorder: 60
 URxvt.lineSpace:    10
@@ -49,3 +50,7 @@ URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
 twobwm.enable_compton: true
 Xft.dpi: 100
+
+Sxiv.foreground: #202020
+Sxiv.background: #eee4e5
+Sxiv.font: Fira Code:size=12
