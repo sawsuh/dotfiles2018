@@ -5,18 +5,13 @@
 # terminal emulator
 super + z
 	urxvt -name term
-#	termite --name=term
 
 super + shift + z
 	bash /home/prashant/.t.sh
 
 # program launcher
-super + shift + @space
-	rofi -show run -display-run ">  ~ "
-
 super + @space
         urxvt -name stick -g 90x1 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
-#	termite --name=stick --geometry=900x40 -e "bash -c 'LAUNCHER=true /bin/zsh -i -t'"
 
 # password manager
 super + p
@@ -126,17 +121,10 @@ super + alt + shift + {a,s,w,d}
 # take a screenshot
 super + alt + c
 	bash ~/.scr.sh
-# scrot -z ~/screenshots/$(date +%F-%T).png; \
-# 	dunstify -r 1 "screenshot taken"
 
 # shift window into preselected region
 super + ctrl + shift + {a,s,w,d}
 	bspc node --to-node {west,south,north,east}
-
-# open ufetch window
-super + ctrl + u 
-	urxvt -name float -g 30x9 -hold -e zsh -c ~/.local/bin/ufetch   
-#	termite --name=float --geometry=443x239+75+136 -e "ufetch" --hold
 
 # volume control
 super + {m,n} 

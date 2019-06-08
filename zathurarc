@@ -1,14 +1,19 @@
 set statusbar-home-tilde true
-set zoom-max 2500
+map = zoom in
 map i scroll up
 map k scroll down
 map j scroll left
 map l scroll right
+map I scroll half-up
+map K scroll half-down
 map f toggle_fullscreen
+map [fullscreen] = zoom in
 map [fullscreen] i scroll up
 map [fullscreen] k scroll down
 map [fullscreen] j scroll left
 map [fullscreen] l scroll right
+map [fullscreen] I scroll half-up
+map [fullscreen] K scroll half-down
 map [fullscreen] f toggle_fullscreen
 
 set statusbar-h-padding 60

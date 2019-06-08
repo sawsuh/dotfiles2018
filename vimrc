@@ -8,9 +8,8 @@ syntax on
 set breakindent
 set breakindentopt=shift:2
 let g:tex_flavor='latex'
-let g:livepreview_previewer = 'mupdf'
+let g:livepreview_previewer = 'zathura'
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_CompileRule_pdf = 'pdflatex $* && pkill -HUP mupdf'
 augroup MyIMAPs
     au!
     au VimEnter * call IMAP('``i','\indent <++>','tex')

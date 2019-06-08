@@ -3,10 +3,12 @@ dots: cd ~/.dots
 osu: bash ~/.osu.sh 
 y: yay
 yu: yay -Syu --devel
-vtex: vtex(){ mupdf "$1".pdf& vim "$1".tex }; vtex 
+vtex: vtex(){ zathura "$1".pdf& vim "$1".tex }; vtex 
 ff: firefox
 cr: chromium
 nit: nitrogen
+dis: discord
+study: urxvt -name float -geometry 20x1 --hold -e zsh -c "setterm -cursor off& potato -m"
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1

@@ -136,3 +136,4 @@ label-muted-background = ${colors.my_color0}
 label-muted-padding = 1
 label-volume-background = ${colors.my_color0}
 label-volume-padding = 1
+
