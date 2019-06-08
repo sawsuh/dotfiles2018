@@ -8,7 +8,7 @@ ff: firefox
 cr: chromium
 nit: nitrogen
 dis: discord
-study: urxvt -name float -geometry 20x1 --hold -e zsh -c "setterm -cursor off& potato -m"
+study: urxvt -name stick -geometry 20x1 --hold -e zsh -c "setterm -cursor off& potato -m"
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
