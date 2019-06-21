@@ -147,7 +147,7 @@ refresh_rate 			= 1.0
 ; Set the clock format. See strftime(3) for a full list of format specifiers
 ; Possible values: string
 ; Default value: %H:%M:%S
-format 					= %H:%M
+format 					= %-I:%M %p
 
 ; Set the font of clock
 ; Possible values: string
