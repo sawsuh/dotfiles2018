@@ -37,3 +37,4 @@ redshift -l -35.3:149&
 xsetroot -cursor_name left_ptr&
 xsetwacom set 9 Area 0 0 6000 6000&
 xsetwacom set 9 MapToOutput 1920x1080+0+0&
+i3lock
