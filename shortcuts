@@ -11,6 +11,8 @@ study: urxvt -name stick -geometry 20x1+1584+147 --hold -e zsh -c "setterm -curs
 home: cd ~
 tu: git -C ~/.task add .; git -C ~/.task commit -m "updated tasks"; git -C ~/.task push;
 td: git -C ~/.task pull
+pu: pass git add .; pass git push
+pd: pass git pull
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
