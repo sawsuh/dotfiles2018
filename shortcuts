@@ -9,10 +9,8 @@ nit: nitrogen
 dis: discord
 study: urxvt -name stick -geometry 20x1+1584+147 --hold -e zsh -c "setterm -cursor off && python3 .pomodoro.py"
 home: cd ~
-pu: tar -pzcf ~/pass.tar.gz -C ~ .password-store
-tu: tar -pzcf ~/tasks.tar.gz -C ~ .task
-pd: rm -rf ~/.password-store && tar -xvf pass.tar.gz -C ~
-td: rm -rf ~/.task && tar -xvf tasks.tar.gz -C ~
+tu: git -C ~/.task add .; git -C ~/.task commit -m "updated tasks"; git -C ~/.task push;
+td: git -C ~/.task pull
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
