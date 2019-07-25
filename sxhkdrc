@@ -14,7 +14,7 @@ super + @space
 	rofi -theme rofi-theme -show run -display-run ""
 # password manager
 super + p
-        urxvt -name stick -g 50x10 -e bash -c 'PASS=true /bin/zsh -i -t'
+	rofi-pass
 
 # make sxhkd reload its configuration files:
 super + Escape
