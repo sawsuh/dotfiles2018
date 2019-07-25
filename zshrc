@@ -111,13 +111,10 @@ ZSH_DISABLE_COMPFIX=true
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message &&
-	   current_dir=$PWD &&
-	   cd ~/.dots &&
-	   git add . &&
-	   git commit -m "$commit_message" &&
-	   git push;
-	   cd "$current_dir"'
+alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message ;
+	   git -C ~/.dots add . ;
+	   git -C ~/.dots commit -m "$commit_message" ;
+	   git -C ~/.dots push; '
 awk '/--Commands/, /--Files/' .shortcuts | sed '1d;$d' | awk -F": " '{print "alias "$1"=\x27"$2"\x27"}' > ~/.shorttemp
 awk '/--Files/,EOF' .shortcuts | sed '1d' | awk -F ": " '{print "alias "$1"=\"vim "$2"\""}' >> ~/.shorttemp
 source ~/.shorttemp
