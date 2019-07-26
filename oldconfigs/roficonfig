@@ -1,5 +1,0 @@
-configuration {
-	lines: 3;
-	font: "t cherry 13";
-	terminal: "Termite --name=float";
-}

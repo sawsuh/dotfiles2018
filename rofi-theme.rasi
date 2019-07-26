@@ -1,0 +1,82 @@
+/**
+ * Author: Primetoxinz
+ */
+* {
+    text-color:                  #eee4e5;
+    background-color:            #202020;
+    lightbg:                     #534c48;
+    red:                         #f15d22;
+    orange:                      #faa41a; 
+    blue:                        #48b9c7; 
+
+    selected-normal-foreground:  @foreground;
+    normal-foreground:           @foreground;
+    selected-urgent-foreground:  @foreground;
+    urgent-foreground:           @foreground;
+    active-foreground:           @foreground;
+    selected-active-foreground:  @foreground;
+    border-color:                #42423d;
+    normal-background:           @background;
+    selected-normal-background:  @background;
+    separatorcolor:              @orange;
+    spacing:                     2;
+    urgent-background:           @red;
+    selected-urgent-background:  @red;
+    selected-active-background:  @blue;
+    active-background:           @orange;
+}
+#window {
+    border:     3px;
+    text-color: @foreground;
+    background-color: @background;
+    padding:    50px;
+    border-color:                #42423d;
+    font: "Fira Code 12";
+    fullscreen: "True";
+}
+#mainbox {
+    border:  0;
+    padding: 0px;
+}
+/*#message {
+    border:     1px dash 0px 0px ;
+    text-color: @separatorcolor;
+    padding:    0px 0px 0px ;
+}*/
+
+#listview {
+    border:       0px 0px 0px ;
+    padding:      0px 0px 0px ;
+    font: "Fira Code 12";
+    text-color: @foreground;
+    dynamic: "True";
+    lines: 1;
+}
+#element {
+    border: 0;
+    padding:	20px 20px 20px;
+    highlight:  none;
+    font: "Fira Code 12";
+}
+
+#element.selected {
+    text-color: @normal-foreground;
+    background-color: @normal-background;
+    font: "Fira Code Bold 12";
+    highlight: bold;
+}
+
+#inputbar {
+    spacing: 0;
+    border: 0px ;
+    padding: 20px 20px 20px;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ">";
+    margin:     0px 0.8em 0em 0em ;
+    text-color: #8cc2aa;
+    font: "Fira Code Bold 12";
+}
