@@ -2,11 +2,6 @@
 dots: cd ~/.dots
 y: yay
 yu: yay -Syu --devel
-vtex: vtex(){ zathura "$1".pdf& vim "$1".tex }; vtex 
-ff: firefox
-cr: chromium
-nit: nitrogen
-dis: discord
 home: cd ~
 --FilestoVim
 xr: ~/.Xresources
