@@ -7,7 +7,6 @@ ff: firefox
 cr: chromium
 nit: nitrogen
 dis: discord
-study: urxvt -name stick -geometry 20x1+1584+147 --hold -e zsh -c "setterm -cursor off && python3 .pomodoro.py"
 home: cd ~
 --FilestoVim
 xr: ~/.Xresources
