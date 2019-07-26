@@ -1,0 +1,2 @@
+#!/bin/zsh
+urxvt -name float -e zsh -c 'git -C ~/.task add .; git -C ~/.task commit -m "updated tasks"; git -C ~/.task push;'

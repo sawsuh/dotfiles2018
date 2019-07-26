@@ -118,7 +118,7 @@ alias dfu='vared -p "  $fg_bold[green]> $reset_color" -c commit_message ;
 awk '/--Commands/, /--Files/' .shortcuts | sed '1d;$d' | awk -F": " '{print "alias "$1"=\x27"$2"\x27"}' > ~/.shorttemp
 awk '/--Files/,EOF' .shortcuts | sed '1d' | awk -F ": " '{print "alias "$1"=\"vim "$2"\""}' >> ~/.shorttemp
 source ~/.shorttemp
-rm ~/.shorttemp
+export PATH=/home/prashant/.local/bin:$PATH
 task
 TRAPWINCH() {
   zle && { zle reset-prompt; zle -R }

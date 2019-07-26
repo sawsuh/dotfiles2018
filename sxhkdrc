@@ -11,7 +11,7 @@ super + shift + z
 
 # program launcher
 super + @space
-	rofi -theme rofi-theme -show run -display-run ""
+	export PATH=/home/prashant/.local/bin:$PATH; rofi -theme rofi-theme -show run -display-run ""
 # password manager
 super + p
 	rofi-pass
