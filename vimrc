@@ -18,6 +18,7 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``b','\binom{<++>}{<++>}<++>','tex')
     au VimEnter * call IMAP('``9','\left(<++>\right)<++>','tex')
     au VimEnter * call IMAP('``[','\left[<++>\right]<++>','tex')
+    au VimEnter * call IMAP('``{','\left\{<++>\right\}<++>','tex')
     au VimEnter * call IMAP('``\','\left|<++>\right|<++>','tex')
     au VimEnter * call IMAP('``n','\mathbb{N} <++>','tex')
     au VimEnter * call IMAP('``r','\mathbb{R} <++>','tex')
