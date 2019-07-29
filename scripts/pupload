@@ -1,2 +1,2 @@
 #!/bin/zsh
-urxvt -name float -e zsh -c 'pass git add .; pass git commit -m "passwords updated"; pass git push'
+urxvt -name float -e zsh -c 'pass git push'
