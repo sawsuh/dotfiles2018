@@ -29,9 +29,9 @@
     border:     3px;
     text-color: @foreground;
     background-color: @background;
-    padding:    50px;
+    padding:    70px;
     border-color:                #42423d;
-    font: "Fira Code 12";
+    font: "Fira Code 16";
     fullscreen: "True";
 }
 #mainbox {
@@ -47,29 +47,29 @@
 #listview {
     border:       0px 0px 0px ;
     padding:      0px 0px 0px ;
-    font: "Fira Code 12";
+    font: "Fira Code 16";
     text-color: @foreground;
     dynamic: "True";
     lines: 1;
 }
 #element {
     border: 0;
-    padding:	20px 20px 20px;
+    padding:	40px 40px 40px;
     highlight:  none;
-    font: "Fira Code 12";
+    font: "Fira Code 16";
 }
 
 #element.selected {
     text-color: @normal-foreground;
     background-color: @normal-background;
-    font: "Fira Code Bold 12";
+    font: "Fira Code Bold 16";
     highlight: bold;
 }
 
 #inputbar {
     spacing: 0;
     border: 0px ;
-    padding: 20px 20px 20px;
+    padding: 40px 40px 40px;
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
@@ -78,5 +78,5 @@
     str:        ">";
     margin:     0px 0.8em 0em 0em ;
     text-color: #8cc2aa;
-    font: "Fira Code Bold 12";
+    font: "Fira Code Bold 16";
 }

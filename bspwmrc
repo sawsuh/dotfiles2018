@@ -1,5 +1,5 @@
 #! /bin/sh
-xrandr --output HDMI-1 --right-of DVI-D-1 --mode 2560x1440 --pos 1920x0 --rotate normal --output DVI-D-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 144
+xrandr --output HDMI-1 --right-of DVI-D-1 --mode 2560x1440 --pos 2560x0 --rotate normal --output DVI-D-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
 nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
 mopidy&
@@ -35,7 +35,5 @@ bspc rule -a "dotnet" state=floating
 
 redshift -l -35.3:149&
 xsetroot -cursor_name left_ptr&
-xsetwacom set 9 Area 0 0 6000 6000&
-xsetwacom set 9 MapToOutput 1920x1080+0+0&
 export PATH=/home/prashant/.local/bin:$PATH
 i3lock
