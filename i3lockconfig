@@ -52,13 +52,13 @@ wrong_text 				= wrong password :(
 ; Font size of the status text
 ; Possible values: floats
 ; Default value: 28.0
-text_size 				= 14.0
+text_size 				= 20.0
 ; Original i3lock-color man says this variable is responsing for
 ; showing size of active modifyers, such as caps lock, num lock, etc
 ; Never saw it working, lol.
 ; Possible values: floats
-; Default value: 14.0
-modifier_size 			= 14.0
+; Default value: 18.0
+modifier_size 			= 20.0
 
 ; [unlock] section configures behaviour of unlock indicator
 [unlock]
@@ -156,7 +156,7 @@ font 					= Fira Code
 ; Set the font size of the clock
 ; Possible values: floats
 ; Default value: 32.0
-font_size 				= 16.0
+font_size 				= 20.0
 
 ; Set the position of the time string. All the variables from unlock_%_expr
 ; may be used, in addition to:
@@ -183,8 +183,8 @@ format 					= %a %d %b
 font 					= Fira Code
 ; Set the font size of the date
 ; Possible values: floats
-; Default value: 14.0
-font_size 				= 16.0
+; Default value: 18.0
+font_size 				= 20.0
 
 ; Set the position of the date string. All the variables from unlock_%_expr
 ; and x_expr in [time] may be used, in addition to:
@@ -212,7 +212,7 @@ font 					= Fira Code
 ; Size of font used to show layout indicators
 ; Possible values: floats
 ; Default values: 32.0
-font_size				= 16.0
+font_size				= 20.0
 
 ; Set the position of the date string. All the variables from unlock_%_expr
 ; may be used.
