@@ -3,6 +3,7 @@ dots: cd ~/.dots
 y: yay
 yu: yay -Syu --devel
 home: cd ~
+fact: wget -qO- randomfunfacts.com | sed -n "/<strong>/{s;^.*<i>\(.*\)</i>.*$;\1;p}"
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
