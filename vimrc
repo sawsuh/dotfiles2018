@@ -13,9 +13,9 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 augroup MyIMAPs
     au!
     au VimEnter * call IMAP('``i','\indent <++>','tex')
-    au VimEnter * call IMAP('``s','\sum_{<++>}^{<++>}<++>','tex')
-    au VimEnter * call IMAP('``p','\prod_{<++>}^{<++>}<++>','tex')
-    au VimEnter * call IMAP('``b','\binom{<++>}{<++>}<++>','tex')
+    au VimEnter * call IMAP('``s','\sum_{<+var+>}^{<+num+>}<++>','tex')
+    au VimEnter * call IMAP('``p','\prod_{<+var+>}^{<+num+>}<++>','tex')
+    au VimEnter * call IMAP('``b','\binom{<+n+>}{<+r+>}<++>','tex')
     au VimEnter * call IMAP('``9','\left(<++>\right)<++>','tex')
     au VimEnter * call IMAP('``[','\left[<++>\right]<++>','tex')
     au VimEnter * call IMAP('``{','\left\{<++>\right\}<++>','tex')
@@ -25,8 +25,8 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``q','\mathbb{Q} <++>','tex')
     au VimEnter * call IMAP('``z','\mathbb{Z} <++>','tex')
     au VimEnter * call IMAP('``f','\mathbb{F} <++>','tex')
-    au VimEnter * call IMAP('``I','\int_{<++>}^{<++>} \! <++> \, \mathrm{d}<++> <++>','tex')
-    au VimEnter * call IMAP('``l','\lim_{<++> \to <++>} <++>','tex')
+    au VimEnter * call IMAP('``I','\int_{<+bot+>}^{<+top+>} \! <+func+> \, \mathrm{d}<+var+> <++>','tex')
+    au VimEnter * call IMAP('``l','\lim_{<+var+> \to <+lim+>} <+f+>','tex')
 augroup END 
 ca wq :w<cr>:call Quit()<cr>
 ca q :call Quit()<cr>
