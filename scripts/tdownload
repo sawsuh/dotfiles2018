@@ -1,2 +1,2 @@
 #!/bin/zsh
-urxvt -name float -e zsh -c 'git -C ~/.task pull'
+urxvt -name float -e zsh -c 'git -C ~/.task fetch --all; git -C ~/.task reset --hard origin/master'
