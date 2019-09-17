@@ -19,6 +19,7 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``\','\left| <++> \right| <++>','tex')
     au VimEnter * call IMAP('``|','\left\Vert <++> \right\Vert <++>','tex')
     au VimEnter * call IMAP('``mb','\mathbb{<++>} <++>','tex')
+    au VimEnter * call IMAP('``mc','\mathcal{<++>} <++>','tex')
     au VimEnter * call IMAP('``I','\int_{<+bot+>}^{<+top+>} \! <+func+> \, \mathrm{d}<+var+> <++>','tex')
     au VimEnter * call IMAP('``l','\lim_{<+var+> \to <+lim+>} <+f+>','tex')
 augroup END 
