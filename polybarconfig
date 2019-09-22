@@ -19,7 +19,7 @@ width = 2560
 ;offset-x = 30
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=12
+font-0 = Fira Code:size=
 font-1 = Wuncon Siji:size=16
 modules-left = bspwm
 modules-center = title
@@ -33,7 +33,7 @@ monitor = HDMI-1
 bottom = true
 height = 45
 monitor = DVI-D-1
-width = 1920
+width = 2560
 ;offset-y = 15
 ;offset-x = 910
 background = ${colors.my_background}
@@ -49,12 +49,12 @@ enable-ipc = true
 
 [section/popups]
 bottom = false
-height = 121
-width = 400
+height = 150
+width = 500
 offset-y = 10
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=12
+font-0 = Fira Code:size=16
 font-1 = font-logos:size=18
 modules-center = date2 bspwm audio
 override-redirect = true
@@ -65,7 +65,7 @@ border-color = #42423d
 [bar/pop1]
 inherit = section/popups
 monitor = DVI-D-1
-offset-x = 1510
+offset-x = 2050
 
 [bar/pop2]
 monitor = HDMI-1
@@ -112,20 +112,6 @@ label-focused = >%name%
 label-unfocused = 
 label-occupied =
 label-empty = 
-
-[module/mpd]
-type = internal/mpd
-host 127.0.0.1
-port = 6600
-format-stopped = no music
-label-song = %artist% - %title%   
-format-playing = <label-song>
-format-playing-background = ${colors.my_color0}
-format-playing-foreground = ${colors.my_foreground}
-format-online-background = ${colors.my_color0}
-format-online-foreground = ${colors.my_foreground}
-format-online-padding = 2
-format-playing-padding = 2
 
 [module/audio]
 type = internal/pulseaudio
