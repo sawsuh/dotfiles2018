@@ -50,7 +50,7 @@ enable-ipc = true
 [section/bars]
 bottom = true
 height = 70
-width = 2048
+width = 2560
 offset-y = 0
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
@@ -65,12 +65,10 @@ wm-restack = false
 [bar/pop1]
 inherit = section/bars
 monitor = DVI-D-1
-offset-x = 256
 
 [bar/pop2]
 monitor = HDMI-1
 inherit = section/bars
-offset-x = 256
 
 [module/title]
 type = internal/xwindow

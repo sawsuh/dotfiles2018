@@ -10,7 +10,6 @@ then
 		wid=$(xdotool search --pid $pid)
 		bspc config -m DVI-D-1 bottom_padding 80
 		xdotool windowmap $wid
-		xdotool windowraise $wid
 		pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
 		wid2=$(xdotool search --pid $pid2)
 		xdotool windowunmap $wid2
