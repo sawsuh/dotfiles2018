@@ -9,7 +9,7 @@
 [colors]
 my_background 	= #202020
 my_foreground 	= #eee4e5
-my_color0	= #202020
+my_color0	= #42423d
 
 [bar/bar4]
 bottom = true
@@ -47,30 +47,30 @@ override-redirect = true
 wm-restack = true
 enable-ipc = true   
 
-[section/popups]
-bottom = false
-height = 150
-width = 500
-offset-y = 10
+[section/bars]
+bottom = true
+height = 70
+width = 2048
+offset-y = 0
 background = ${colors.my_background}
 foreground =  ${colors.my_foreground}
 font-0 = Fira Code:size=16
 font-1 = font-logos:size=18
-modules-center = date2 bspwm audio
+modules-left = bspwm
+modules-center = date2
+modules-right = audio
 override-redirect = true
 wm-restack = false
-border-size = 3
-border-color = #42423d
 
 [bar/pop1]
-inherit = section/popups
+inherit = section/bars
 monitor = DVI-D-1
-offset-x = 2050
+offset-x = 256
 
 [bar/pop2]
 monitor = HDMI-1
-inherit = section/popups
-offset-x = 10
+inherit = section/bars
+offset-x = 256
 
 [module/title]
 type = internal/xwindow
@@ -89,15 +89,14 @@ type = custom/script
 ;exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 exec = date +'%a %-d/%-m %-I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
-format-background = ${colors.my_color0}
-format-padding = 1 
+format-background = ${colors.my_background}
 #click-left = bash ~/.scripts/cal.sh
 
 [module/bspwm]
 type = internal/bspwm
 pin-workspaces = true
 format-background = ${colors.my_color0} 
-format-padding = 1
+format-padding = 2
 label-focused = >%name%
 label-unfocused = 
 label-occupied =
@@ -107,7 +106,7 @@ label-empty =
 type = internal/bspwm
 pin-workspaces = true
 format-background = ${colors.my_background} 
-format-padding = 1 
+format-padding = 2 
 label-focused = >%name%
 label-unfocused = 
 label-occupied =
@@ -119,7 +118,7 @@ format-volume = <label-volume>
 label-volume = ♪%percentage%
 label-muted = ♪-
 label-muted-background = ${colors.my_color0}
-label-muted-padding = 1
+label-muted-padding = 2
 label-volume-background = ${colors.my_color0}
-label-volume-padding = 1
+label-volume-padding = 2
 
