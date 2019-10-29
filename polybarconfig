@@ -9,43 +9,8 @@
 [colors]
 my_background 	= #202020
 my_foreground 	= #eee4e5
-my_color0	= #42423d
-
-[bar/bar4]
-bottom = true
-height = 45
-width = 2560
-;offset-y = 15
-;offset-x = 30
-background = ${colors.my_background}
-foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=
-font-1 = Wuncon Siji:size=16
-modules-left = bspwm
-modules-center = title
-modules-right = date2
-override-redirect = true
-wm-restack = true
-enable-ipc = true   
-monitor = HDMI-1
-
-[bar/bar3]
-bottom = true
-height = 45
-monitor = DVI-D-1
-width = 2560
-;offset-y = 15
-;offset-x = 910
-background = ${colors.my_background}
-foreground =  ${colors.my_foreground}
-font-0 = Fira Code:size=12
-font-1 = Wuncon Siji:size=16
-modules-right = mpd
-modules-left = bspwm2
-modules-center =   
-override-redirect = true
-wm-restack = true
-enable-ipc = true   
+my_color0	= #202020
+my_overline 	= #42423d
 
 [section/bars]
 bottom = true
@@ -59,8 +24,8 @@ font-1 = font-logos:size=18
 modules-left = bspwm
 modules-center = date2
 modules-right = audio
-override-redirect = true
-wm-restack = false
+border-top-size = 3
+border-top-color = ${colors.my_overline}
 
 [bar/pop1]
 inherit = section/bars
@@ -70,41 +35,16 @@ monitor = DVI-D-1
 monitor = HDMI-1
 inherit = section/bars
 
-[module/title]
-type = internal/xwindow
-label = "%title%"
-label-empty = 
-label-maxlen = 60
-format-background = ${colors.my_background}
-#format-foreground = ${colors.my_foreground}
-#format-underline = ${colors.my_background}
-#label-separator = 
-#label-separator-padding = 1
-#label-padding = 1 
-
 [module/date2]
 type = custom/script
-;exec = date +'%a %d %b, %I %M %p' | tr '[:upper:]' '[:lower:]'
 exec = date +'%a %-d/%-m %-I %M %p' | tr '[:upper:]' '[:lower:]'
 interval = 5
 format-background = ${colors.my_background}
-#click-left = bash ~/.scripts/cal.sh
 
 [module/bspwm]
 type = internal/bspwm
-pin-workspaces = true
 format-background = ${colors.my_color0} 
 format-padding = 2
-label-focused = >%name%
-label-unfocused = 
-label-occupied =
-label-empty = 
-
-[module/bspwm2]
-type = internal/bspwm
-pin-workspaces = true
-format-background = ${colors.my_background} 
-format-padding = 2 
 label-focused = >%name%
 label-unfocused = 
 label-occupied =
