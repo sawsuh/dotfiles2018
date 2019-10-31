@@ -26,7 +26,7 @@
     active-background:           @orange;
 }
 #window {
-    border:     3px;
+    border:     5px;
     text-color: @foreground;
     background-color: @background;
     padding:    70px;
