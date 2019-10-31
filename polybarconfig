@@ -24,7 +24,7 @@ font-1 = font-logos:size=18
 modules-left = bspwm
 modules-center = date2
 modules-right = audio
-border-top-size = 3
+border-top-size = 5
 border-top-color = ${colors.my_overline}
 
 [bar/pop1]
