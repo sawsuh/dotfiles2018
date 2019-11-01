@@ -14,7 +14,7 @@ my_overline 	= #42423d
 
 [section/bars]
 bottom = true
-height = 70
+height = 65
 width = 2560
 offset-y = 0
 background = ${colors.my_background}
