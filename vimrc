@@ -24,13 +24,4 @@ augroup MyIMAPs
     au VimEnter * call IMAP('``I','\int_{<+bot+>}^{<+top+>} \! <+func+> \, \mathrm{d}<+var+> <++>','tex')
     au VimEnter * call IMAP('``l','\lim_{<+var+> \to <+lim+>} <+f+>','tex')
 augroup END 
-ca wq :w<cr>:call Quit()<cr>
-ca q :call Quit()<cr>
-map <S-z><S-z> :w<Cr>:call Quit()<cr>
-function! Quit()
-    if exists('#goyo')
-        Goyo
-    endif
-    quit
-endfunction
 autocmd VimEnter * Goyo

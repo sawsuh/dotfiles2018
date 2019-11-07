@@ -20,7 +20,13 @@ bspc config normal_border_color "#42423d"
 bspc config focused_border_color "#eee4e5"
 bspc config presel_border_color "#ffbec9"
 bspc config split_ratio          0.52
-bspc config focus_follows_pointer true
+bspc config click_to_focus 	button1
+bspc config swallow_first_click	true
+bspc config pointer_follows_focus	true
+bspc config pointer_follows_monitor	true
+bspc config borderless_monocle	true
+bspc config gapless_monocle	true
+bspc config paddingless_monocle	true
 
 bspc rule -a mpv state=floating
 bspc rule -a "*:sxiv" state=floating
