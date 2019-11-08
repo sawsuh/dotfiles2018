@@ -60,7 +60,7 @@ super + ctrl + {x,y,z}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# set the focused desktop to monocle mode
+# cycle the focused desktop mode
 super + m 
 	bspc desktop focused --layout next
 
