@@ -32,7 +32,7 @@ inherit = section/bars
 monitor = DVI-D-1
 
 [bar/pop2]
-monitor = HDMI-1
+monitor = HDMI-A-0
 inherit = section/bars
 
 [module/date2]
