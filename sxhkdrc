@@ -42,7 +42,7 @@ super + {_,shift + }q
 
 # start file browser
 super + shift + f
-	python3 ~/.pfiles.py
+	bash ~/.files.sh
 
 # set the window state
 super + {t,shift + t,x,f}
