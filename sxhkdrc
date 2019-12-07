@@ -124,10 +124,7 @@ super + shift + {m,n}
 super + shift + n
 	pactl set-sink-mute 1 toggle
 
-# bar notification toggle mon 1
-super + b
-	bash ~/.barnotif1
+# bar notification toggle
+super + {b,g}
+	bash ~/.barnotif {1,2}
 
-# bar notification toggle mon 2
-super + g
-	bash ~/.barnotif2
