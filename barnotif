@@ -6,9 +6,9 @@ function barunmap {
 }
 
 function barmap {
+	bspc config -m $2 bottom_padding 80
 	wid=$(xdotool search --pid $1)
 	xdotool windowmap $wid
-	bspc config -m $2 bottom_padding 80
 }
 
 function barspawn {
@@ -27,12 +27,12 @@ then
 			xdotool windowunmap $wid
 			bspc config -m DVI-D-1 bottom_padding 10
 		else
-			barmap $pid DVI-D-1
 			barunmap pop2 HDMI-A-0
+			barmap $pid DVI-D-1
 		fi
 	else
-		barspawn pop1 DVI-D-1
 		barunmap pop2 HDMI-A-0
+		barspawn pop1 DVI-D-1
 	fi
 else
 	pid=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
@@ -44,11 +44,11 @@ else
 			xdotool windowunmap $wid
 			bspc config -m HDMI-A-0 bottom_padding 10
 		else
-			barmap $pid HDMI-A-0
 			barunmap pop1 DVI-D-1
+			barmap $pid HDMI-A-0
 		fi
 	else
-		barspawn pop2 HDMI-A-0
 		barunmap pop1 DVI-D-1
+		barspawn pop2 HDMI-A-0
 	fi
 fi
