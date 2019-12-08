@@ -126,5 +126,5 @@ super + shift + n
 
 # bar notification toggle
 super + {b,g}
-	bash ~/.barnotif {1,2}
+	bash ~/.barnotif.sh {1,2}
 

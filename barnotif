@@ -1,3 +1,21 @@
+function barunmap {
+	pid=$(pgrep -a polybar | grep $1 | awk '{print $1}')
+	wid=$(xdotool search --pid $pid)
+	xdotool windowunmap $wid
+	bspc config -m $2 bottom_padding 10
+}
+
+function barmap {
+	wid=$(xdotool search --pid $1)
+	xdotool windowmap $wid
+	bspc config -m $2 bottom_padding 80
+}
+
+function barspawn {
+	bspc config -m $2 bottom_padding 80
+	polybar $1& > /dev/null
+}
+
 if [[ "$1" = "1" ]]
 then
 	pid=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
@@ -9,21 +27,12 @@ then
 			xdotool windowunmap $wid
 			bspc config -m DVI-D-1 bottom_padding 10
 		else
-			wid=$(xdotool search --pid $pid)
-			bspc config -m DVI-D-1 bottom_padding 80
-			xdotool windowmap $wid
-			pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
-			wid2=$(xdotool search --pid $pid2)
-			xdotool windowunmap $wid2
-			bspc config -m HDMI-A-0 bottom_padding 10
+			barmap $pid DVI-D-1
+			barunmap pop2 HDMI-A-0
 		fi
 	else
-		bspc config -m DVI-D-1 bottom_padding 80
-		polybar pop1& > /dev/null
-		pid2=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
-		wid2=$(xdotool search --pid $pid2)
-		xdotool windowunmap $wid2
-		bspc config -m HDMI-A-0 bottom_padding 10
+		barspawn pop1 DVI-D-1
+		barunmap pop2 HDMI-A-0
 	fi
 else
 	pid=$(pgrep -a polybar | grep pop2 | awk '{print $1}')
@@ -35,20 +44,11 @@ else
 			xdotool windowunmap $wid
 			bspc config -m HDMI-A-0 bottom_padding 10
 		else
-			wid=$(xdotool search --pid $pid)
-			bspc config -m HDMI-A-0 bottom_padding 80
-			xdotool windowmap $wid
-			pid1=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
-			wid1=$(xdotool search --pid $pid1)
-			xdotool windowunmap $wid1
-			bspc config -m DVI-D-1 bottom_padding 10
+			barmap $pid HDMI-A-0
+			barunmap pop1 DVI-D-1
 		fi
 	else
-		bspc config -m HDMI-A-0 bottom_padding 80
-		polybar pop2& > /dev/null
-		pid1=$(pgrep -a polybar | grep pop1 | awk '{print $1}')
-		wid1=$(xdotool search --pid $pid1)
-		xdotool windowunmap $wid1
-		bspc config -m DVI-D-1 bottom_padding 10
+		barspawn pop2 HDMI-A-0
+		barunmap pop1 DVI-D-1
 	fi
 fi
