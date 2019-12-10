@@ -7,15 +7,15 @@ def files(x,y):
 
 def barpid(popx):
     cmd = ['pgrep', '-a', 'polybar']
-    pgrepout = sp.Popen(cmd, stdout=sp.PIPE)
-    grepout = sp.Popen(["grep", str(popx)], stdin=pgrepout.stdout, stdout=sp.PIPE)
-    awkout = sp.run(["awk", '{print $1}'], stdin=grepout.stdout, stdout = sp.PIPE)
-    return(awkout.stdout.decode('utf-8'))
+    pgrep = sp.run(cmd, stdout=sp.PIPE) #grep polybar pids
+    processes = pgrep.stdout.decode('utf-8') # get output
+    barline = re.search("[0-9]+.+"+str(popx),processes).group(0) #find line corresponding to our bar
+    return(barline.split(' ')[0]) #get pid
 
-def visibilitytest(pid):
-    cmd = ['xdotool', 'search', '--pid', str(pid), '--onlyvisible']
-    output = sp.run(cmd, stdout=sp.PIPE)
-    return(output.stdout.decode('utf-8'))
+def visibilitytest(pid): 
+    cmd = ['xdotool', 'search', '--pid', str(pid), '--onlyvisible'] 
+    output = sp.run(cmd, stdout=sp.PIPE) #check vis
+    return(output.stdout.decode('utf-8')) #return wid if exists
 
 xcordin = sp.run(["xdotool", "getmouselocation", "--shell"], stdout=sp.PIPE) #get xdotool output
 xcord = int(re.search("[0-9]+",str(xcordin.stdout.decode('utf-8'))).group(0)) #parse for mouse xcord
@@ -29,5 +29,4 @@ else:
     if visibilitytest(barpid("pop1")):
         files(1342, 752)
     else:
-        files(1342, 822)
-#files(1342,752)
+        files(1342, 822) 
