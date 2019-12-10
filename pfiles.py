@@ -1,11 +1,33 @@
-import re
 import subprocess as sp
-mouseloc = sp.run(['xdotool','getmouselocation','--shell'], stdout = sp.PIPE)
-xcoord = re.findall(r"X=[0-9]+",mouseloc.stdout.decode('utf-8'))[0][2:]
-command = ['bash','/home/prashant/.files.sh']
-if int(xcoord) > 2560:
-    command.append('3902')
-    sp.Popen(command, stderr=sp.DEVNULL, stdout=sp.DEVNULL)
+import re
+
+def files(x,y): 
+    cmd = [ 'tdrop', '-a', '-h', '600', '-w', '1200', '-x', str(x), '-y', str(y), '-n', '1', '-f', "-name stick1 -e ranger", 'urxvt' ]
+    sp.run(cmd) #tdrop command
+
+def barpid(popx):
+    cmd = ['pgrep', '-a', 'polybar']
+    pgrepout = sp.Popen(cmd, stdout=sp.PIPE)
+    grepout = sp.Popen(["grep", str(popx)], stdin=pgrepout.stdout, stdout=sp.PIPE)
+    awkout = sp.run(["awk", '{print $1}'], stdin=grepout.stdout, stdout = sp.PIPE)
+    return(awkout.stdout.decode('utf-8'))
+
+def visibilitytest(pid):
+    cmd = ['xdotool', 'search', '--pid', str(pid), '--onlyvisible']
+    output = sp.run(cmd, stdout=sp.PIPE)
+    return(output.stdout.decode('utf-8'))
+
+xcordin = sp.run(["xdotool", "getmouselocation", "--shell"], stdout=sp.PIPE) #get xdotool output
+xcord = int(re.search("[0-9]+",str(xcordin.stdout.decode('utf-8'))).group(0)) #parse for mouse xcord
+
+if xcord > 2560:
+    if visibilitytest(barpid("pop2")):
+        files(3902, 752)
+    else:
+        files(3902, 822)
 else:
-    command.append('1342')
-    sp.Popen(command, stderr=sp.DEVNULL, stdout=sp.DEVNULL)
+    if visibilitytest(barpid("pop1")):
+        files(1342, 752)
+    else:
+        files(1342, 822)
+#files(1342,752)
