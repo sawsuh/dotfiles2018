@@ -126,5 +126,5 @@ super + shift + n
 
 # bar notification toggle
 super + {b,g}
-	bash ~/.barnotif.sh {1,2}
+	python3 ~/.pbarnotif.py {1,2}
 
