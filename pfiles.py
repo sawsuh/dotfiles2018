@@ -9,8 +9,11 @@ def barpid(popx):
     cmd = ['pgrep', '-a', 'polybar']
     pgrep = sp.run(cmd, stdout=sp.PIPE) #grep polybar pids
     processes = pgrep.stdout.decode('utf-8') # get output
-    barline = re.search("[0-9]+.+"+str(popx),processes).group(0) #find line corresponding to our bar
-    return(barline.split(' ')[0]) #get pid
+    if re.search("[0-9]+.+"+str(popx),processes):  
+        barline = re.search("[0-9]+.+"+str(popx),processes).group(0) #find line corresponding to our bar
+        return(barline.split(' ')[0]) #get pid
+    else: 
+        return False
 
 def visibilitytest(pid): 
     cmd = ['xdotool', 'search', '--pid', str(pid), '--onlyvisible'] 
