@@ -27,18 +27,19 @@ class bar:
     
     def barunmap(self):
         sp.run(['xdotool', 'windowunmap', str(self.barwidinvisible())],stderr = sp.DEVNULL,stdout=sp.DEVNULL)
-        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '10'],stdout=sp.PIPE)
+        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '10'])
 
     def barmap(self):
-        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'],stdout=sp.PIPE)
+        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'])
         sp.run(['xdotool', 'windowmap', str(self.barwidinvisible())],stderr = sp.DEVNULL, stdout=sp.DEVNULL)
 
     def barspawn(self):
-        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'],stdout=sp.PIPE)
+        sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'])
         sp.Popen(['polybar', str(self.name)], stderr = sp.DEVNULL,stdout=sp.DEVNULL)
 
 left = bar('pop1', 'DVI-D-1')
 right = bar('pop2', 'HDMI-A-0')
+
 currentbar = bar('','')
 otherbar = bar('','')
 if sys.argv[1] == '1':
@@ -47,6 +48,7 @@ if sys.argv[1] == '1':
 elif sys.argv[1] == '2':
     currentbar = right
     otherbar = left
+
 if currentbar.barpid() is not None:
     if currentbar.barwidvisible():
         currentbar.barunmap()
