@@ -37,27 +37,23 @@ class bar:
         sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'],stdout=sp.PIPE)
         sp.Popen(['polybar', str(self.name)], stderr = sp.DEVNULL,stdout=sp.DEVNULL)
 
-monitorone = 'DVI-D-1'
-monitortwo = 'HDMI-A-0'
 left = bar('pop1', 'DVI-D-1')
 right = bar('pop2', 'HDMI-A-0')
+currentbar = bar('','')
+otherbar = bar('','')
 if sys.argv[1] == '1':
-    if left.barpid() is not None:
-        if left.barwidvisible() != "":
-            left.barunmap()
-        else:
-            left.barmap()
-            right.barunmap()
+    currentbar = left
+    otherbar = right
+elif sys.argv[1] == '2':
+    currentbar = right
+    otherbar = left
+if currentbar.barpid() is not None:
+    if currentbar.barwidvisible():
+        currentbar.barunmap()
     else:
-        left.barspawn()
-        right.barunmap()
-elif sys.argv[1] == '2':    
-    if right.barpid() is not None: 
-        if right.barwidvisible() != "":
-            right.barunmap()
-        else:
-            right.barmap()
-            left.barunmap()
-    else:
-        right.barspawn()
-        left.barunmap()
+        currentbar.barmap()
+        otherbar.barunmap()
+else:
+    currentbar.barspawn()
+    otherbar.barunmap()
+

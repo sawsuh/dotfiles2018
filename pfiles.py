@@ -2,16 +2,14 @@ import subprocess as sp
 import re
 
 def files(x,y): 
-    cmd = [ 'tdrop', '-a', '-h', '600', '-w', '1200', '-x', str(x), '-y', str(y), '-n', '1', '-f', "-name stick1 -e ranger", 'urxvt' ]
-    sp.run(cmd) #tdrop command
+    sp.run([ 'tdrop', '-a', '-h', '600', '-w', '1200', '-x', str(x), '-y', str(y), '-n', '1', '-f', "-name stick1 -e ranger", 'urxvt' ])
 
 def barpid(popx):
-    cmd = ['pgrep', '-a', 'polybar']
-    pgrep = sp.run(cmd, stdout=sp.PIPE) #grep polybar pids
+    pgrep = sp.run(['pgrep', '-a', 'polybar'], stdout=sp.PIPE) #grep polybar pids
     processes = pgrep.stdout.decode('utf-8') # get output
-    if re.search("[0-9]+.+"+str(popx),processes):  
-        barline = re.search("[0-9]+.+"+str(popx),processes).group(0) #find line corresponding to our bar
-        return(barline.split(' ')[0]) #get pid
+    matchstring = re.compile("([0-9]+).+"+str(popx))
+    if matchstring.search(processes):  
+        return( matchstring.search(processes).group(1)) #find line corresponding to our bar
     else: 
         return False
 
