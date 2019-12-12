@@ -8,13 +8,12 @@ class bar:
         self.monitor = monitor
 	
     def barpid(self):
-        cmd = ['pgrep', '-a', 'polybar']
-        pgrep = sp.run(cmd, stdout=sp.PIPE) #grep polybar pids
+        pgrep = sp.run(['pgrep', '-a', 'polybar'], stdout=sp.PIPE) #grep polybar pids
         processes = pgrep.stdout.decode('utf-8') # get output
-        matchstring = "[0-9]+.+"+str(self.name)
-        if re.search(matchstring, processes):
-            barline = re.search(matchstring ,processes).group(0) #find line corresponding to our bar
-            return(barline.split(' ')[0]) #get pid
+        matchstring = re.compile("([0-9]+).+"+str(self.name))
+        if matchstring.search(processes):
+            barline = matchstring.search(processes).group(1) #find line corresponding to our bar
+            return(barline) #get pid
 	
     def barwidvisible(self): 
         cmd = ['xdotool', 'search', '--pid', str(self.barpid()), '--onlyvisible'] 
