@@ -12,7 +12,7 @@ elif sys.argv[1] == '2':
     otherbar = left
 
 if currentbar.barpid():
-    if currentbar.barwidvisible():
+    if currentbar.barvisible():
         currentbar.barunmap()
     else:
         currentbar.barmap()

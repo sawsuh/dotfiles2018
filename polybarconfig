@@ -26,6 +26,7 @@ modules-center = date2
 modules-right = audio
 border-top-size = 4
 border-top-color = ${colors.my_overline}
+enable-ipc = true
 
 [bar/pop1]
 inherit = section/bars

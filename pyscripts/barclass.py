@@ -13,32 +13,25 @@ class bar:
             barline = matchstring.search(processes).group(1) #find line corresponding to our bar
             return(barline) #get pid
 	
-    def barwidvisible(self): 
+    def barvisible(self): 
         if not self.barpid():
             return False
         cmd = ['xdotool', 'search', '--pid', str(self.barpid()), '--onlyvisible'] 
-        output = sp.run(cmd,stderr = sp.DEVNULL, stdout=sp.PIPE) #check vis
+        output = sp.run(cmd, stdout=sp.PIPE) #check vis
         return(output.stdout.decode('utf-8')) #return wid if exists 
 
-    def barwidinvisible(self): 
+    def barunmap(self):
         if not self.barpid():
             return False
-        cmd = ['xdotool', 'search', '--pid', str(self.barpid())] 
-        output = sp.run(cmd,stderr = sp.DEVNULL, stdout=sp.PIPE) #check vis
-        return(output.stdout.decode('utf-8')) #return wid if exists  
-
-    def barunmap(self):
-        if not self.barwidinvisible():
-            return False
-        sp.run(['xdotool', 'windowunmap', str(self.barwidinvisible())],stderr = sp.DEVNULL,stdout=sp.DEVNULL)
+        sp.run(['polybar-msg', '-p', self.barpid(), 'cmd', 'hide'])
         sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '10'])
 
     def barmap(self):
-        if not self.barwidinvisible():
+        if not self.barpid():
             return False
         sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'])
-        sp.run(['xdotool', 'windowmap', str(self.barwidinvisible())],stderr = sp.DEVNULL, stdout=sp.DEVNULL)
+        sp.run(['polybar-msg', '-p', self.barpid(), 'cmd', 'show'])
 
     def barspawn(self):
         sp.run(['bspc', 'config', '-m', str(self.monitor), 'bottom_padding', '80'])
-        sp.Popen(['polybar', str(self.name)], stderr = sp.DEVNULL,stdout=sp.DEVNULL)
+        sp.Popen(['polybar', str(self.name)])

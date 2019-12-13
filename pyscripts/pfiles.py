@@ -12,12 +12,12 @@ left = bar('pop1', 'DVI-D-1')
 right = bar('pop2', 'HDMI-A-0')
 
 if xcord > 2560:
-    if right.barwidvisible():
+    if right.barvisible():
         files(3902, 752)
     else:
         files(3902, 822)
 else:
-    if left.barwidvisible():
+    if left.barvisible():
         files(1342, 752)
     else:
         files(1342, 822) 
