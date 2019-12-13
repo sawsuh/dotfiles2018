@@ -42,7 +42,7 @@ super + {_,shift + }q
 
 # start file browser
 super + shift + f
-	python3 ~/.pfiles.py
+	python3 ~/.pyscripts/pfiles.py
 
 # set the window state
 super + {t,shift + t,x,f}
@@ -126,5 +126,5 @@ super + shift + n
 
 # bar notification toggle
 super + {b,g}
-	python3 ~/.pbarnotif.py {1,2}
+	python3 ~/.pyscripts/pbarnotif.py {1,2}
 

@@ -10,6 +10,7 @@ set breakindentopt=shift:2
 let g:tex_flavor='latex'
 let g:livepreview_previewer = 'zathura'
 let g:Tex_DefaultTargetFormat = 'pdf'
+let g:goyo_width = '80%'
 augroup MyIMAPs
     au!
     au VimEnter * call IMAP('``i','\indent <++>','tex')
