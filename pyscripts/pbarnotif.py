@@ -1,13 +1,13 @@
 from barclass import bar
 import sys
 
-left = bar('pop1', 'DVI-D-1')
-right = bar('pop2', 'HDMI-A-0')
+left = bar("pop1", "DVI-D-1")
+right = bar("pop2", "HDMI-A-0")
 
-if sys.argv[1] == '1':
+if sys.argv[1] == "1":
     currentbar = left
     otherbar = right
-elif sys.argv[1] == '2':
+elif sys.argv[1] == "2":
     currentbar = right
     otherbar = left
 
@@ -20,4 +20,3 @@ if currentbar.barpid():
 else:
     currentbar.barspawn()
     otherbar.barunmap()
-
