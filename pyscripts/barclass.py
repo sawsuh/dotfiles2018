@@ -11,7 +11,7 @@ class bar:
         pgrep = sp.run(["pgrep", "-a", "polybar"],
                        stdout=sp.PIPE)  # grep polybar pids
         processes = pgrep.stdout.decode("utf-8")  # get output
-        matchstring = re.compile("([0-9]+).+" + str(self.name))
+        matchstring = re.compile(f"([0-9]+).+{str(self.name)}")
         if matchstring.search(processes):
             barline = matchstring.search(processes).group(
                 1
