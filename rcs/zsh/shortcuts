@@ -4,7 +4,7 @@ y: yay
 yu: yay -Syu --devel
 home: cd ~
 fact: wget -qO- randomfunfacts.com | sed -n "/<strong>/{s;^.*<i>\(.*\)</i>.*$;\1;p}"
-p4k: python3 ~/.pyscripts/p4k.py
+music: python3 ~/.pyscripts/music.py
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
