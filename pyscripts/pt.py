@@ -28,8 +28,7 @@ widcommand = sp.run(["xdotool", "getwindowfocus"],
                     stdout=sp.PIPE, stderr=sp.DEVNULL)
 wid = hex(int(widcommand.stdout.decode("utf-8")))
 geomstring = f"0,{topx},{topy},{width},{height}"
-resizecmd = ["wmctrl", "-i", "-r", wid, "-e", geomstring]
-sp.run(resizecmd)
+sp.run(["wmctrl", "-i", "-r", wid, "-e", geomstring])
 middlex = topx + width / 2
 middley = topy + height / 2
 sp.run(["xdotool", "mousemove", str(middlex), str(middley)])
