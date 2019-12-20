@@ -1,20 +1,24 @@
-e
+#
 # wm independent hotkeys
 #
 
 # terminal emulator
-super + z
+super + o; z
 	urxvt -name term
 
-super + shift + z
+super + o; x
 	python3 /home/prashant/.pyscripts/pt.py
 
 # program launcher
-super + @space
+super + o; r
 	export PATH=/home/prashant/.local/bin:$PATH; rofi -theme rofi-theme -show run -display-run ""
 # password manager
-super + p
+super + o; p
 	rofi-pass
+
+# start file browser
+super + o; f
+	python3 ~/.pyscripts/pfiles.py
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -40,9 +44,6 @@ super + {_,shift + }q
 # state/flags
 #
 
-# start file browser
-super + shift + f
-	python3 ~/.pyscripts/pfiles.py
 
 # set the window state
 super + {t,shift + t,x,f}
