@@ -16,11 +16,6 @@ recordcmd = [
 recording = sp.run(recordcmd, stdout=sp.PIPE, stderr=sp.DEVNULL)
 width, height, topx, topy = recording.stdout.decode("utf-8").split(" ")
 
-width = int(width) - 8
-height = int(height) - 8
-topx = int(topx) + 4
-topy = int(topy) + 4
-
 sp.Popen(["urxvt", "-name", "float"])
 time.sleep(0.150)
 
