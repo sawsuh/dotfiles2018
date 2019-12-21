@@ -124,7 +124,7 @@ super + alt + c
 
 # take a screenshot with selection
 super + shift + c
-	maim -su -b 0 -c 0.9296875,0.890625,0.89453125,0.5 $(date +'%-d-%-m-%-y_%-R').png
+	maim -sul -b 0 -c 0.25882352941176473,0.25882352941176473,0.23921568627450981,0.5 $(date +'%-d-%-m-%-y_%-R').png
 
 # volume control
 super + shift + {m,n} 
