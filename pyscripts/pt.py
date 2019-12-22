@@ -9,7 +9,6 @@ recordcmd = [
     "0",
     "-c",
     "0.25882352941176473,0.25882352941176473,0.23921568627450981,0.5",
-#    "0.9296875,0.890625,0.89453125,0.5",
     "-l",
     "-f",
     "%w %h %x %y",
@@ -28,7 +27,7 @@ widcommand = sp.run(["xdotool", "getwindowfocus"],
 wid = hex(int(widcommand.stdout.decode("utf-8")))
 geomstring = f"0,{topx},{topy},{width},{height}"
 sp.run(["wmctrl", "-i", "-r", wid, "-e", geomstring])
-middlex = topx + width / 2
-middley = topy + height / 2
+middlex = int(topx) + width / 2
+middley = int(topy) + height / 2
 sp.run(["xdotool", "mousemove", str(middlex), str(middley)])
 sp.run(["xdotool", "windowactivate", wid])
