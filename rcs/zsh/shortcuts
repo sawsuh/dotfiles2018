@@ -5,6 +5,7 @@ yu: yay -Syu --devel
 home: cd ~
 fact: wget -qO- randomfunfacts.com | sed -n "/<strong>/{s;^.*<i>\(.*\)</i>.*$;\1;p}"
 music: python3 ~/.pyscripts/music.py
+dfu: bash ~/.dfu.sh 
 --FilestoVim
 xr: ~/.Xresources
 sxrc: ~/.config/sxhkd/sxhkdrc1
