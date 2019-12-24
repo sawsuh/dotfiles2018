@@ -104,5 +104,4 @@ for i in range(0, 7):
     downloadthread.start()
 [item.join() for item in threads]
 print("")
-for item, date in sorted(outputlist, key=lambda x: x[1], reverse=1):
-    print(item)
+[print(item) for (item, date) in sorted(outputlist, key=lambda x: x[1], reverse=1)]
