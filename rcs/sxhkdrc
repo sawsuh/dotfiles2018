@@ -130,16 +130,8 @@ super + w: c
 super + a: {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# expand a window by moving one of its side outward
-super + s: super + a: {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
 # contract a window by moving one of its side inward
 super + a: shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# contract a window by moving one of its side inward
-super + s: super + a: shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # take a screenshot
