@@ -2,10 +2,7 @@
 xrandr --output HDMI-A-0 --right-of DVI-D-1 --mode 2560x1440 --pos 2560x0 --rotate normal --output DVI-D-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
 nitrogen --restore&
 compton --config /home/prashant/.compton.conf&
-mopidy&
 xrdb ~/.Xresources&
-#polybar bar3&
-#polybar bar4&
 dunst&
 
 bspc monitor DVI-D-1 -d one two three four five

@@ -1,7 +1,7 @@
 #modes:
 #super + r - run
 #super + s - node contrl
-#supre + a - resize
+#super + a - resize
 #super + w - preselect
 
 #
@@ -80,12 +80,20 @@ super + s: {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
 # focus the next/previous desktop in the current monitor
+super + s: super + {c,v}
+	bspc desktop -f {prev,next}.local; 
+
+# focus the next/previous desktop in the current monitor
 super + {c,v}
 	bspc desktop -f {prev,next}.local; 
 
 # send to the given desktop
 super + s: {1-9,0}
 	bspc node -d '^{1-9,10}'
+
+# focus the given desktop
+super + s: super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'; 
 
 # send to next desktop
 super s: {c,v}
