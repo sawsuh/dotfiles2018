@@ -64,7 +64,11 @@ super + ctrl + {x,y,z}
 #
 
 # focus the node in the given direction
-super + s: {_,shift + }{h,j,k,l}
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+# focus the node in the given direction
+super + s: {_, shift + } {h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # shift window into preselected region
@@ -79,6 +83,10 @@ super + m
 super + s: {_,shift + }Tab
 	bspc node -f {next,prev}.local
 
+# focus the next in the current desktop
+super + {_,shift + }Tab
+	bspc node -f {next,prev}.local
+
 # focus the next/previous desktop in the current monitor
 super + s: super + {c,v}
 	bspc desktop -f {prev,next}.local; 
@@ -87,6 +95,10 @@ super + s: super + {c,v}
 super + {c,v}
 	bspc desktop -f {prev,next}.local; 
 
+# send to next desktop
+super s: {c,v}
+	bspc node -d {prev,next}
+
 # send to the given desktop
 super + s: {1-9,0}
 	bspc node -d '^{1-9,10}'
@@ -94,10 +106,6 @@ super + s: {1-9,0}
 # focus the given desktop
 super + s: super + {1-9,0}
 	bspc desktop -f '^{1-9,10}'; 
-
-# send to next desktop
-super s: {c,v}
-	bspc node -d {prev,next}
 
 # focus the given desktop
 super + {1-9,0}
