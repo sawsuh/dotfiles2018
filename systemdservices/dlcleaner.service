@@ -1,0 +1,6 @@
+[Unit]
+Description=Backup of my apache website
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c '/bin/python3 /home/prashant/.pyscripts/downloadscleaner.py >> /home/prashant/.pyscripts/logs/downloadslog'
